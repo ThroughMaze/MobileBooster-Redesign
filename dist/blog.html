@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Mobile Booster Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/js/blog.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/js/bootstrap.js">
+  <link rel="modulepreload" crossorigin href="/assets/js/bootstrap.min.js">
+  <link rel="stylesheet" crossorigin href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" crossorigin href="/assets/css/blog.css">
+</head>
+<body>
+<header class="header-white">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container header-content">
+            <a href="/" class="logo-container">
+                <img src="/assets/images/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                     class="mobile-booster-logo"/>
+            </a>
+            <div id="header-icons" class="d-flex d-lg-none">
+                <a id="cart" href="#">
+                    <img src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M31.4684%2035H16.0004C15.7168%2035.0001%2015.4364%2034.9398%2015.1779%2034.8232C14.9193%2034.7066%2014.6885%2034.5364%2014.5008%2034.3238C14.3131%2034.1112%2014.1727%2033.8611%2014.089%2033.5901C14.0054%2033.3191%2013.9803%2033.0334%2014.0154%2032.752L15.7344%2019H31.7344L33.4534%2032.752C33.4886%2033.0334%2033.4635%2033.3191%2033.3798%2033.5901C33.2961%2033.8611%2033.1558%2034.1112%2032.9681%2034.3238C32.7803%2034.5364%2032.5495%2034.7066%2032.291%2034.8232C32.0324%2034.9398%2031.7521%2035.0001%2031.4684%2035Z'%20stroke='black'%20stroke-width='2'%20stroke-miterlimit='10'%20stroke-linecap='square'/%3e%3cpath%20d='M19.7344%2022V17C19.7378%2015.9402%2020.1603%2014.9248%2020.9097%2014.1754C21.6591%2013.426%2022.6746%2013.0034%2023.7344%2013V13C24.7942%2013.0034%2025.8096%2013.426%2026.559%2014.1754C27.3084%2014.9248%2027.7309%2015.9402%2027.7344%2017V22'%20stroke='black'%20stroke-width='2'%20stroke-miterlimit='10'%20stroke-linecap='square'/%3e%3c/svg%3e"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="menu">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+            </div>
+            </a>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
+                    style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Shop
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="data:image/svg+xml,%3csvg%20width='36'%20height='21'%20viewBox='0%200%2036%2021'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.2778%201.33706C16.5536%20-0.0918295%2019.4464%20-0.0918295%2021.7222%201.33706L32.0502%207.82166C37.9999%2011.5573%2035.3533%2020.75%2028.328%2020.75H7.67204C0.646749%2020.75%20-1.99994%2011.5573%203.94982%207.82167L14.2778%201.33706Z'%20fill='%23fff'/%3e%3c/svg%3e"/>
+                        </div>
+                        <ul role="menu" class="navbar-dropdown dropdown-menu" data-bs-popper="static">
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by coverage</p>
+                                <a href="#" class="navbar-dropdown-links">Small Space (0: 300 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Midsize Space (300 : 500 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Large Space (500: 1000 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">huge space (1000 : 5000 SQM)</a>
+                            </li>
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by signal type</p>
+                                <a href="#" class="navbar-dropdown-links">3G</a>
+                                <a href="#" class="navbar-dropdown-links">4G</a>
+                                <a href="#" class="navbar-dropdown-links">5G</a>
+                                <a href="#" class="navbar-dropdown-links">3G & 4G & 5G</a>
+                            </li>
+                            <li class="navbar-dropdown-list navbar-dropdown-suggestion">
+                                <img src="/assets/images/Black1%201.png"/>
+                                <a href="#" class="btn-primary w-100">show more</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Carriers
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="data:image/svg+xml,%3csvg%20width='36'%20height='21'%20viewBox='0%200%2036%2021'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.2778%201.33706C16.5536%20-0.0918295%2019.4464%20-0.0918295%2021.7222%201.33706L32.0502%207.82166C37.9999%2011.5573%2035.3533%2020.75%2028.328%2020.75H7.67204C0.646749%2020.75%20-1.99994%2011.5573%203.94982%207.82167L14.2778%201.33706Z'%20fill='%23fff'/%3e%3c/svg%3e"/>
+                        </div>
+                        <div class="navbar-dropdown">
+                            <div class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">Vodafone</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">O2</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">giffgaff</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Tesco Mobile</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">EE</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">BT</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">ID UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Three UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Virgin UK</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Frequency
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="data:image/svg+xml,%3csvg%20width='36'%20height='21'%20viewBox='0%200%2036%2021'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.2778%201.33706C16.5536%20-0.0918295%2019.4464%20-0.0918295%2021.7222%201.33706L32.0502%207.82166C37.9999%2011.5573%2035.3533%2020.75%2028.328%2020.75H7.67204C0.646749%2020.75%20-1.99994%2011.5573%203.94982%207.82167L14.2778%201.33706Z'%20fill='%23fff'/%3e%3c/svg%3e"/>
+                        </div>
+                        <ul class="navbar-dropdown dropdown-menu" id="frequency-dropdown">
+                            <li class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">700 MHz (5G)</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/1800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">900/210 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/2600 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/900/2100 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/900/1800 /2100/2600 MHz</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">Floor Plan Analysis</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex gap-3">
+                    <div id="openPopup" class="country-logo" data-bs-toggle="modal" data-bs-target="#country-modal">
+                        <img class="logo" src="https://flagcdn.com/gb.svg">
+                        <img src="data:image/svg+xml,%3csvg%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%201.5L6%206.5L11%201.5'%20stroke='black'%20stroke-width='1.4'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"/>
+                    </div>
+                    <a id="cart-desktop-header" href="#">
+                        <img src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M31.4684%2035H16.0004C15.7168%2035.0001%2015.4364%2034.9398%2015.1779%2034.8232C14.9193%2034.7066%2014.6885%2034.5364%2014.5008%2034.3238C14.3131%2034.1112%2014.1727%2033.8611%2014.089%2033.5901C14.0054%2033.3191%2013.9803%2033.0334%2014.0154%2032.752L15.7344%2019H31.7344L33.4534%2032.752C33.4886%2033.0334%2033.4635%2033.3191%2033.3798%2033.5901C33.2961%2033.8611%2033.1558%2034.1112%2032.9681%2034.3238C32.7803%2034.5364%2032.5495%2034.7066%2032.291%2034.8232C32.0324%2034.9398%2031.7521%2035.0001%2031.4684%2035Z'%20stroke='black'%20stroke-width='2'%20stroke-miterlimit='10'%20stroke-linecap='square'/%3e%3cpath%20d='M19.7344%2022V17C19.7378%2015.9402%2020.1603%2014.9248%2020.9097%2014.1754C21.6591%2013.426%2022.6746%2013.0034%2023.7344%2013V13C24.7942%2013.0034%2025.8096%2013.426%2026.559%2014.1754C27.3084%2014.9248%2027.7309%2015.9402%2027.7344%2017V22'%20stroke='black'%20stroke-width='2'%20stroke-miterlimit='10'%20stroke-linecap='square'/%3e%3c/svg%3e"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+        <div class="container">
+            <ul class="navbar-nav navbar-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Shop</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Carriers</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Frequency</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Floor Plan Analysis</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="blog-hero-section">
+        <div class="hero-section-content container">
+            <div class="hero-text">
+                <h1>Mobile booster blog</h1>
+                <p class="hero-subtext">Stay on the cutting edge with our insights into booster technology, innovations,
+                    and tips for maximizing signal strength.</p>
+            </div>
+            <div class="hero-illustration">
+                <img src="/assets/images/2150040428-removebg-preview%202.png"
+                     alt="Get stronger connections anywhere – find the perfect signal booster for your needs"/>
+            </div>
+        </div>
+    </section>
+    <section class="container blog-content">
+        <div class="row row-gap-4 row-gap-lg-0">
+            <div class="single-blog-section col-12">
+                <h2>Trending Articles</h2>
+                <a href="./article.html" class="single-blog-card">
+                    <div class="single-blog-img">
+                        <img src="/assets/images/single-blog-image.png"/>
+                    </div>
+                    <div class="single-blog-content">
+                        <h2 class="single-blog-heading">Best Signal Boosters for Restaurants and Cafes</h2>
+                        <p class="single-blog-subheading">The performance enhancements with RISC-V are significant for
+                            VPNs
+                            and
+                            any other application
+                            performing cryptographic operations.</p>
+                        <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6">
+                <a href="./article.html" class="double-blog-card">
+                    <div class="double-blog-img">
+                        <img src="/assets/images/double-blog-img-1.png"/>
+                    </div>
+                    <div class="double-blog-content">
+                        <h3 class="double-blog-heading">How a Signal Booster Can Help with Your Home Automation
+                            Thermostat
+                            System</h3>
+                        <p class="double-blog-subheading">The performance enhancements with RISC-V are significant for
+                            VPNs
+                            and any other application
+                            performing cryptographic operations.</p>
+                        <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6">
+                <a href="./article.html" class="double-blog-card">
+                    <div class="double-blog-img">
+                        <img src="/assets/images/double-blog-img-2.png"/>
+                    </div>
+                    <div class="double-blog-content">
+                        <h3 class="double-blog-heading">Cost-Effectiveness of Using a Mobile Signal Booster vs.
+                            Switching
+                            Carriers</h3>
+                        <p class="double-blog-subheading">The performance enhancements with RISC-V are significant for
+                            VPNs
+                            and any other application
+                            performing cryptographic operations.</p>
+                        <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <h2>Latest Articles</h2>
+        <div class="row row-gap-4 mt-4">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-1.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-2.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-3.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-5.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-6.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-7.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-8.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-9.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-2.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-11.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-4.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="./article.html" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="/assets/images/blog-img-11.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+               <span class="read-time">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_11325)'%3e%3cpath%20d='M11.9464%204H3.98438V5.33333H11.9464V4Z'%20fill='black'/%3e%3cpath%20d='M11.9464%207.33203H3.98438V8.66536H11.9464V7.33203Z'%20fill='black'/%3e%3cpath%20d='M9.29237%2010.668H3.98438V12.0013H9.29237V10.668Z'%20fill='black'/%3e%3cpath%20d='M13.2706%200H2.65456C2.12665%200%201.62036%200.210714%201.24707%200.585786C0.873775%200.960859%200.664063%201.46957%200.664062%202V14C0.664063%2014.5304%200.873775%2015.0391%201.24707%2015.4142C1.62036%2015.7893%202.12665%2016%202.65456%2016H13.2706C13.7985%2016%2014.3048%2015.7893%2014.6781%2015.4142C15.0513%2015.0391%2015.2611%2014.5304%2015.2611%2014V2C15.2611%201.46957%2015.0513%200.960859%2014.6781%200.585786C14.3048%200.210714%2013.7985%200%2013.2706%200ZM13.9341%2013.3333C13.9341%2013.5101%2013.8642%2013.6797%2013.7397%2013.8047C13.6153%2013.9298%2013.4465%2014%2013.2706%2014H2.65456C2.47859%2014%202.30983%2013.9298%202.1854%2013.8047C2.06097%2013.6797%201.99106%2013.5101%201.99106%2013.3333V2.66667C1.99106%202.48986%202.06097%202.32029%202.1854%202.19526C2.30983%202.07024%202.47859%202%202.65456%202H13.2706C13.4465%202%2013.6153%202.07024%2013.7397%202.19526C13.8642%202.32029%2013.9341%202.48986%2013.9341%202.66667V13.3333Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_11325'%3e%3crect%20width='15.924'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="latest-articles">
+        </div>
+    </section>
+    <section class="pagination-container">
+        <div class="pagination"></div>
+    </section>
+</main>
+<footer>
+    <div class="footer-content container">
+        <div class="footer-list-container">
+            <div>
+                <h6 class="footer-list-heading">Explore Products</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Find a Booster Quiz</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Installation Guide</a></li>
+                    <li><a href="#">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Customer Support</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Company Information</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Buyer's Guide</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Our brands</h6>
+                <ul class="footer-list">
+                    <li><a href="#">mysignalboosters</a></li>
+                    <li><a href="#">Mysignal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-section">
+            <p class="footer-list-heading">Subscribe</p>
+            <form method="post" action="/" class="subscribe-form needs-validation" novalidate>
+                <div>
+                    <input type="email" placeholder="Email address" class="input-bordered w-100" required/>
+                    <div class="invalid-feedback">This field is required Subscribe</div>
+                </div>
+                <button type="submit" class="subscribe-submit-btn">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0039 9H1.00001" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path d="M13.0026 15.0013L19.0039 9L13.0026 2.9987" stroke="white" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </form>
+            <span class="subscribe-section-description">
+                        Subscribe to our newsletter and stay connected with exclusive offers, product updates, and tips to boost your signal experience.
+            </span>
+            <div class="message-after">
+                <p class="success-msg">Thanks for subscribing!</p>
+                <p class="subscribe-message">Please check your email for confirmation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-container container">
+        <a href="/" class="sm-none">
+            <img src="/assets/images/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                 class="mobile-booster-logo">
+        </a>
+        <p>© 2024 mobilebooster . All rights reserved. </p>
+        <div class="footer-social-container">
+            <a href="#" class="social-circle">
+                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20x='0px'%20y='0px'%20width='24'%20height='24'%20viewBox='0,0,256,256'%3e%3cg%20fill='%23ffffff'%20fill-rule='nonzero'%20stroke='none'%20stroke-width='1'%20stroke-linecap='butt'%20stroke-linejoin='miter'%20stroke-miterlimit='10'%20stroke-dasharray=''%20stroke-dashoffset='0'%20font-family='none'%20font-weight='none'%20font-size='none'%20text-anchor='none'%20style='mix-blend-mode:%20normal'%3e%3cg%20transform='scale(8.53333,8.53333)'%3e%3cpath%20d='M9,25h-5v-15h5zM6.501,8c-1.383,0%20-2.501,-1.121%20-2.501,-2.501c0,-1.38%201.12,-2.499%202.501,-2.499c1.378,0%202.499,1.121%202.499,2.499c0,1.38%20-1.121,2.501%20-2.499,2.501zM27,25h-4.807v-7.3c0,-1.741%20-0.033,-3.98%20-2.499,-3.98c-2.503,0%20-2.888,1.896%20-2.888,3.854v7.426h-4.806v-15.011h4.614v2.051h0.065c0.642,-1.18%202.211,-2.424%204.551,-2.424c4.87,0%205.77,3.109%205.77,7.151c0,0%200,8.233%200,8.233z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20x='0px'%20y='0px'%20width='24'%20height='24'%20viewBox='0,0,256,256'%3e%3cg%20fill='%23ffffff'%20fill-rule='nonzero'%20stroke='none'%20stroke-width='1'%20stroke-linecap='butt'%20stroke-linejoin='miter'%20stroke-miterlimit='10'%20stroke-dasharray=''%20stroke-dashoffset='0'%20font-family='none'%20font-weight='none'%20font-size='none'%20text-anchor='none'%20style='mix-blend-mode:%20normal'%3e%3cg%20transform='scale(5.12,5.12)'%3e%3cpath%20d='M32,11h5c0.552,0%201,-0.448%201,-1v-6.737c0,-0.524%20-0.403,-0.96%20-0.925,-0.997c-1.591,-0.113%20-4.699,-0.266%20-6.934,-0.266c-6.141,0%20-10.141,3.68%20-10.141,10.368v6.632h-7c-0.552,0%20-1,0.448%20-1,1v7c0,0.552%200.448,1%201,1h7v19c0,0.552%200.448,1%201,1h7c0.552,0%201,-0.448%201,-1v-19h7.222c0.51,0%200.938,-0.383%200.994,-0.89l0.778,-7c0.066,-0.592%20-0.398,-1.11%20-0.994,-1.11h-8v-5c0,-1.657%201.343,-3%203,-3z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20x='0px'%20y='0px'%20width='24'%20height='24'%20viewBox='0,0,256,256'%3e%3cg%20fill='%23ffffff'%20fill-rule='nonzero'%20stroke='none'%20stroke-width='1'%20stroke-linecap='butt'%20stroke-linejoin='miter'%20stroke-miterlimit='10'%20stroke-dasharray=''%20stroke-dashoffset='0'%20font-family='none'%20font-weight='none'%20font-size='none'%20text-anchor='none'%20style='mix-blend-mode:%20normal'%3e%3cg%20transform='scale(5.12,5.12)'%3e%3cpath%20d='M50.0625,10.4375c-1.84766,0.82031%20-3.82812,1.37109%20-5.91016,1.62109c2.125,-1.27344%203.75781,-3.28906%204.52344,-5.6875c-1.98437,1.17578%20-4.19141,2.03125%20-6.53125,2.49219c-1.875,-2%20-4.54687,-3.24609%20-7.50391,-3.24609c-5.67969,0%20-10.28516,4.60156%20-10.28516,10.28125c0,0.80469%200.09375,1.58984%200.26953,2.34375c-8.54687,-0.42969%20-16.12109,-4.52344%20-21.19531,-10.74609c-0.88672,1.52344%20-1.39062,3.28906%20-1.39062,5.17187c0,3.56641%201.8125,6.71484%204.57422,8.5625c-1.6875,-0.05469%20-3.27344,-0.51953%20-4.66016,-1.28906c0,0.04297%200,0.08594%200,0.12891c0,4.98438%203.54688,9.13672%208.24609,10.08594c-0.85937,0.23438%20-1.76953,0.35938%20-2.70703,0.35938c-0.66406,0%20-1.30859,-0.0625%20-1.9375,-0.1875c1.3125,4.08203%205.10938,7.0625%209.60547,7.14453c-3.51562,2.75781%20-7.94922,4.39844%20-12.76953,4.39844c-0.83203,0%20-1.64844,-0.04687%20-2.44922,-0.14453c4.54687,2.92188%209.95312,4.62109%2015.76172,4.62109c18.91406,0%2029.25781,-15.66797%2029.25781,-29.25391c0,-0.44531%20-0.01172,-0.89453%20-0.02734,-1.33203c2.00781,-1.44922%203.75,-3.26172%205.12891,-5.32422z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e"/>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="country-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Change country</h3>
+                <span class="close-btn">
+                <img src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M38.5%2010.5L10.5%2038.5'%20stroke='%23212121'%20stroke-miterlimit='10'%20stroke-linecap='square'/%3e%3cpath%20d='M38.5%2038.5L10.5%2010.5'%20stroke='%23212121'%20stroke-miterlimit='10'%20stroke-linecap='square'/%3e%3c/svg%3e" data-bs-dismiss="modal" aria-label="Close"/>
+            </span>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for a country" id="countrySearch">
+                    <label for="countrySearch" id="search-icon">
+                        <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.7874%2014.7553L12.7057%2011.6736C13.8639%2010.2508%2014.4314%208.43748%2014.291%206.60823C14.1505%204.77898%2013.3129%203.07354%2011.9511%201.84418C10.5893%200.614832%208.80728%20-0.0445158%206.97324%200.00233626C5.13921%200.0491883%203.39322%200.798662%202.09594%202.09594C0.798662%203.39322%200.0491883%205.13921%200.00233626%206.97324C-0.0445158%208.80728%200.614832%2010.5893%201.84418%2011.9511C3.07354%2013.3129%204.77898%2014.1505%206.60823%2014.291C8.43748%2014.4314%2010.2508%2013.8639%2011.6736%2012.7057L14.7553%2015.7874C14.8931%2015.9225%2015.0784%2015.9982%2015.2714%2015.9982C15.4643%2015.9982%2015.6496%2015.9225%2015.7874%2015.7874C15.9236%2015.6502%2016%2015.4647%2016%2015.2714C16%2015.078%2015.9236%2014.8926%2015.7874%2014.7553ZM1.46178%207.16005C1.46178%206.03304%201.79598%204.93134%202.42211%203.99426C3.04824%203.05718%203.93819%202.32682%204.97942%201.89553C6.02064%201.46424%207.16637%201.3514%208.27173%201.57127C9.37709%201.79114%2010.3924%202.33385%2011.1893%203.13077C11.9863%203.92768%2012.529%204.94302%2012.7488%206.04838C12.9687%207.15373%2012.8559%208.29946%2012.4246%209.34069C11.9933%2010.3819%2011.2629%2011.2719%2010.3258%2011.898C9.38877%2012.5241%208.28707%2012.8583%207.16005%2012.8583C5.64953%2012.8559%204.20157%2012.2548%203.13346%2011.1866C2.06535%2010.1185%201.46422%208.67058%201.46178%207.16005Z'%20fill='black'/%3e%3c/svg%3e"/>
+                    </label>
+                </div>
+                <div class="country-list">
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="uk" name="country" value="UK">
+                        <label for="uk"><img src="https://flagcdn.com/gb.svg" class="country-popup-logo"
+                                             alt="uk Flag">United
+                            Kingdom</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="nz" name="country" value="NZ">
+                        <label for="nz"><img src="https://flagcdn.com/nz.svg" class="country-popup-logo"
+                                             alt="nz Flag">New
+                            Zealand</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="australia" name="country" value="Australia">
+                        <label for="australia"><img src="https://flagcdn.com/au.svg" class="country-popup-logo"
+                                                    alt="Australia Flag"> Australia</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="UAE" name="country" value="UAE">
+                        <label for="UAE"><img src="https://flagcdn.com/ae.svg" class="country-popup-logo"
+                                              alt="UAE Flag">
+                            UAE</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Mobile Booster Article</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/blog.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header-white">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container header-content">
+            <a href="/" class="logo-container">
+                <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                     class="mobile-booster-logo"/>
+            </a>
+            <div id="header-icons" class="d-flex d-lg-none">
+                <a id="cart" href="#">
+                    <img src="assets/images/landing/cart-black.svg"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="menu">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+            </div>
+            </a>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
+                    style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Shop
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul role="menu" class="navbar-dropdown dropdown-menu" data-bs-popper="static">
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by coverage</p>
+                                <a href="#" class="navbar-dropdown-links">Small Space (0: 300 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Midsize Space (300 : 500 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Large Space (500: 1000 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">huge space (1000 : 5000 SQM)</a>
+                            </li>
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by signal type</p>
+                                <a href="#" class="navbar-dropdown-links">3G</a>
+                                <a href="#" class="navbar-dropdown-links">4G</a>
+                                <a href="#" class="navbar-dropdown-links">5G</a>
+                                <a href="#" class="navbar-dropdown-links">3G & 4G & 5G</a>
+                            </li>
+                            <li class="navbar-dropdown-list navbar-dropdown-suggestion">
+                                <img src="assets/images/landing/Black1%201.png"/>
+                                <a href="#" class="btn-primary w-100">show more</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Carriers
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <div class="navbar-dropdown">
+                            <div class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">Vodafone</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">O2</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">giffgaff</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Tesco Mobile</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">EE</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">BT</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">ID UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Three UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Virgin UK</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Frequency
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul class="navbar-dropdown dropdown-menu" id="frequency-dropdown">
+                            <li class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">700 MHz (5G)</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/1800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">900/210 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/2600 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/900/2100 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/900/1800 /2100/2600 MHz</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">Floor Plan Analysis</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex gap-3">
+                    <div id="openPopup" class="country-logo" data-bs-toggle="modal" data-bs-target="#country-modal">
+                        <img class="logo" src="https://flagcdn.com/gb.svg">
+                        <img src="assets/images/landing/black-down-arrow.svg"/>
+                    </div>
+                    <a id="cart-desktop-header" href="#">
+                        <img src="assets/images/landing/cart-black.svg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+        <div class="container">
+            <ul class="navbar-nav navbar-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Shop</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Carriers</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Frequency</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Floor Plan Analysis</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <div id="progress-bar-container">
+        <div id="article-progress-bar"></div>
+    </div>
+</header>
+<main>
+    <article id="blog-article" class="container">
+        <div class="article-image">
+            <img src="assets/images/landing/article-main-image.png"/>
+        </div>
+        <div class="article-content-container">
+            <div class="article-social-media">
+                <a id="share-facebook" href="#" target="_blank">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.5 35C30.8513 35 36 29.8513 36 23.5C36 17.1487 30.8513 12 24.5 12C18.1487 12 13 17.1487 13 23.5C13 29.8513 18.1487 35 24.5 35Z"
+                              fill="#1434CB"/>
+                        <path d="M28.9747 26.8242L29.4847 23.5002H26.2952V21.3432C26.2952 20.4337 26.7407 19.5472 28.1692 19.5472H29.6193V16.7172C28.7679 16.5794 27.9076 16.5042 27.0452 16.4922C24.4183 16.4922 22.7013 18.0842 22.7013 20.9667V23.5002H19.7812V26.8242H22.7013V34.8602C23.892 35.0469 25.1045 35.0469 26.2952 34.8602V26.8242H28.9747Z"
+                              fill="white"/>
+                    </svg>
+                </a>
+                <a id="share-x" href="#" target="_blank">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_239_3371)">
+                            <path d="M22.2309 23.0411L15.4945 15H17.0908L22.94 21.982L27.6117 15H33L25.9354 25.5579L33 33.9902H31.4036L25.2267 26.6171L20.293 33.9902H14.9048L22.2313 23.0411H22.2309ZM24.4174 25.651L25.1331 24.5996L30.8284 16.2341H28.3764L23.7803 22.9853L23.0645 24.0367L17.0901 32.8123H19.542L24.4174 25.6514V25.651Z"
+                                  fill="black"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_239_3371">
+                                <rect width="18.0952" height="19" fill="white" transform="matrix(-1 0 0 1 33 15)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </a>
+            </div>
+            <div class="article-content">
+                <h3>Don’t Let Poor Signal Quality Hold You Back: Get Your Mobile Signal Booster Now</h3>
+                <span class="read-time">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_187_11325)">
+<path d="M11.9464 4H3.98438V5.33333H11.9464V4Z" fill="black"/>
+<path d="M11.9464 7.33203H3.98438V8.66536H11.9464V7.33203Z" fill="black"/>
+<path d="M9.29237 10.668H3.98438V12.0013H9.29237V10.668Z" fill="black"/>
+<path d="M13.2706 0H2.65456C2.12665 0 1.62036 0.210714 1.24707 0.585786C0.873775 0.960859 0.664063 1.46957 0.664062 2V14C0.664063 14.5304 0.873775 15.0391 1.24707 15.4142C1.62036 15.7893 2.12665 16 2.65456 16H13.2706C13.7985 16 14.3048 15.7893 14.6781 15.4142C15.0513 15.0391 15.2611 14.5304 15.2611 14V2C15.2611 1.46957 15.0513 0.960859 14.6781 0.585786C14.3048 0.210714 13.7985 0 13.2706 0ZM13.9341 13.3333C13.9341 13.5101 13.8642 13.6797 13.7397 13.8047C13.6153 13.9298 13.4465 14 13.2706 14H2.65456C2.47859 14 2.30983 13.9298 2.1854 13.8047C2.06097 13.6797 1.99106 13.5101 1.99106 13.3333V2.66667C1.99106 2.48986 2.06097 2.32029 2.1854 2.19526C2.30983 2.07024 2.47859 2 2.65456 2H13.2706C13.4465 2 13.6153 2.07024 13.7397 2.19526C13.8642 2.32029 13.9341 2.48986 13.9341 2.66667V13.3333Z"
+      fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_187_11325">
+<rect width="15.924" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+<span>3 min read</span>
+                </span>
+                <div class="toc-container">
+                    <p class="ez-toc-title">Table of Content</p>
+                    <ul class="toc-list" role="list">
+                        <li>
+                            <a href="#">Understanding the Need for Mobile Phone Signal Boosters</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Identifying Poor Signal Quality Symptoms
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                What to Look for in Mobile Signal Boosters
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Setting up and Using Your Mobile Signal Booster
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <span>Are you tired of weak signal quality holding you back? Whether you're missing important calls, struggling to load web pages, or just feeling frustrated with slow data speeds, a mobile signal booster is the solution you've been looking for.
+A mobile signal booster can enhance the strength and reliability of your current weak or unstable signal, no matter where you are. It's user-friendly and simple to set up, so you don't have to be tech-savvy to operate it.
+your phone is distorted, your signal quality is likely poor.</span>
+                <h3>Understanding the Need for Mobile Phone Signal Boosters</h3>
+                <span>Suppose you have ever experienced the frustration of a weak mobile signal. In that case, you know exactly why mobile signal boosters are needed.
+These little devices work wonders in ensuring you always have a steady and strong signal wherever you are. Whether in the middle of nowhere or the city's heart, a phone signal booster in the UK can be a lifesaver. Plus, it's always satisfying to stick it to those pesky dead zones.
+To support our claims, here are some important data and statistics:</span>
+                <ul>
+                    <li>According to a <a href="#">recent survey</a>, 72% of consumers experience signal issues at least
+                        once a week. In
+                        comparison, 32% say they struggle with poor signal quality daily. That's a lot of frustration
+                        and
+                        missed opportunities!
+                    </li>
+                    <li>A mobile signal booster can improve coverage up to 32 times, depending on factors like your
+                        location, the materials your building is made of, and the network you're using.
+                    </li>
+                    <li>With a booster, you can enjoy faster data speeds, clearer calls, and better reception - even in
+                        areas with weak or non-existent signals. That means no more dropped calls or buffering videos on
+                        the
+                        go.
+                    </li>
+                    <li>Boosters are compatible with all major networks and devices, so you can use them with your
+                        phone,
+                        tablet, laptop, or any other mobile device.
+                    </li>
+                </ul>
+                <span>Sufficient signal quality is a must if you want to enjoy the full potential of your device. You can't enjoy streaming, gaming, or taking work calls without a steady connection.</span>
+                <h3>Identifying Poor Signal Quality Symptoms</h3>
+                <span>How can you determine if your signal quality is low? There are some indicators to watch for.</span>
+                <p>The sound from the person on the other end is not audible.</p>
+                <span>If you're unable to hear the person on the other end, chances are high that your signal quality is low. It can be challenging to have a conversation due to poor signal quality, causing disruptions.</span>
+                <p>There's a lot of static.</p>
+                <span>If you notice a lot of static on the phone, it's another sign that your signal quality is poor. Static can be annoying and make it difficult to carry on a conversation. If you find a lot of static on your line, your signal quality is likely poor.</span>
+                <p>The connection keeps dropping.</p>
+                <span>Frequent disconnections can indicate poor signal quality during phone calls. This can be particularly aggravating if you are having an important conversation. If your phone calls get dropped frequently, your signal quality is likely poor.</span>
+                <p>The sound is distorted.</p>
+                <span>If the sound on your phone is distorted, it's another sign that your signal quality is poor. This can make understanding the person on the other end difficult and complicate a conversation. If you find that the sound on your phone is distorted, your signal quality is likely poor.</span>
+                <img src="assets/images/landing/single-blog-image.png"/>
+                <span>Just another day saving the internet, one hacked site at a time!</span>
+                <h3>What to Look for in Mobile Signal Boosters</h3>
+                <span>To improve the quality of your mobile signal, you should consider searching for a mobile signal booster. When shopping for one, keep the following important things in mind.</span>
+                <p>Coverage area</p>
+                <span>The coverage area is the first thing you want to look for in a mobile signal booster. Most boosters will list the maximum coverage area on the box.</span>
+                <span>Remember that this is usually the "theoretical" maximum coverage area, and your actual coverage may be less depending on factors like terrain, obstructions, and interference.</span>
+                <p>Gain of the booster</p>
+                <span>Another important factor to consider is the gain of the booster. The gain is a measure of how much the booster amplifies the signal. The higher the gain, the better.</span>
+                <span>However, remember that too much gain can be bad, as it can cause the booster to amplify background noise along with the signal, which can degrade call quality.</span>
+                <p>The booster supports your carrier networks.</p>
+                <span>You also want to ensure your booster supports all the frequency bands your carrier uses. If you're in the UK, you've got several major carrier networks to choose from. But no matter your network of choice, ensuring that the signal booster you select supports all the frequency bands it uses is vital.</span>
+                <span>To determine these frequencies and ensure your chosen booster will give you the boost you need, browse your carrier's website or call them.</span>
+                <p>External antenna</p>
+                <span>It's important to consider if the booster you're choosing has an external antenna. While many boosters have internal antennas suitable for most users, a booster equipped with an external antenna may offer better performance if you live in an area with bad cell reception.</span>
+                <img src="assets/images/landing/double-blog-img-2.png">
+                <span>Just another day saving the internet, one hacked site at a time!</span>
+                <h3>Setting up and Using Your Mobile Signal Booster</h3>
+                <span>Setting up and using our mobile booster is easy once you have selected the appropriate product for your requirements. The installation process is simple.</span>
+                <span>Our mobile boosters include clear installation instructions that will guide you to set up the device within 15-30 minutes. Once installed, you will experience immediate improvement in your mobile phone reception.</span>
+                <span>If you need help with the installation process, you can check our Buyer's Guide for more information. We also offer 24/7 customer support to guide you through the process.</span>
+            </div>
+        </div>
+    </article>
+    <section class="booster-quiz-section">
+        <div class="container">
+            <h3 class="booster-quiz-section-heading">Unsure of which signal Booster you need?</h3>
+            <p class="booster-quiz-section-subheading">Engage in our 30-second booster quiz by answering a few
+                questions, and discover the perfect booster
+                tailored to your needs.</p>
+            <div class="booster-quiz" id="booster-quiz">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip" data-tooltip="data_only">
+                    <p class="tooltip-heading">Why is data only?</p>
+                    <span class="tooltip-subheading">Upgrade the external cable from 10 metres.
+This is for larger buildings who need extra cable from roof to the Booster inside.</span>
+                </div>
+                <div class="tooltip" data-tooltip="voice_calls">
+                    <p class="tooltip-heading">Why is data only?</p>
+                    <span class="tooltip-subheading">Upgrade the external cable from 10 metres.
+This is for larger buildings who need extra cable from roof to the Booster inside.</span>
+                </div>
+                <div class="booster-quiz-arrow">
+                    <img src="assets/images/landing/circled-down-arrow.png"/>
+                </div>
+                <div>
+                    <p class="booster-quiz-heading" id="quiz-question">Which network should be boosted? <span
+                            class="booster-quiz-counter" id="page-indicator">(1/3)</span>
+                    </p>
+                </div>
+                <div id="prev-lg" class="slider-btn sm-none">
+                    <img src="assets/images/landing/prev-arrow.svg"/>
+                    <span>Previous</span>
+                </div>
+                <div class="slider-container">
+                    <div id="slider" class="slider">
+                        <div>
+                            <div id="slide1" class="booster-quiz-cards-container slide">
+                                <div data-type="all_networks" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/select-all-icon.svg"/>
+                                </div>
+                                <div data-term-id="data" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/data-icon.svg"/>
+                                    <div class="booster-quiz-card-info">
+                                        <p class="booster-quiz-card-heading">Data only</p>
+                                        <svg id="data_only" class="tooltip-icon" width="16" height="16"
+                                             viewBox="0 0 16 16"
+                                             fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.23" clip-path="url(#clip0_109_2715)">
+                                                <path d="M8.00016 0.333328C3.76583 0.333328 0.333496 3.76566 0.333496 7.99999C0.333496 12.2343 3.76583 15.6667 8.00016 15.6667C12.2345 15.6667 15.6668 12.2343 15.6668 7.99999C15.6668 3.76566 12.2345 0.333328 8.00016 0.333328ZM8.66683 12.3333C8.66683 12.5173 8.5175 12.6667 8.3335 12.6667H7.66683C7.48283 12.6667 7.3335 12.5173 7.3335 12.3333V6.33333C7.3335 6.14933 7.48283 5.99999 7.66683 5.99999H8.3335C8.5175 5.99999 8.66683 6.14933 8.66683 6.33333V12.3333ZM8.00016 4.66666C7.53983 4.66666 7.16683 4.29366 7.16683 3.83333C7.16683 3.37299 7.53983 2.99999 8.00016 2.99999C8.4605 2.99999 8.8335 3.37299 8.8335 3.83333C8.8335 4.29366 8.4605 4.66666 8.00016 4.66666Z"
+                                                      fill="black"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_109_2715">
+                                                    <rect width="16" height="16" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div data-term-id="203" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/vodafone-icon.svg"/>
+                                </div>
+                                <div data-term-id="202" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/o2-2.svg"/>
+                                </div>
+                                <div data-term-id="308" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/giffgaff.svg"/>
+                                </div>
+                                <div data-term-id="307" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/Tesco_Mobile-Logo.wine.svg"/>
+                                </div>
+                                <div data-term-id="200" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/ee-mobile-network-uk-.svg"/>
+                                </div>
+                                <div data-term-id="309" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/bt-3.svg"/>
+                                </div>
+                                <div data-term-id="201" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/id-UK%201.png"/>
+                                </div>
+                                <div data-term-id="198" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/Three_UK-Logo.wine.svg"/>
+                                </div>
+                                <div data-term-id="310" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/Virgin_Group-Logo.wine.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="slide2" class="booster-quiz-cards-container slide">
+                                <div data-term-id="378" data-term="signals" class="booster-quiz-card second-step">
+                                    <img src="assets/images/landing/phone-call%201.svg"/>
+                                    <div class="booster-quiz-card-info">
+                                        <p class="booster-quiz-card-heading">Voice Calls</p>
+                                        <svg id="voice_calls" class="tooltip-icon" width="16" height="16"
+                                             viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.23" clip-path="url(#clip0_109_2715)">
+                                                <path d="M8.00016 0.333328C3.76583 0.333328 0.333496 3.76566 0.333496 7.99999C0.333496 12.2343 3.76583 15.6667 8.00016 15.6667C12.2345 15.6667 15.6668 12.2343 15.6668 7.99999C15.6668 3.76566 12.2345 0.333328 8.00016 0.333328ZM8.66683 12.3333C8.66683 12.5173 8.5175 12.6667 8.3335 12.6667H7.66683C7.48283 12.6667 7.3335 12.5173 7.3335 12.3333V6.33333C7.3335 6.14933 7.48283 5.99999 7.66683 5.99999H8.3335C8.5175 5.99999 8.66683 6.14933 8.66683 6.33333V12.3333ZM8.00016 4.66666C7.53983 4.66666 7.16683 4.29366 7.16683 3.83333C7.16683 3.37299 7.53983 2.99999 8.00016 2.99999C8.4605 2.99999 8.8335 3.37299 8.8335 3.83333C8.8335 4.29366 8.4605 4.66666 8.00016 4.66666Z"
+                                                      fill="black"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_109_2715">
+                                                    <rect width="16" height="16" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div data-term-id="314" data-term="signals" class="booster-quiz-card second-step">
+                                    <img src="assets/images/landing/3g-icon.svg"/>
+                                </div>
+                                <div data-term-id="312" data-term="signals" class="booster-quiz-card second-step">
+                                    <img src="assets/images/landing/4g-icon.svg"/>
+                                </div>
+                                <div data-term-id="315" data-term="signals" class="booster-quiz-card second-step">
+                                    <img src="assets/images/landing/5g-icon.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="slide3" class="booster-quiz-cards-container slide">
+                                <div data-term-id="13" data-term="range" class="booster-quiz-card third-step">
+                                    <img src="assets/images/landing/home-button%201.svg"/>
+                                    <p class="booster-quiz-card-heading">Small Space (300 SQM)</p>
+                                </div>
+                                <div data-term-id="14" data-term="range" class="booster-quiz-card third-step">
+                                    <img src="assets/images/landing/building-icon.svg"/>
+                                    <p class="booster-quiz-card-heading">Midsize Space (500 SQM)</p>
+                                </div>
+                                <div data-term-id="15" data-term="range" class="booster-quiz-card third-step">
+                                    <img src="assets/images/landing/hotel%201.svg"/>
+                                    <p class="booster-quiz-card-heading">Large Space (1000 SQM)</p>
+                                </div>
+                                <div data-term-id="16" data-term="range" class="booster-quiz-card third-step">
+                                    <img src="assets/images/landing/company-icon.svg"/>
+                                    <p class="booster-quiz-card-heading">huge Space (5000 SQM)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="frequencies"
+                               value="[{termID:483,list:[202,308,307,200,309,201,198,310,315]},{termID:37,list:[203,202,308,307,200,309,201,198,310,312,378]},{termID:486,list:[203,202,308,307,200,309,201,198,310,314,378]},{termID:490,list:[203,202,308,307,200,309,201,198,310,315,378]},{termID:488,list:[202,308,307,200,309,201,198,310,312,315,378]},{termID:30,list:[203,312,315,378]},{termID:485,list:[203,202,308,307,200,309,201,198,310,314,312,315,378]},{termID:318,list:[202,312,378]},{termID:319,list:[203,202,308,307,200,309,201,198,310,312,315,378]},{termID:489,list:[436]},{termID:27,list:[436,314]},{termID:29,list:[203,200,309,310,312,378]},{termID:504,list:[203,202,200,198,312,315,378]}]">
+                    </div>
+                </div>
+                <div class="slider-btn-sm-container">
+                    <div id="prev" class="slider-btn">
+                        <img src="assets/images/landing/prev-arrow.svg"/>
+                        <span>Previous</span>
+                    </div>
+                    <div class="slider-btn" id="next">
+                        <img src="assets/images/landing/next-arrow.svg"/>
+                        <span>Next</span>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="latest-articles container">
+        <h2>Related Articles</h2>
+        <div class="row row-gap-4 mt-4">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="assets/images/landing/blog-img-1.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+                         <span class="read-time">
+                            <img src="assets/images/blog/read-icon.svg"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="assets/images/landing/blog-img-2.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+             <span class="read-time">
+                            <img src="assets/images/blog/read-icon.svg"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="assets/images/landing/blog-img-3.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+             <span class="read-time">
+                            <img src="assets/images/blog/read-icon.svg"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="latest-articles-card">
+                    <div class="latest-articles-img">
+                        <img src="assets/images/landing/blog-img-4.png"/>
+                    </div>
+                    <div class="latest-articles-content">
+             <span class="read-time">
+                            <img src="assets/images/blog/read-icon.svg"/>
+                            <span>3 min read</span>
+                        </span>
+                        <h4>The Comprehensive Guide to Blocking Phone Signals</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="quiz-error-message">
+        <img src="assets/images/Featured%20icon.png"/>
+        <p>Please select an option to continue.</p>
+    </div>
+</main>
+<footer>
+    <div class="footer-content container">
+        <div class="footer-list-container">
+            <div>
+                <h6 class="footer-list-heading">Explore Products</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Find a Booster Quiz</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Installation Guide</a></li>
+                    <li><a href="#">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Customer Support</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Company Information</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Buyer's Guide</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Our brands</h6>
+                <ul class="footer-list">
+                    <li><a href="#">mysignalboosters</a></li>
+                    <li><a href="#">Mysignal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-section">
+            <p class="footer-list-heading">Subscribe</p>
+            <form method="post" action="/" class="subscribe-form needs-validation" novalidate>
+                <div>
+                    <input type="email" placeholder="Email address" class="input-bordered w-100" required/>
+                    <div class="invalid-feedback">This field is required Subscribe</div>
+                </div>
+                <button type="submit" class="subscribe-submit-btn">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0039 9H1.00001" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path d="M13.0026 15.0013L19.0039 9L13.0026 2.9987" stroke="white" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </form>
+            <span class="subscribe-section-description">
+                        Subscribe to our newsletter and stay connected with exclusive offers, product updates, and tips to boost your signal experience.
+            </span>
+            <div class="message-after">
+                <p class="success-msg">Thanks for subscribing!</p>
+                <p class="subscribe-message">Please check your email for confirmation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-container container">
+        <a href="/" class="sm-none">
+            <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                 class="mobile-booster-logo">
+        </a>
+        <p>© 2024 mobilebooster . All rights reserved. </p>
+        <div class="footer-social-container">
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/linkedin.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/facebook-icon.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/twitter-icon.svg"/>
+            </a>
+        </div>
+    </div>
+</footer>
+<div class="modal fade" id="country-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Change country</h3>
+                <span class="close-btn">
+                <img src="assets/images/landing/close-icon.svg" data-bs-dismiss="modal" aria-label="Close"/>
+            </span>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for a country" id="countrySearch">
+                    <label for="countrySearch" id="search-icon">
+                        <img src="assets/images/landing/search-icon.svg"/>
+                    </label>
+                </div>
+                <div class="country-list">
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="uk" name="country" value="UK">
+                        <label for="uk"><img src="https://flagcdn.com/gb.svg" class="country-popup-logo"
+                                             alt="uk Flag">United
+                            Kingdom</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="nz" name="country" value="NZ">
+                        <label for="nz"><img src="https://flagcdn.com/nz.svg" class="country-popup-logo"
+                                             alt="nz Flag">New
+                            Zealand</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="australia" name="country" value="Australia">
+                        <label for="australia"><img src="https://flagcdn.com/au.svg" class="country-popup-logo"
+                                                    alt="Australia Flag"> Australia</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="UAE" name="country" value="UAE">
+                        <label for="UAE"><img src="https://flagcdn.com/ae.svg" class="country-popup-logo"
+                                              alt="UAE Flag">
+                            UAE</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/article-progress-bar.js" type="module"></script>
+<script src="assets/js/share-article.js" type="module"></script>
+<script src="assets/js/article.js" type="module"></script>
+</body>
+</html>
