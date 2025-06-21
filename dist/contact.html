@@ -7,6 +7,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #1434CB 0%, #0A2A8F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background-image: url('/assets/images/hero-illustration.svg');
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: contain;
+            opacity: 0.1;
+        }
+        
+        .contact-stats .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-stats .stat-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .contact-card {
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            border-top: 4px solid #1434CB;
+        }
+        
+        .contact-icon {
+            background: rgba(20, 52, 203, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover .contact-icon {
+            background: rgba(20, 52, 203, 0.2);
+        }
+        
+        .form-container {
+            border-top: 5px solid #1434CB;
+        }
+        
+        .form-control:focus {
+            border-color: #1434CB;
+            box-shadow: 0 0 0 0.25rem rgba(20, 52, 203, 0.25);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(20, 52, 203, 0.1);
+            color: #1434CB;
+        }
+        
+        .accordion-button:focus {
+            border-color: #1434CB;
+            box-shadow: 0 0 0 0.25rem rgba(20, 52, 203, 0.25);
+        }
+        
+        .map-placeholder {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-placeholder::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(20, 52, 203, 0.1) 0%, rgba(20, 52, 203, 0.05) 100%);
+        }
+        
+        @media (max-width: 992px) {
+            .contact-hero::before {
+                width: 100%;
+                opacity: 0.05;
+            }
+        }
+    </style>
   <script type="module" crossorigin src="/assets/js/contact.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/js/bootstrap.js">
   <link rel="modulepreload" crossorigin href="/assets/js/bootstrap.min.js">
@@ -123,26 +223,26 @@
 
 <main>
     <!-- Hero Section -->
-    <section class="contact-hero bg-primary text-white py-5">
+    <section class="contact-hero text-white py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="mb-4">Get in Touch</h1>
-                    <p class="lead mb-4">Have questions about our mobile signal boosters? Our expert team is here to help you find the perfect solution for your needs.</p>
-                    <div class="contact-stats row">
-                        <div class="col-6 col-md-4 mb-3">
+                    <h1 class="display-4 fw-bold mb-4">Let's Connect</h1>
+                    <p class="lead mb-4">Have questions about our mobile signal boosters? Our expert team is here to help you find the perfect solution for your connectivity needs.</p>
+                    <div class="contact-stats row g-3">
+                        <div class="col-6 col-md-4">
                             <div class="stat-item text-center">
                                 <h3 class="mb-1">24/7</h3>
                                 <small>Support Available</small>
                             </div>
                         </div>
-                        <div class="col-6 col-md-4 mb-3">
+                        <div class="col-6 col-md-4">
                             <div class="stat-item text-center">
                                 <h3 class="mb-1">&lt; 2hrs</h3>
                                 <small>Response Time</small>
                             </div>
                         </div>
-                        <div class="col-6 col-md-4 mb-3">
+                        <div class="col-6 col-md-4">
                             <div class="stat-item text-center">
                                 <h3 class="mb-1">98%</h3>
                                 <small>Satisfaction Rate</small>
@@ -150,7 +250,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                     <div class="hero-image text-center">
                         <img src="/assets/images/support-icon.png" alt="Customer Support" class="img-fluid" style="max-width: 300px;">
                     </div>
@@ -162,7 +262,13 @@
     <!-- Contact Methods -->
     <section class="contact-methods py-5">
         <div class="container">
-            <div class="row">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Reach Out</h6>
+                <h2 class="mb-3">How Can We Help You?</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">Choose the most convenient way to get in touch with our team</p>
+            </div>
+            
+            <div class="row g-4">
                 <div class="col-lg-4 mb-4">
                     <div class="contact-card bg-white rounded-4 p-4 shadow-sm h-100 text-center">
                         <div class="contact-icon mb-3">
@@ -215,12 +321,13 @@
                 <div class="col-lg-8">
                     <div class="form-container bg-white rounded-4 p-5 shadow-sm">
                         <div class="text-center mb-5">
+                            <h6 class="text-primary fw-bold text-uppercase">Get In Touch</h6>
                             <h2 class="mb-3">Send Us a Message</h2>
                             <p class="text-muted">Fill out the form below and we'll get back to you as soon as possible.</p>
                         </div>
                         
                         <form id="contact-form" class="needs-validation" novalidate>
-                            <div class="row">
+                            <div class="row g-3">
                                 <div class="col-md-6 mb-3">
                                     <label for="first_name" class="form-label">First Name *</label>
                                     <input type="text" class="form-control" id="first_name" name="first_name" required>
@@ -233,7 +340,7 @@
                                 </div>
                             </div>
                             
-                            <div class="row">
+                            <div class="row g-3">
                                 <div class="col-md-6 mb-3">
                                     <label for="email" class="form-label">Email Address *</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
@@ -296,16 +403,17 @@
     <section class="faq-section py-5">
         <div class="container">
             <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Quick Answers</h6>
                 <h2 class="mb-3">Frequently Asked Questions</h2>
-                <p class="text-muted">Find quick answers to common questions about our mobile signal boosters.</p>
+                <p class="text-muted mx-auto" style="max-width: 700px;">Find quick answers to common questions about our mobile signal boosters.</p>
             </div>
             
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
+                        <div class="accordion-item rounded-3 mb-3 border">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <button class="accordion-button rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                     How do I know which signal booster is right for me?
                                 </button>
                             </h2>
@@ -316,9 +424,9 @@
                             </div>
                         </div>
                         
-                        <div class="accordion-item">
+                        <div class="accordion-item rounded-3 mb-3 border">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                                     How long does shipping take?
                                 </button>
                             </h2>
@@ -329,9 +437,9 @@
                             </div>
                         </div>
                         
-                        <div class="accordion-item">
+                        <div class="accordion-item rounded-3 mb-3 border">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                                     Do you offer installation support?
                                 </button>
                             </h2>
@@ -342,9 +450,9 @@
                             </div>
                         </div>
                         
-                        <div class="accordion-item">
+                        <div class="accordion-item rounded-3 mb-3 border">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
                                     What's your return policy?
                                 </button>
                             </h2>
@@ -363,44 +471,98 @@
     <!-- Office Information -->
     <section class="office-info py-5 bg-light">
         <div class="container">
-            <div class="row">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Visit Us</h6>
+                <h2 class="mb-3">Our Office</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">Drop by our headquarters to see our products in action</p>
+            </div>
+            
+            <div class="row g-4">
                 <div class="col-lg-6 mb-4">
-                    <div class="office-card bg-white rounded-4 p-4 shadow-sm">
-                        <h3 class="mb-4">Our Office</h3>
+                    <div class="office-card bg-white rounded-4 p-4 shadow-sm h-100">
+                        <h4 class="mb-4 border-bottom pb-3">Contact Information</h4>
                         <div class="office-details">
-                            <div class="detail-item mb-3">
-                                <strong>Address:</strong><br>
-                                123 Signal Street<br>
-                                London, SW1A 1AA<br>
-                                United Kingdom
+                            <div class="detail-item mb-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 0C6.13 0 3 3.13 3 7C3 12.25 10 20 10 20C10 20 17 12.25 17 7C17 3.13 13.87 0 10 0ZM10 9.5C8.62 9.5 7.5 8.38 7.5 7C7.5 5.62 8.62 4.5 10 4.5C11.38 4.5 12.5 5.62 12.5 7C12.5 8.38 11.38 9.5 10 9.5Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <strong>Address:</strong>
+                                </div>
+                                <p class="ms-5 mb-0">
+                                    123 Signal Street<br>
+                                    London, SW1A 1AA<br>
+                                    United Kingdom
+                                </p>
                             </div>
-                            <div class="detail-item mb-3">
-                                <strong>Business Hours:</strong><br>
-                                Monday - Friday: 9:00 AM - 6:00 PM<br>
-                                Saturday: 10:00 AM - 4:00 PM<br>
-                                Sunday: Closed
+                            <div class="detail-item mb-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 10.8333V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H9.16667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M14.1667 1.66666H19.1667V6.66666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.16667 11.6667L19.1667 1.66666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <strong>Business Hours:</strong>
+                                </div>
+                                <p class="ms-5 mb-0">
+                                    Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                    Saturday: 10:00 AM - 4:00 PM<br>
+                                    Sunday: Closed
+                                </p>
                             </div>
                             <div class="detail-item">
-                                <strong>Emergency Support:</strong><br>
-                                24/7 online chat and email support available
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.3333 14.1V16.6C18.3343 16.8321 18.2867 17.0618 18.1937 17.2745C18.1008 17.4871 17.9644 17.678 17.7934 17.8348C17.6224 17.9916 17.4205 18.1113 17.2006 18.1856C16.9808 18.26 16.7478 18.2876 16.5167 18.2667C13.9523 17.9881 11.4891 17.1118 9.32498 15.7083C7.31151 14.4289 5.60443 12.7218 4.32499 10.7083C2.91663 8.53426 2.04019 6.05908 1.76665 3.48333C1.74583 3.25288 1.77321 3.02063 1.84707 2.80138C1.92092 2.58213 2.03986 2.38071 2.19562 2.20995C2.35139 2.03919 2.54107 1.90281 2.75257 1.80955C2.96407 1.71629 3.19283 1.6681 3.42499 1.66666H5.92499C6.32941 1.66268 6.72148 1.80589 7.02812 2.06959C7.33476 2.33329 7.53505 2.69953 7.59165 3.09999C7.69717 3.90005 7.89286 4.68562 8.17499 5.44166C8.2871 5.73993 8.31137 6.06409 8.24491 6.37573C8.17844 6.68737 8.02404 6.97342 7.79999 7.19999L6.74165 8.25833C7.92795 10.3446 9.65534 12.072 11.7417 13.2583L12.8 12.2C13.0266 11.9759 13.3126 11.8215 13.6243 11.7551C13.9359 11.6886 14.26 11.7129 14.5583 11.825C15.3144 12.1071 16.0999 12.3028 16.9 12.4083C17.3048 12.4654 17.6745 12.6693 17.9388 12.9812C18.203 13.2931 18.3435 13.6912 18.3333 14.1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <strong>Contact:</strong>
+                                </div>
+                                <p class="ms-5 mb-0">
+                                    Phone: +44 123 456 7890<br>
+                                    Email: support@mobilebooster.com<br>
+                                    24/7 online chat support available
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-6 mb-4">
-                    <div class="map-container bg-white rounded-4 p-4 shadow-sm">
-                        <h3 class="mb-4">Find Us</h3>
-                        <div class="map-placeholder bg-light rounded d-flex align-items-center justify-content-center" style="height: 300px;">
-                            <div class="text-center text-muted">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24 4C16.27 4 10 10.27 10 18C10 28.5 24 44 24 44C24 44 38 28.5 38 18C38 10.27 31.73 4 24 4ZM24 23C21.24 23 19 20.76 19 18C19 15.24 21.24 13 24 13C26.76 13 29 15.24 29 18C29 20.76 26.76 23 24 23Z" fill="#ccc"/>
+                    <div class="map-container bg-white rounded-4 p-4 shadow-sm h-100">
+                        <h4 class="mb-4 border-bottom pb-3">Find Us</h4>
+                        <div class="map-placeholder bg-light rounded d-flex align-items-center justify-content-center" style="height: 350px;">
+                            <div class="text-center">
+                                <svg width="60" height="60" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 4C16.27 4 10 10.27 10 18C10 28.5 24 44 24 44C24 44 38 28.5 38 18C38 10.27 31.73 4 24 4ZM24 23C21.24 23 19 20.76 19 18C19 15.24 21.24 13 24 13C26.76 13 29 15.24 29 18C29 20.76 26.76 23 24 23Z" fill="#1434CB"/>
                                 </svg>
-                                <p class="mt-2">Interactive Map</p>
-                                <small>123 Signal Street, London</small>
+                                <h5 class="mt-3">Interactive Map</h5>
+                                <p class="text-muted">123 Signal Street, London, SW1A 1AA</p>
+                                <a href="https://maps.google.com" target="_blank" class="btn btn-outline-primary">Get Directions</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5" style="background: linear-gradient(135deg, #1434CB 0%, #0A2A8F 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-white">
+                    <h2 class="mb-3">Ready to Boost Your Signal?</h2>
+                    <p class="lead mb-0">Browse our range of signal boosters or contact our experts for personalized recommendations.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="shop.html" class="btn btn-light btn-lg me-2 mb-2 mb-md-0">Shop Now</a>
+                    <a href="#contact-form" class="btn btn-outline-light btn-lg">Contact Us</a>
                 </div>
             </div>
         </div>
