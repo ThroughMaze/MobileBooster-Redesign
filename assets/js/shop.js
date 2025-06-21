@@ -19,19 +19,20 @@ class Shop {
         this.loadProducts();
         this.bindEvents();
         this.initFormValidation();
+        this.initTooltips();
     }
 
     loadProducts() {
         // Get all product elements
         const productElements = document.querySelectorAll('.product-card');
         this.products = Array.from(productElements).map((element, index) => {
-            const parentCol = element.closest('[data-coverage]');
+            const parentCol = element.closest('[data-coverage]') || element;
             return {
                 id: index + 1,
                 element: element,
-                coverage: parentCol?.dataset.coverage || '',
-                signal: parentCol?.dataset.signal || '',
-                price: parseFloat(parentCol?.dataset.price || '0'),
+                coverage: parentCol.dataset.coverage || '',
+                signal: parentCol.dataset.signal || '',
+                price: parseFloat(parentCol.dataset.price || '0'),
                 title: element.querySelector('.product-title a')?.textContent || '',
                 description: element.querySelector('.product-description')?.textContent || ''
             };
@@ -76,6 +77,22 @@ class Shop {
         // Load more button
         document.getElementById('load-more-products')?.addEventListener('click', () => {
             this.loadMoreProducts();
+        });
+
+        // Quick view buttons
+        document.querySelectorAll('.quick-view-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.quickView(e);
+            });
+        });
+
+        // Category navigation
+        document.querySelectorAll('.category-nav ul li a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.filterByCategory(e);
+            });
         });
     }
 
@@ -150,18 +167,12 @@ class Shop {
         
         // Hide all products first
         this.products.forEach(product => {
-            const parentCol = product.element.closest('.col-lg-4');
-            if (parentCol) {
-                parentCol.style.display = 'none';
-            }
+            product.element.style.display = 'none';
         });
 
         // Show filtered products
         this.filteredProducts.forEach(product => {
-            const parentCol = product.element.closest('.col-lg-4');
-            if (parentCol) {
-                parentCol.style.display = 'block';
-            }
+            product.element.style.display = 'block';
         });
 
         // Show no results message if needed
@@ -177,7 +188,7 @@ class Shop {
         if (show && !noResultsMsg) {
             noResultsMsg = document.createElement('div');
             noResultsMsg.id = 'no-results-message';
-            noResultsMsg.className = 'col-12 text-center py-5';
+            noResultsMsg.className = 'text-center py-5';
             noResultsMsg.innerHTML = `
                 <div class="no-results">
                     <h3 class="text-muted mb-3">No products found</h3>
@@ -192,16 +203,15 @@ class Shop {
     }
 
     updateResultsCount() {
-        // Add results count if it doesn't exist
         let resultsCount = document.getElementById('results-count');
         if (!resultsCount) {
             resultsCount = document.createElement('div');
             resultsCount.id = 'results-count';
             resultsCount.className = 'text-muted mb-4';
-            document.querySelector('.products-section .container').insertBefore(
-                resultsCount, 
-                document.getElementById('products-container')
-            );
+            const productsHeading = document.querySelector('#products h2');
+            if (productsHeading) {
+                productsHeading.insertAdjacentElement('afterend', resultsCount);
+            }
         }
         
         resultsCount.textContent = `Showing ${this.filteredProducts.length} of ${this.products.length} products`;
@@ -215,15 +225,47 @@ class Shop {
             search: ''
         };
         this.sortBy = 'featured';
-
+        
         // Reset form controls
         document.getElementById('coverage-filter').value = '';
         document.getElementById('signal-filter').value = '';
         document.getElementById('price-filter').value = '';
         document.getElementById('product-search').value = '';
         document.getElementById('sort-filter').value = 'featured';
-
+        
         this.applyFilters();
+    }
+
+    filterByCategory(e) {
+        const category = e.target.textContent.toLowerCase().split(' ')[0];
+        
+        // Reset other filters
+        this.clearFilters();
+        
+        // Apply category filter
+        if (category === 'all') {
+            // Do nothing, all products are already shown
+        } else if (category === 'home') {
+            this.filters.coverage = 'small';
+        } else if (category === 'office') {
+            this.filters.coverage = 'medium';
+        } else if (category === 'industrial') {
+            this.filters.coverage = 'xlarge';
+        } else if (category === 'vehicle') {
+            // This would need a vehicle category in the data
+        } else if (category === 'antennas') {
+            // This would need an antennas category in the data
+        } else if (category === 'accessories') {
+            // This would need an accessories category in the data
+        }
+        
+        this.applyFilters();
+        
+        // Highlight active category
+        document.querySelectorAll('.category-nav ul li a').forEach(link => {
+            link.classList.remove('text-primary', 'fw-bold');
+        });
+        e.target.classList.add('text-primary', 'fw-bold');
     }
 
     addToCart(e) {
@@ -248,6 +290,20 @@ class Shop {
         
         // Update cart count (if you have a cart counter)
         this.updateCartCount();
+    }
+
+    quickView(e) {
+        const productCard = e.target.closest('.product-card');
+        const productTitle = productCard.querySelector('.product-title a').textContent;
+        
+        // In a real implementation, this would open a modal with product details
+        // For now, we'll just show a message and redirect to the product page
+        this.showMessage(`Quick view for ${productTitle}`, 'info');
+        
+        // Prevent immediate redirect to allow the message to be seen
+        setTimeout(() => {
+            window.location.href = 'product.html';
+        }, 1000);
     }
 
     updateCartCount() {
@@ -286,6 +342,14 @@ class Shop {
                 }
                 form.classList.add('was-validated');
             }, false);
+        });
+    }
+
+    initTooltips() {
+        // Initialize Bootstrap tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
         });
     }
 }

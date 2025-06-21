@@ -44,10 +44,7 @@ export default defineConfig({
                 checkout: resolve('', 'checkout.html'),
                 thanks: resolve('', 'thanks-for-purchase.html'),
                 contact: resolve('', 'contact.html'),
-                about: resolve('', 'about.html'),
-                archive: resolve('', 'archive.html'),
-                shop: resolve('', 'shop.html'),
-                productArchive: resolve('', 'product-archive.html')
+                shop: resolve('', 'shop.html')
             },
         }
     },
