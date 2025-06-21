@@ -3,11 +3,6 @@ import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 // Checkout functionality
 class Checkout {
     constructor() {
-        this.shippingCosts = {
-            'free_shipping': 0,
-            'standard_shipping': 9.99,
-            'express_shipping': 19.99
-        };
         this.init();
     }
 
@@ -24,11 +19,6 @@ class Checkout {
         if (shipToDifferent) {
             shipToDifferent.addEventListener('change', (e) => this.toggleShippingAddress(e));
         }
-
-        // Shipping method changes
-        document.querySelectorAll('input[name="shipping_method"]').forEach(radio => {
-            radio.addEventListener('change', () => this.updateShippingCost());
-        });
 
         // Payment method changes
         document.querySelectorAll('input[name="payment_method"]').forEach(radio => {
@@ -89,20 +79,6 @@ class Checkout {
         }
     }
 
-    updateShippingCost() {
-        const selectedShipping = document.querySelector('input[name="shipping_method"]:checked');
-        if (!selectedShipping) return;
-
-        const shippingCost = this.shippingCosts[selectedShipping.value];
-        const shippingElement = document.querySelector('.shipping-cost');
-        
-        if (shippingElement) {
-            shippingElement.textContent = shippingCost === 0 ? 'Free' : `£${shippingCost.toFixed(2)}`;
-        }
-
-        this.updateOrderTotal();
-    }
-
     updateOrderTotal() {
         const subtotalElement = document.querySelector('.subtotal');
         const vatElement = document.querySelector('.vat');
@@ -112,8 +88,7 @@ class Checkout {
         if (!subtotalElement || !vatElement || !shippingElement || !totalElement) return;
 
         const subtotal = parseFloat(subtotalElement.textContent.replace('£', ''));
-        const selectedShipping = document.querySelector('input[name="shipping_method"]:checked');
-        const shippingCost = selectedShipping ? this.shippingCosts[selectedShipping.value] : 0;
+        const shippingCost = 0; // Free shipping
         
         const vat = subtotal * 0.2;
         const total = subtotal + shippingCost + vat;
