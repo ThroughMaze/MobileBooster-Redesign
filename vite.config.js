@@ -41,7 +41,12 @@ export default defineConfig({
                 article: resolve('', 'article.html'),
                 product: resolve('', 'product.html'),
                 cart: resolve('', 'cart.html'),
-                checkout: resolve('', 'checkout.html')
+                checkout: resolve('', 'checkout.html'),
+                thanks: resolve('', 'thanks-for-purchase.html'),
+                contact: resolve('', 'contact.html'),
+                about: resolve('', 'about.html'),
+                archive: resolve('', 'archive.html'),
+                shop: resolve('', 'shop.html')
             },
         }
     },
