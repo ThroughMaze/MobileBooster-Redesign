@@ -46,7 +46,8 @@ export default defineConfig({
                 contact: resolve('', 'contact.html'),
                 about: resolve('', 'about.html'),
                 archive: resolve('', 'archive.html'),
-                shop: resolve('', 'shop.html')
+                shop: resolve('', 'shop.html'),
+                productArchive: resolve('', 'product-archive.html')
             },
         }
     },

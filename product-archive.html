@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Products Archive - Mobile Booster</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/blog.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header-white">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container header-content">
+            <a href="/" class="logo-container">
+                <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                     class="mobile-booster-logo"/>
+            </a>
+            <div id="header-icons" class="d-flex d-lg-none">
+                <a id="cart" href="cart.html">
+                    <img src="assets/images/landing/cart-black.svg"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="menu">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
+                    style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Shop
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul role="menu" class="navbar-dropdown dropdown-menu" data-bs-popper="static">
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by coverage</p>
+                                <a href="#" class="navbar-dropdown-links">Small Space (0: 300 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Midsize Space (300 : 500 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Large Space (500: 1000 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">huge space (1000 : 5000 SQM)</a>
+                            </li>
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by signal type</p>
+                                <a href="#" class="navbar-dropdown-links">3G</a>
+                                <a href="#" class="navbar-dropdown-links">4G</a>
+                                <a href="#" class="navbar-dropdown-links">5G</a>
+                                <a href="#" class="navbar-dropdown-links">3G & 4G & 5G</a>
+                            </li>
+                            <li class="navbar-dropdown-list navbar-dropdown-suggestion">
+                                <img src="assets/images/landing/Black1%201.png"/>
+                                <a href="#" class="btn-primary w-100">show more</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Carriers
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <div class="navbar-dropdown">
+                            <div class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">Vodafone</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">O2</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">giffgaff</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Tesco Mobile</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">EE</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">BT</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">ID UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Three UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Virgin UK</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Frequency
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul class="navbar-dropdown dropdown-menu" id="frequency-dropdown">
+                            <li class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">700 MHz (5G)</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/1800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">900/210 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/2600 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/900/2100 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/900/1800 /2100/2600 MHz</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">Floor Plan Analysis</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex gap-3">
+                    <div id="openPopup" class="country-logo" data-bs-toggle="modal" data-bs-target="#country-modal">
+                        <img class="logo" src="https://flagcdn.com/gb.svg">
+                        <img src="assets/images/landing/black-down-arrow.svg"/>
+                    </div>
+                    <a id="cart-desktop-header" href="cart.html">
+                        <img src="assets/images/landing/cart-black.svg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="archive-hero bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="mb-4">Product Catalog</h1>
+                    <p class="lead mb-4">Browse our complete range of mobile signal boosters and accessories for homes, offices, and commercial spaces.</p>
+                    
+                    <!-- Search and Filter -->
+                    <div class="search-filter-container bg-white rounded-4 p-4 mt-4">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="search-box position-relative">
+                                    <input type="text" class="form-control" placeholder="Search products..." id="search-input">
+                                    <button class="btn btn-link position-absolute end-0 top-50 translate-middle-y" type="button">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.7874 18.7553L16.7057 15.6736C17.8639 14.2508 18.4314 12.4375 18.291 10.6082C18.1505 8.77898 17.3129 7.07354 15.9511 5.84418C14.5893 4.61483 12.8073 3.95552 10.9732 4.00234C9.13921 4.04916 7.39322 4.79866 6.09594 6.09594C4.79866 7.39322 4.04916 9.13921 4.00234 10.9732C3.95552 12.8073 4.61483 14.5893 5.84418 15.9511C7.07354 17.3129 8.77898 18.1505 10.6082 18.291C12.4375 18.4314 14.2508 17.8639 15.6736 16.7057L18.7553 19.7874C18.8931 19.9225 19.0784 19.9982 19.2714 19.9982C19.4643 19.9982 19.6496 19.9225 19.7874 19.7874C19.9236 19.6502 20 19.4647 20 19.2714C20 19.078 19.9236 18.8926 19.7874 18.7553ZM5.46178 11.1601C5.46178 10.033 5.79598 8.93134 6.42211 7.99426C7.04824 7.05718 7.93819 6.32682 8.97942 5.89553C10.0206 5.46424 11.1664 5.3514 12.2717 5.57127C13.3771 5.79114 14.3924 6.33385 15.1893 7.13077C15.9863 7.92768 16.529 8.94302 16.7488 10.0484C16.9687 11.1537 16.8559 12.2995 16.4246 13.3407C15.9933 14.3819 15.2629 15.2719 14.3258 15.898C13.3888 16.5241 12.2871 16.8583 11.1601 16.8583C9.64953 16.8559 8.20157 16.2548 7.13346 15.1866C6.06535 14.1185 5.46422 12.6706 5.46178 11.1601Z" fill="#1434CB"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="filter-dropdown">
+                                    <select class="form-select" id="category-filter">
+                                        <option value="">All Categories</option>
+                                        <option value="boosters">Signal Boosters</option>
+                                        <option value="antennas">Antennas</option>
+                                        <option value="cables">Cables</option>
+                                        <option value="accessories">Accessories</option>
+                                        <option value="kits">Complete Kits</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="archive-stats text-center">
+                        <div class="stat-item mb-3">
+                            <h3 class="mb-1">50+</h3>
+                            <small>Products Available</small>
+                        </div>
+                        <div class="stat-item mb-3">
+                            <h3 class="mb-1">24h</h3>
+                            <small>Fast Shipping</small>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="mb-1">100%</h3>
+                            <small>Satisfaction Guarantee</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Filter -->
+    <section class="categories-filter py-4 bg-light">
+        <div class="container">
+            <div class="category-tabs d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-outline-primary active" data-category="all">All Products</button>
+                <button class="btn btn-outline-primary" data-category="boosters">Signal Boosters</button>
+                <button class="btn btn-outline-primary" data-category="antennas">Antennas</button>
+                <button class="btn btn-outline-primary" data-category="cables">Cables</button>
+                <button class="btn btn-outline-primary" data-category="kits">Complete Kits</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid py-5">
+        <div class="container">
+            <div class="row" id="products-container">
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="boosters">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/Black1%201.png" alt="Mobile Signal Booster Pro" class="img-fluid rounded-top-4">
+                            <div class="product-badge bg-success text-white">Best Seller</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="text-muted small ms-1">(127 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Mobile Signal Booster Pro</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">Perfect for small homes and offices. Supports 3G, 4G, and 5G networks with coverage up to 300 SQM.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">300 SQM</span>
+                                <span class="badge bg-light text-dark me-1">3G/4G/5G</span>
+                                <span class="badge bg-light text-dark">Easy Install</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£299.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="boosters">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/Black1%201.png" alt="Commercial Signal Booster" class="img-fluid rounded-top-4">
+                            <div class="product-badge bg-primary text-white">Professional</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="text-muted small ms-1">(89 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Commercial Signal Booster</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">Ideal for medium-sized offices and commercial spaces. Enhanced power and coverage up to 500 SQM.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">500 SQM</span>
+                                <span class="badge bg-light text-dark me-1">3G/4G/5G</span>
+                                <span class="badge bg-light text-dark">High Power</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£449.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="boosters">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/Black1%201.png" alt="Enterprise Signal Booster" class="img-fluid rounded-top-4">
+                            <div class="product-badge bg-warning text-dark">Enterprise</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="text-muted small ms-1">(156 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Enterprise Signal Booster</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">Maximum coverage for large buildings and warehouses. Professional-grade performance up to 1000 SQM.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">1000 SQM</span>
+                                <span class="badge bg-light text-dark me-1">3G/4G/5G</span>
+                                <span class="badge bg-light text-dark">Max Power</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£699.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="antennas">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/yaggi-antenna.png" alt="Yagi Directional Antenna" class="img-fluid rounded-top-4">
+                            <div class="product-badge bg-info text-white">High Gain</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span class="text-muted small ms-1">(73 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Yagi Directional Antenna</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">High-gain directional antenna for targeting distant cell towers. Ideal for rural areas with weak signal.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">16dBi Gain</span>
+                                <span class="badge bg-light text-dark me-1">Directional</span>
+                                <span class="badge bg-light text-dark">Outdoor</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£89.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="cables">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/cable-icon.svg" alt="Low-Loss Cable" class="img-fluid rounded-top-4 p-4">
+                            <div class="product-badge bg-secondary text-white">Essential</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span class="text-muted small ms-1">(94 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Low-Loss Extension Cable</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">Premium low-loss coaxial cable for connecting antennas to signal boosters with minimal signal degradation.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">10m Length</span>
+                                <span class="badge bg-light text-dark me-1">Low Loss</span>
+                                <span class="badge bg-light text-dark">N-Type Connectors</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£39.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="kits">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/Black1%201.png" alt="Complete Home Kit" class="img-fluid rounded-top-4">
+                            <div class="product-badge bg-dark text-white">Complete Kit</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="text-muted small ms-1">(45 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Complete Home Booster Kit</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">Everything you need for a complete home installation. Includes booster, antennas, cables, and mounting hardware.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">300 SQM</span>
+                                <span class="badge bg-light text-dark me-1">3G/4G/5G</span>
+                                <span class="badge bg-light text-dark">All-in-One</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£399.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="accessories">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/power-surge.png" alt="Surge Protector" class="img-fluid rounded-top-4 p-4">
+                            <div class="product-badge bg-info text-white">Protection</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="text-muted small ms-1">(32 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Signal Booster Surge Protector</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">Protect your signal booster investment from lightning strikes and power surges with this essential accessory.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">Lightning Protection</span>
+                                <span class="badge bg-light text-dark me-1">Weatherproof</span>
+                                <span class="badge bg-light text-dark">Easy Install</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£49.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="antennas">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/Black1%201.png" alt="Omnidirectional Antenna" class="img-fluid rounded-top-4">
+                            <div class="product-badge bg-primary text-white">Versatile</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span class="text-muted small ms-1">(58 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Omnidirectional Indoor Antenna</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">360-degree signal reception for indoor use. Ideal for distributing boosted signal throughout your home or office.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">8dBi Gain</span>
+                                <span class="badge bg-light text-dark me-1">Omnidirectional</span>
+                                <span class="badge bg-light text-dark">Indoor</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£69.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="kits">
+                    <article class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <img src="assets/images/landing/Black1%201.png" alt="Vehicle Signal Booster Kit" class="img-fluid rounded-top-4">
+                            <div class="product-badge bg-warning text-dark">Mobile</div>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="text-muted small ms-1">(41 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title mb-3">
+                                <a href="product.html">Vehicle Signal Booster Kit</a>
+                            </h3>
+                            <p class="product-excerpt text-muted mb-3">Stay connected on the road with this complete vehicle signal booster kit. Perfect for cars, vans, RVs, and trucks.</p>
+                            <div class="product-specs mb-3">
+                                <span class="badge bg-light text-dark me-1">Vehicle Use</span>
+                                <span class="badge bg-light text-dark me-1">3G/4G</span>
+                                <span class="badge bg-light text-dark">12V Power</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary fs-5">£249.99</span>
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg" id="load-more-btn">Load More Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-3">Browse by Category</h2>
+                <p class="text-muted">Find the perfect solution for your specific needs</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="#" class="category-card bg-white rounded-4 p-4 shadow-sm text-center h-100 d-block text-decoration-none">
+                        <div class="category-icon mb-3">
+                            <img src="assets/images/landing/Black1%201.png" alt="Signal Boosters" class="img-fluid" style="height: 80px;">
+                        </div>
+                        <h4 class="mb-2 text-dark">Signal Boosters</h4>
+                        <p class="text-muted small mb-3">Amplify your mobile signal for better calls and faster data</p>
+                        <span class="text-primary">View All Boosters →</span>
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="#" class="category-card bg-white rounded-4 p-4 shadow-sm text-center h-100 d-block text-decoration-none">
+                        <div class="category-icon mb-3">
+                            <img src="assets/images/landing/yaggi-antenna.png" alt="Antennas" class="img-fluid" style="height: 80px;">
+                        </div>
+                        <h4 class="mb-2 text-dark">Antennas</h4>
+                        <p class="text-muted small mb-3">Indoor and outdoor antennas for optimal signal reception</p>
+                        <span class="text-primary">View All Antennas →</span>
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="#" class="category-card bg-white rounded-4 p-4 shadow-sm text-center h-100 d-block text-decoration-none">
+                        <div class="category-icon mb-3">
+                            <img src="assets/images/landing/cable-icon.svg" alt="Cables & Accessories" class="img-fluid" style="height: 80px;">
+                        </div>
+                        <h4 class="mb-2 text-dark">Cables & Accessories</h4>
+                        <p class="text-muted small mb-3">Essential components to complete your signal booster setup</p>
+                        <span class="text-primary">View All Accessories →</span>
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="#" class="category-card bg-white rounded-4 p-4 shadow-sm text-center h-100 d-block text-decoration-none">
+                        <div class="category-icon mb-3">
+                            <img src="assets/images/landing/Black1%201.png" alt="Complete Kits" class="img-fluid" style="height: 80px;">
+                        </div>
+                        <h4 class="mb-2 text-dark">Complete Kits</h4>
+                        <p class="text-muted small mb-3">All-in-one solutions with everything you need for installation</p>
+                        <span class="text-primary">View All Kits →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-signup py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Get Product Updates & Special Offers</h2>
+                    <p class="text-muted mb-4">Subscribe to our newsletter to receive the latest product news, exclusive discounts, and expert tips.</p>
+                    
+                    <form class="newsletter-form needs-validation" novalidate>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+                            <button class="btn btn-primary btn-lg" type="submit">Subscribe</button>
+                        </div>
+                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                    </form>
+                    
+                    <small class="text-muted">By subscribing, you agree to our Privacy Policy and consent to receive marketing emails.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content container">
+        <div class="footer-list-container">
+            <div>
+                <h6 class="footer-list-heading">Explore Products</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Find a Booster Quiz</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Installation Guide</a></li>
+                    <li><a href="#">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Customer Support</h6>
+                <ul class="footer-list">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Company Information</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Buyer's Guide</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Our brands</h6>
+                <ul class="footer-list">
+                    <li><a href="#">mysignalboosters</a></li>
+                    <li><a href="#">Mysignal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-section">
+            <p class="footer-list-heading">Subscribe</p>
+            <form method="post" action="/" class="subscribe-form needs-validation" novalidate>
+                <div>
+                    <input type="email" placeholder="Email address" class="input-bordered w-100" required/>
+                    <div class="invalid-feedback">This field is required Subscribe</div>
+                </div>
+                <button type="submit" class="subscribe-submit-btn">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0039 9H1.00001" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path d="M13.0026 15.0013L19.0039 9L13.0026 2.9987" stroke="white" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </form>
+            <span class="subscribe-section-description">
+                Subscribe to our newsletter and stay connected with exclusive offers, product updates, and tips to boost your signal experience.
+            </span>
+            <div class="message-after">
+                <p class="success-msg">Thanks for subscribing!</p>
+                <p class="subscribe-message">Please check your email for confirmation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-container container">
+        <a href="/" class="sm-none">
+            <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                 class="mobile-booster-logo">
+        </a>
+        <p>© 2024 mobilebooster . All rights reserved. </p>
+        <div class="footer-social-container">
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/linkedin.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/facebook-icon.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/twitter-icon.svg"/>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="country-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Change country</h3>
+                <span class="close-btn">
+                <img src="assets/images/landing/close-icon.svg" data-bs-dismiss="modal" aria-label="Close"/>
+            </span>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for a country" id="countrySearch">
+                    <label for="countrySearch" id="search-icon">
+                        <img src="assets/images/landing/search-icon.svg"/>
+                    </label>
+                </div>
+                <div class="country-list">
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="uk" name="country" value="UK">
+                        <label for="uk"><img src="https://flagcdn.com/gb.svg" class="country-popup-logo"
+                                             alt="uk Flag">United
+                            Kingdom</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="nz" name="country" value="NZ">
+                        <label for="nz"><img src="https://flagcdn.com/nz.svg" class="country-popup-logo"
+                                             alt="nz Flag">New
+                            Zealand</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="australia" name="country" value="Australia">
+                        <label for="australia"><img src="https://flagcdn.com/au.svg" class="country-popup-logo"
+                                                    alt="Australia Flag"> Australia</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="UAE" name="country" value="UAE">
+                        <label for="UAE"><img src="https://flagcdn.com/ae.svg" class="country-popup-logo"
+                                              alt="UAE Flag">
+                            UAE</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/shop.js" type="module"></script>
+</body>
+</html>

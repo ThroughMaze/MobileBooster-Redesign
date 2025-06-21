@@ -3,14 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Thank You for Your Purchase - Mobile Booster</title>
+    <title>Order Confirmation - Mobile Booster</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/css/blog.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .order-confirmation-page {
+            background-color: #f8f9fa;
+        }
+        
+        .order-confirmation-header {
+            background-color: #1434CB;
+            padding: 3rem 0;
+            text-align: center;
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+        }
+        
+        .order-confirmation-header h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .order-confirmation-header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .order-confirmation-icon {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .order-confirmation-icon svg {
+            width: 40px;
+            height: 40px;
+            color: #1434CB;
+        }
+        
+        .order-details-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .order-details-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1434CB;
+        }
+        
+        .order-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .order-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .order-info-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .order-info-box p {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+        
+        .order-info-box p strong {
+            color: #333;
+        }
+        
+        .order-items {
+            margin-top: 2rem;
+        }
+        
+        .order-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .order-item:last-child {
+            border-bottom: none;
+        }
+        
+        .order-item-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        
+        .order-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .order-item-details {
+            flex: 1;
+        }
+        
+        .order-item-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .order-item-meta {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .order-item-price {
+            font-weight: 600;
+            color: #1434CB;
+        }
+        
+        .order-summary {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .order-summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .order-summary-row.total {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .next-steps-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .next-steps-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1434CB;
+        }
+        
+        .step-item {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #1434CB;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-content p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .support-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .support-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1434CB;
+        }
+        
+        .support-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .support-option {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+        
+        .support-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        .support-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 1rem;
+        }
+        
+        .support-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .support-option h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .support-option p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .action-buttons {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+    </style>
 </head>
-<body>
+<body class="order-confirmation-page">
 <header class="header-white">
     <nav class="navbar navbar-expand-lg">
         <div class="container header-content">
@@ -118,193 +385,165 @@
     </nav>
 </header>
 
-<main class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <!-- Success Message -->
-            <div class="text-center mb-5">
-                <div class="success-icon mb-4">
-                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="40" fill="#00F04C" fill-opacity="0.1"/>
-                        <circle cx="40" cy="40" r="30" fill="#00F04C"/>
-                        <path d="M30 40L36 46L50 32" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <h1 class="mb-3" style="color: var(--primary-color);">Thank You for Your Purchase!</h1>
-                <p class="lead text-muted mb-4">Your order has been successfully placed and is being processed.</p>
+<main>
+    <!-- Order Confirmation Header -->
+    <section class="order-confirmation-header">
+        <div class="container">
+            <div class="order-confirmation-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
             </div>
+            <h1>Thank You for Your Order!</h1>
+            <p>Your order has been successfully placed and is being processed. We've sent a confirmation email to your registered email address.</p>
+        </div>
+    </section>
 
-            <!-- Order Details -->
-            <div class="order-confirmation bg-white rounded-4 p-4 mb-4 shadow-sm">
-                <h3 class="mb-4">Order Confirmation</h3>
-                
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <div class="order-info">
-                            <h5 class="mb-3">Order Details</h5>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Order Details -->
+                <div class="order-details-card">
+                    <h2>Order Details</h2>
+                    
+                    <div class="order-info-grid">
+                        <div class="order-info-box">
+                            <h3>Order Information</h3>
                             <p><strong>Order Number:</strong> #MB-2024-001234</p>
                             <p><strong>Order Date:</strong> December 21, 2024</p>
                             <p><strong>Payment Method:</strong> Credit Card ending in ****1234</p>
-                            <p><strong>Total Amount:</strong> £575.96</p>
+                            <p><strong>Order Status:</strong> <span class="badge bg-success">Processing</span></p>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="shipping-info">
-                            <h5 class="mb-3">Shipping Information</h5>
-                            <p><strong>Estimated Delivery:</strong> 3-5 business days</p>
-                            <p><strong>Shipping Method:</strong> Free Standard Shipping</p>
-                            <p><strong>Tracking Number:</strong> Will be provided via email</p>
+                        
+                        <div class="order-info-box">
+                            <h3>Shipping Information</h3>
+                            <p><strong>Shipping Method:</strong> Standard Delivery (Free)</p>
+                            <p><strong>Estimated Delivery:</strong> December 24-26, 2024</p>
+                            <p><strong>Tracking Number:</strong> <span class="text-muted">Will be provided via email</span></p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Order Items -->
-                <h5 class="mb-3">Items Ordered</h5>
-                <div class="order-items">
-                    <div class="order-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
-                        <div class="d-flex align-items-center">
-                            <img src="assets/images/landing/Black1%201.png" alt="Product" class="me-3" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;">
-                            <div>
-                                <h6 class="mb-1">Mobile Signal Booster Pro</h6>
-                                <small class="text-muted">Quantity: 1</small>
-                            </div>
-                        </div>
-                        <span class="fw-bold">£299.99</span>
                     </div>
                     
-                    <div class="order-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
-                        <div class="d-flex align-items-center">
-                            <img src="assets/images/landing/Black1%201.png" alt="Product" class="me-3" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;">
-                            <div>
-                                <h6 class="mb-1">External Antenna Kit</h6>
-                                <small class="text-muted">Quantity: 2</small>
+                    <h3>Items Ordered</h3>
+                    <div class="order-items">
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <img src="assets/images/landing/Black1%201.png" alt="Mobile Signal Booster Pro">
                             </div>
+                            <div class="order-item-details">
+                                <h4 class="order-item-title">Mobile Signal Booster Pro</h4>
+                                <div class="order-item-meta">Quantity: 1</div>
+                            </div>
+                            <div class="order-item-price">£299.99</div>
                         </div>
-                        <span class="fw-bold">£179.98</span>
+                        
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <img src="assets/images/landing/Black1%201.png" alt="External Antenna Kit">
+                            </div>
+                            <div class="order-item-details">
+                                <h4 class="order-item-title">External Antenna Kit</h4>
+                                <div class="order-item-meta">Quantity: 2</div>
+                            </div>
+                            <div class="order-item-price">£179.98</div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <div class="order-summary-row">
+                            <span>Subtotal:</span>
+                            <span>£479.97</span>
+                        </div>
+                        <div class="order-summary-row">
+                            <span>Shipping:</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="order-summary-row">
+                            <span>VAT (20%):</span>
+                            <span>£95.99</span>
+                        </div>
+                        <div class="order-summary-row total">
+                            <span>Total:</span>
+                            <span>£575.96</span>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Order Total -->
-                <div class="order-total mt-4 pt-3 border-top">
-                    <div class="d-flex justify-content-between mb-2">
-                        <span>Subtotal:</span>
-                        <span>£479.97</span>
-                    </div>
-                    <div class="d-flex justify-content-between mb-2">
-                        <span>Shipping:</span>
-                        <span>Free</span>
-                    </div>
-                    <div class="d-flex justify-content-between mb-2">
-                        <span>VAT (20%):</span>
-                        <span>£95.99</span>
-                    </div>
-                    <hr>
-                    <div class="d-flex justify-content-between">
-                        <strong>Total:</strong>
-                        <strong>£575.96</strong>
-                    </div>
-                </div>
-            </div>
-
-            <!-- What's Next -->
-            <div class="whats-next bg-white rounded-4 p-4 mb-4 shadow-sm">
-                <h3 class="mb-4">What Happens Next?</h3>
                 
-                <div class="timeline">
-                    <div class="timeline-item d-flex mb-4">
-                        <div class="timeline-icon me-3">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                <span class="fw-bold">1</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h5>Order Confirmation</h5>
-                            <p class="text-muted mb-0">You'll receive an email confirmation with your order details within the next few minutes.</p>
+                <!-- Next Steps -->
+                <div class="next-steps-card">
+                    <h2>What Happens Next?</h2>
+                    
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Order Processing</h3>
+                            <p>We're preparing your order for shipment. This typically takes 1-2 business days.</p>
                         </div>
                     </div>
                     
-                    <div class="timeline-item d-flex mb-4">
-                        <div class="timeline-icon me-3">
-                            <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                <span class="fw-bold">2</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h5>Processing</h5>
-                            <p class="text-muted mb-0">Your order will be processed and prepared for shipment within 1-2 business days.</p>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Shipping Confirmation</h3>
+                            <p>Once your order ships, you'll receive an email with tracking information so you can monitor your delivery.</p>
                         </div>
                     </div>
                     
-                    <div class="timeline-item d-flex mb-4">
-                        <div class="timeline-icon me-3">
-                            <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                <span class="fw-bold">3</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h5>Shipping</h5>
-                            <p class="text-muted mb-0">Once shipped, you'll receive a tracking number to monitor your package's progress.</p>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Delivery</h3>
+                            <p>Your order will be delivered to your specified address within the estimated delivery timeframe.</p>
                         </div>
                     </div>
                     
-                    <div class="timeline-item d-flex">
-                        <div class="timeline-icon me-3">
-                            <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                <span class="fw-bold">4</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h5>Delivery</h5>
-                            <p class="text-muted mb-0">Your Mobile Booster will be delivered to your specified address within 3-5 business days.</p>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Installation & Setup</h3>
+                            <p>Once received, follow the included installation guide to set up your signal booster. Our support team is available if you need assistance.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Support Information -->
-            <div class="support-info bg-white rounded-4 p-4 mb-4 shadow-sm">
-                <h3 class="mb-4">Need Help?</h3>
                 
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <div class="support-item text-center p-3">
-                            <div class="support-icon mb-3">
-                                <img src="assets/images/landing/support-icon.png" alt="Support" style="width: 48px; height: 48px;">
+                <!-- Support Information -->
+                <div class="support-card">
+                    <h2>Need Help?</h2>
+                    
+                    <div class="support-options">
+                        <div class="support-option">
+                            <div class="support-icon">
+                                <img src="assets/images/landing/support-icon.png" alt="Customer Support">
                             </div>
-                            <h5>Customer Support</h5>
-                            <p class="text-muted small">Get help with your order or product questions</p>
+                            <h3>Customer Support</h3>
+                            <p>Questions about your order? Our team is here to help.</p>
                             <a href="contact.html" class="btn btn-outline-primary btn-sm">Contact Us</a>
                         </div>
-                    </div>
-                    
-                    <div class="col-md-4 mb-3">
-                        <div class="support-item text-center p-3">
-                            <div class="support-icon mb-3">
-                                <img src="assets/images/landing/premium-icon.png" alt="Installation" style="width: 48px; height: 48px;">
+                        
+                        <div class="support-option">
+                            <div class="support-icon">
+                                <img src="assets/images/landing/premium-icon.png" alt="Installation Guide">
                             </div>
-                            <h5>Installation Guide</h5>
-                            <p class="text-muted small">Step-by-step setup instructions</p>
+                            <h3>Installation Guide</h3>
+                            <p>Step-by-step instructions for setting up your booster.</p>
                             <a href="#" class="btn btn-outline-primary btn-sm">View Guide</a>
                         </div>
-                    </div>
-                    
-                    <div class="col-md-4 mb-3">
-                        <div class="support-item text-center p-3">
-                            <div class="support-icon mb-3">
-                                <img src="assets/images/landing/warranty-icon.png" alt="Warranty" style="width: 48px; height: 48px;">
+                        
+                        <div class="support-option">
+                            <div class="support-icon">
+                                <img src="assets/images/landing/warranty-icon.png" alt="Returns & Warranty">
                             </div>
-                            <h5>Warranty</h5>
-                            <p class="text-muted small">2-year warranty on all products</p>
+                            <h3>Returns & Warranty</h3>
+                            <p>Information about our return policy and warranty.</p>
                             <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="text-center">
-                <a href="/" class="btn btn-primary btn-lg me-3">Continue Shopping</a>
-                <a href="#" class="btn btn-outline-secondary btn-lg">Track Your Order</a>
+                
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <a href="/" class="btn btn-primary btn-lg me-3 mb-2">Continue Shopping</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg mb-2">Track Your Order</a>
+                </div>
             </div>
         </div>
     </div>
