@@ -297,120 +297,8 @@
                     </div>
                 </div>
 
-                <!-- Shipping Method -->
-                <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
-                    <h4 class="mb-4">Shipping Method</h4>
-                    
-                    <div class="shipping-options">
-                        <div class="form-check mb-3 p-3 border rounded">
-                            <input class="form-check-input" type="radio" name="shipping_method" id="free_shipping" value="free_shipping" checked>
-                            <label class="form-check-label w-100" for="free_shipping">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>Free Shipping</strong>
-                                        <div class="text-muted small">5-7 business days</div>
-                                    </div>
-                                    <span class="fw-bold">Free</span>
-                                </div>
-                            </label>
-                        </div>
-                        
-                        <div class="form-check mb-3 p-3 border rounded">
-                            <input class="form-check-input" type="radio" name="shipping_method" id="standard_shipping" value="standard_shipping">
-                            <label class="form-check-label w-100" for="standard_shipping">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>Standard Shipping</strong>
-                                        <div class="text-muted small">3-5 business days</div>
-                                    </div>
-                                    <span class="fw-bold">£9.99</span>
-                                </div>
-                            </label>
-                        </div>
-                        
-                        <div class="form-check mb-3 p-3 border rounded">
-                            <input class="form-check-input" type="radio" name="shipping_method" id="express_shipping" value="express_shipping">
-                            <label class="form-check-label w-100" for="express_shipping">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>Express Shipping</strong>
-                                        <div class="text-muted small">1-2 business days</div>
-                                    </div>
-                                    <span class="fw-bold">£19.99</span>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Order Notes -->
-                <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
-                    <h4 class="mb-4">Order Notes</h4>
-                    <div class="mb-3">
-                        <label for="order_comments" class="form-label">Order Notes (Optional)</label>
-                        <textarea class="form-control" id="order_comments" name="order_comments" rows="4" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <!-- Order Summary -->
-                <div class="order-summary bg-white rounded-4 p-4 shadow-sm sticky-top mb-4" style="top: 2rem;">
-                    <h4 class="mb-4">Your Order</h4>
-                    
-                    <!-- Order Items -->
-                    <div class="order-items mb-4">
-                        <div class="order-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
-                            <div class="d-flex align-items-center">
-                                <img src="/assets/images/Black1%201.png" alt="Product" class="me-3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
-                                <div>
-                                    <h6 class="mb-1">Mobile Signal Booster Pro</h6>
-                                    <small class="text-muted">Qty: 1</small>
-                                </div>
-                            </div>
-                            <span class="fw-bold">£299.99</span>
-                        </div>
-                        
-                        <div class="order-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
-                            <div class="d-flex align-items-center">
-                                <img src="/assets/images/Black1%201.png" alt="Product" class="me-3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
-                                <div>
-                                    <h6 class="mb-1">External Antenna Kit</h6>
-                                    <small class="text-muted">Qty: 2</small>
-                                </div>
-                            </div>
-                            <span class="fw-bold">£179.98</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Order Totals -->
-                    <div class="order-totals">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Subtotal:</span>
-                            <span class="subtotal">£479.97</span>
-                        </div>
-                        
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Shipping:</span>
-                            <span class="shipping-cost">Free</span>
-                        </div>
-                        
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>VAT (20%):</span>
-                            <span class="vat">£95.99</span>
-                        </div>
-                        
-                        <hr>
-                        
-                        <div class="d-flex justify-content-between mb-4">
-                            <strong>Total:</strong>
-                            <strong class="total">£575.96</strong>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Payment Method -->
-                <div class="payment-section bg-white rounded-4 p-4 shadow-sm">
+                <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
                     <h4 class="mb-4">Payment Method</h4>
                     
                     <div class="payment-options">
@@ -502,6 +390,72 @@
                             <i class="fas fa-lock me-1"></i>
                             Your payment information is secure and encrypted
                         </small>
+                    </div>
+                </div>
+
+                <!-- Order Notes -->
+                <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
+                    <h4 class="mb-4">Order Notes</h4>
+                    <div class="mb-3">
+                        <label for="order_comments" class="form-label">Order Notes (Optional)</label>
+                        <textarea class="form-control" id="order_comments" name="order_comments" rows="4" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Order Summary -->
+                <div class="order-summary bg-white rounded-4 p-4 shadow-sm sticky-top mb-4" style="top: 2rem;">
+                    <h4 class="mb-4">Your Order</h4>
+                    
+                    <!-- Order Items -->
+                    <div class="order-items mb-4">
+                        <div class="order-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <img src="/assets/images/Black1%201.png" alt="Product" class="me-3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
+                                <div>
+                                    <h6 class="mb-1">Mobile Signal Booster Pro</h6>
+                                    <small class="text-muted">Qty: 1</small>
+                                </div>
+                            </div>
+                            <span class="fw-bold">£299.99</span>
+                        </div>
+                        
+                        <div class="order-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <img src="/assets/images/Black1%201.png" alt="Product" class="me-3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
+                                <div>
+                                    <h6 class="mb-1">External Antenna Kit</h6>
+                                    <small class="text-muted">Qty: 2</small>
+                                </div>
+                            </div>
+                            <span class="fw-bold">£179.98</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Totals -->
+                    <div class="order-totals">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Subtotal:</span>
+                            <span class="subtotal">£479.97</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Shipping:</span>
+                            <span class="shipping-cost">Free</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>VAT (20%):</span>
+                            <span class="vat">£95.99</span>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="d-flex justify-content-between mb-4">
+                            <strong>Total:</strong>
+                            <strong class="total">£575.96</strong>
+                        </div>
                     </div>
                 </div>
             </div>
