@@ -39,7 +39,12 @@ export default defineConfig({
                 main: resolve('', 'index.html'),
                 blog: resolve('', 'blog.html'),
                 article: resolve('', 'article.html'),
-                product: resolve('', 'product.html')
+                product: resolve('', 'product.html'),
+                cart: resolve('', 'cart.html'),
+                checkout: resolve('', 'checkout.html'),
+                thanks: resolve('', 'thanks-for-purchase.html'),
+                contact: resolve('', 'contact.html'),
+                shop: resolve('', 'shop.html')
             },
         }
     },

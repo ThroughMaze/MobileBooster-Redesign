@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Shop Mobile Signal Boosters - Mobile Booster</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/blog.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .shop-hero {
+            background: linear-gradient(135deg, #1434CB 0%, #0A2A8F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shop-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background-image: url('assets/images/landing/hero-illustration.svg');
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: contain;
+            opacity: 0.1;
+        }
+        
+        .hero-features .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-features .feature-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+        
+        .filter-group {
+            min-width: 180px;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(20, 52, 203, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .product-image {
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            transition: all 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-specs .badge {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover .product-specs .badge {
+            background-color: rgba(20, 52, 203, 0.1) !important;
+            color: #1434CB !important;
+        }
+        
+        .add-to-cart {
+            transition: all 0.3s ease;
+        }
+        
+        .accessory-card {
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+        
+        .accessory-card:hover {
+            transform: translateY(-10px);
+            border-top: 3px solid #1434CB;
+        }
+        
+        .feature-item {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover .feature-icon {
+            transform: rotate(10deg);
+        }
+        
+        /* Product Grid Layout Improvements */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        /* Quick View Button */
+        .quick-view-btn {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 80%;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        
+        .product-card:hover .quick-view-btn {
+            bottom: 20px;
+            opacity: 1;
+        }
+        
+        /* Sale Badge */
+        .sale-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #FF5722;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        /* Category Navigation */
+        .category-nav {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .category-nav h5 {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .category-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .category-nav ul li {
+            margin-bottom: 10px;
+        }
+        
+        .category-nav ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .category-nav ul li a:hover {
+            color: #1434CB;
+            transform: translateX(5px);
+        }
+        
+        .category-nav ul li a span {
+            background-color: #f0f0f0;
+            border-radius: 50px;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            color: #666;
+        }
+        
+        /* Testimonial Section */
+        .testimonial-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-rating {
+            color: #FFC107;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        /* Featured Products Carousel */
+        .featured-products {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #1434CB;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .shop-hero::before {
+                width: 100%;
+                opacity: 0.05;
+            }
+            
+            .category-nav {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header-white">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container header-content">
+            <a href="/" class="logo-container">
+                <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                     class="mobile-booster-logo"/>
+            </a>
+            <div id="header-icons" class="d-flex d-lg-none">
+                <a id="cart" href="cart.html">
+                    <img src="assets/images/landing/cart-black.svg"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="menu">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
+                    style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Shop
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul role="menu" class="navbar-dropdown dropdown-menu" data-bs-popper="static">
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by coverage</p>
+                                <a href="#" class="navbar-dropdown-links">Small Space (0: 300 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Midsize Space (300 : 500 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Large Space (500: 1000 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">huge space (1000 : 5000 SQM)</a>
+                            </li>
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by signal type</p>
+                                <a href="#" class="navbar-dropdown-links">3G</a>
+                                <a href="#" class="navbar-dropdown-links">4G</a>
+                                <a href="#" class="navbar-dropdown-links">5G</a>
+                                <a href="#" class="navbar-dropdown-links">3G & 4G & 5G</a>
+                            </li>
+                            <li class="navbar-dropdown-list navbar-dropdown-suggestion">
+                                <img src="assets/images/landing/Black1%201.png"/>
+                                <a href="#" class="btn-primary w-100">show more</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Carriers
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <div class="navbar-dropdown">
+                            <div class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">Vodafone</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">O2</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">giffgaff</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Tesco Mobile</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">EE</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">BT</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">ID UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Three UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Virgin UK</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Frequency
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul class="navbar-dropdown dropdown-menu" id="frequency-dropdown">
+                            <li class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">700 MHz (5G)</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/1800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">900/210 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/2600 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/900/2100 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/900/1800 /2100/2600 MHz</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">Floor Plan Analysis</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex gap-3">
+                    <div id="openPopup" class="country-logo" data-bs-toggle="modal" data-bs-target="#country-modal">
+                        <img class="logo" src="https://flagcdn.com/gb.svg">
+                        <img src="assets/images/landing/black-down-arrow.svg"/>
+                    </div>
+                    <a id="cart-desktop-header" href="cart.html">
+                        <img src="assets/images/landing/cart-black.svg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="shop-hero text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Boost Your Signal Today</h1>
+                    <p class="lead mb-4">Discover our premium range of mobile signal boosters designed for homes, offices, and commercial spaces. Experience stronger signal, faster data, and crystal-clear calls.</p>
+                    <div class="hero-features mb-4">
+                        <div class="feature-item d-flex align-items-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-3">
+                                <circle cx="12" cy="12" r="12" fill="white" fill-opacity="0.2"/>
+                                <path d="M16.25 8.5L10.75 14L7.75 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Free UK shipping on all orders over £100</span>
+                        </div>
+                        <div class="feature-item d-flex align-items-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-3">
+                                <circle cx="12" cy="12" r="12" fill="white" fill-opacity="0.2"/>
+                                <path d="M16.25 8.5L10.75 14L7.75 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>30-day money-back guarantee</span>
+                        </div>
+                        <div class="feature-item d-flex align-items-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-3">
+                                <circle cx="12" cy="12" r="12" fill="white" fill-opacity="0.2"/>
+                                <path d="M16.25 8.5L10.75 14L7.75 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Expert installation support</span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#products" class="btn btn-light btn-lg px-4">Shop Now</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">Take Quiz</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="hero-image text-center">
+                        <img src="assets/images/landing/Black1%201.png" alt="Mobile Signal Boosters" class="img-fluid" style="max-width: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="category-nav sticky-top" style="top: 100px;">
+                        <h5>Categories</h5>
+                        <ul>
+                            <li><a href="#">All Products <span>24</span></a></li>
+                            <li><a href="#">Home Boosters <span>8</span></a></li>
+                            <li><a href="#">Office Boosters <span>6</span></a></li>
+                            <li><a href="#">Industrial Boosters <span>4</span></a></li>
+                            <li><a href="#">Vehicle Boosters <span>3</span></a></li>
+                            <li><a href="#">Antennas <span>5</span></a></li>
+                            <li><a href="#">Accessories <span>12</span></a></li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Filter By</h5>
+                        <div class="mb-3">
+                            <label class="form-label small">Coverage Area</label>
+                            <select class="form-select form-select-sm" id="coverage-filter">
+                                <option value="">All Sizes</option>
+                                <option value="small">Small (0-300 SQM)</option>
+                                <option value="medium">Medium (300-500 SQM)</option>
+                                <option value="large">Large (500-1000 SQM)</option>
+                                <option value="xlarge">Extra Large (1000+ SQM)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label small">Signal Type</label>
+                            <select class="form-select form-select-sm" id="signal-filter">
+                                <option value="">All Types</option>
+                                <option value="3g">3G</option>
+                                <option value="4g">4G</option>
+                                <option value="5g">5G</option>
+                                <option value="multi">3G/4G/5G</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label small">Price Range</label>
+                            <select class="form-select form-select-sm" id="price-filter">
+                                <option value="">All Prices</option>
+                                <option value="0-200">£0 - £200</option>
+                                <option value="200-400">£200 - £400</option>
+                                <option value="400-600">£400 - £600</option>
+                                <option value="600+">£600+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label small">Sort By</label>
+                            <select class="form-select form-select-sm" id="sort-filter">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label small">Search</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-sm" placeholder="Search products..." id="product-search">
+                                <button class="btn btn-sm btn-outline-primary" type="button">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.7874 14.7553L12.7057 11.6736C13.8639 10.2508 14.4314 8.43748 14.291 6.60823C14.1505 4.77898 13.3129 3.07354 11.9511 1.84418C10.5893 0.614832 8.80728 -0.0445158 6.97324 0.00233626C5.13921 0.0491883 3.39322 0.798662 2.09594 2.09594C0.798662 3.39322 0.0491883 5.13921 0.00233626 6.97324C-0.0445158 8.80728 0.614832 10.5893 1.84418 11.9511C3.07354 13.3129 4.77898 14.1505 6.60823 14.291C8.43748 14.4314 10.2508 13.8639 11.6736 12.7057L14.7553 15.7874C14.8931 15.9225 15.0784 15.9982 15.2714 15.9982C15.4643 15.9982 15.6496 15.9225 15.7874 15.7874C15.9236 15.6502 16 15.4647 16 15.2714C16 15.078 15.9236 14.8926 15.7874 14.7553Z" fill="#1434CB"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary w-100 mt-3" onclick="window.shop.clearFilters()">Clear All Filters</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-9">
+                    <div id="products" class="mb-4">
+                        <h2 class="mb-4">Featured Products</h2>
+                        <div class="product-grid" id="products-container">
+                            <!-- Product 1 -->
+                            <div class="product-card bg-white rounded-4 shadow-sm h-100" data-coverage="small" data-signal="multi" data-price="299">
+                                <div class="product-image position-relative">
+                                    <div class="sale-badge">15% OFF</div>
+                                    <img src="assets/images/landing/Black1%201.png" alt="Mobile Signal Booster Pro" class="img-fluid rounded-top-4">
+                                    <div class="product-badge bg-success text-white">Best Seller</div>
+                                    <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                                </div>
+                                <div class="product-content p-4">
+                                    <div class="product-rating mb-2">
+                                        <div class="stars">
+                                            <span class="text-warning">★★★★★</span>
+                                            <span class="text-muted small ms-1">(127 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title h5 mb-2">
+                                        <a href="product.html" class="text-decoration-none">Mobile Signal Booster Pro</a>
+                                    </h3>
+                                    <p class="product-description text-muted small mb-3">Perfect for small homes and offices. Supports 3G, 4G, and 5G networks with coverage up to 300 SQM.</p>
+                                    <div class="product-specs mb-3">
+                                        <span class="badge bg-light text-dark me-1">300 SQM</span>
+                                        <span class="badge bg-light text-dark me-1">3G/4G/5G</span>
+                                        <span class="badge bg-light text-dark">Easy Install</span>
+                                    </div>
+                                    <div class="product-price-action d-flex justify-content-between align-items-center">
+                                        <div class="price">
+                                            <span class="current-price h5 mb-0 text-primary">£299.99</span>
+                                            <span class="original-price text-muted text-decoration-line-through small">£349.99</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm add-to-cart" data-product-id="1">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="product-card bg-white rounded-4 shadow-sm h-100" data-coverage="medium" data-signal="multi" data-price="449">
+                                <div class="product-image position-relative">
+                                    <img src="assets/images/landing/Black1%201.png" alt="Commercial Signal Booster" class="img-fluid rounded-top-4">
+                                    <div class="product-badge bg-primary text-white">Professional</div>
+                                    <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                                </div>
+                                <div class="product-content p-4">
+                                    <div class="product-rating mb-2">
+                                        <div class="stars">
+                                            <span class="text-warning">★★★★★</span>
+                                            <span class="text-muted small ms-1">(89 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title h5 mb-2">
+                                        <a href="product.html" class="text-decoration-none">Commercial Signal Booster</a>
+                                    </h3>
+                                    <p class="product-description text-muted small mb-3">Ideal for medium-sized offices and commercial spaces. Enhanced power and coverage up to 500 SQM.</p>
+                                    <div class="product-specs mb-3">
+                                        <span class="badge bg-light text-dark me-1">500 SQM</span>
+                                        <span class="badge bg-light text-dark me-1">3G/4G/5G</span>
+                                        <span class="badge bg-light text-dark">High Power</span>
+                                    </div>
+                                    <div class="product-price-action d-flex justify-content-between align-items-center">
+                                        <div class="price">
+                                            <span class="current-price h5 mb-0 text-primary">£449.99</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm add-to-cart" data-product-id="2">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="product-card bg-white rounded-4 shadow-sm h-100" data-coverage="large" data-signal="multi" data-price="699">
+                                <div class="product-image position-relative">
+                                    <img src="assets/images/landing/Black1%201.png" alt="Enterprise Signal Booster" class="img-fluid rounded-top-4">
+                                    <div class="product-badge bg-warning text-dark">Enterprise</div>
+                                    <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                                </div>
+                                <div class="product-content p-4">
+                                    <div class="product-rating mb-2">
+                                        <div class="stars">
+                                            <span class="text-warning">★★★★★</span>
+                                            <span class="text-muted small ms-1">(156 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title h5 mb-2">
+                                        <a href="product.html" class="text-decoration-none">Enterprise Signal Booster</a>
+                                    </h3>
+                                    <p class="product-description text-muted small mb-3">Maximum coverage for large buildings and warehouses. Professional-grade performance up to 1000 SQM.</p>
+                                    <div class="product-specs mb-3">
+                                        <span class="badge bg-light text-dark me-1">1000 SQM</span>
+                                        <span class="badge bg-light text-dark me-1">3G/4G/5G</span>
+                                        <span class="badge bg-light text-dark">Max Power</span>
+                                    </div>
+                                    <div class="product-price-action d-flex justify-content-between align-items-center">
+                                        <div class="price">
+                                            <span class="current-price h5 mb-0 text-primary">£699.99</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm add-to-cart" data-product-id="3">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="product-card bg-white rounded-4 shadow-sm h-100" data-coverage="small" data-signal="5g" data-price="399">
+                                <div class="product-image position-relative">
+                                    <div class="sale-badge">New</div>
+                                    <img src="assets/images/landing/Black1%201.png" alt="5G Signal Booster" class="img-fluid rounded-top-4">
+                                    <div class="product-badge bg-info text-white">5G Ready</div>
+                                    <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                                </div>
+                                <div class="product-content p-4">
+                                    <div class="product-rating mb-2">
+                                        <div class="stars">
+                                            <span class="text-warning">★★★★☆</span>
+                                            <span class="text-muted small ms-1">(73 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title h5 mb-2">
+                                        <a href="product.html" class="text-decoration-none">5G Signal Booster</a>
+                                    </h3>
+                                    <p class="product-description text-muted small mb-3">Specialized 5G booster for ultra-fast data speeds. Perfect for tech enthusiasts and modern homes.</p>
+                                    <div class="product-specs mb-3">
+                                        <span class="badge bg-light text-dark me-1">300 SQM</span>
+                                        <span class="badge bg-light text-dark me-1">5G Only</span>
+                                        <span class="badge bg-light text-dark">Ultra Fast</span>
+                                    </div>
+                                    <div class="product-price-action d-flex justify-content-between align-items-center">
+                                        <div class="price">
+                                            <span class="current-price h5 mb-0 text-primary">£399.99</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm add-to-cart" data-product-id="4">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 5 -->
+                            <div class="product-card bg-white rounded-4 shadow-sm h-100" data-coverage="small" data-signal="4g" data-price="199">
+                                <div class="product-image position-relative">
+                                    <img src="assets/images/landing/Black1%201.png" alt="Basic Signal Booster" class="img-fluid rounded-top-4">
+                                    <div class="product-badge bg-secondary text-white">Budget</div>
+                                    <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                                </div>
+                                <div class="product-content p-4">
+                                    <div class="product-rating mb-2">
+                                        <div class="stars">
+                                            <span class="text-warning">★★★★☆</span>
+                                            <span class="text-muted small ms-1">(94 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title h5 mb-2">
+                                        <a href="product.html" class="text-decoration-none">Basic Signal Booster</a>
+                                    </h3>
+                                    <p class="product-description text-muted small mb-3">Affordable solution for basic signal enhancement. Great for small apartments and starter needs.</p>
+                                    <div class="product-specs mb-3">
+                                        <span class="badge bg-light text-dark me-1">200 SQM</span>
+                                        <span class="badge bg-light text-dark me-1">3G/4G</span>
+                                        <span class="badge bg-light text-dark">Budget</span>
+                                    </div>
+                                    <div class="product-price-action d-flex justify-content-between align-items-center">
+                                        <div class="price">
+                                            <span class="current-price h5 mb-0 text-primary">£199.99</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm add-to-cart" data-product-id="5">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 6 -->
+                            <div class="product-card bg-white rounded-4 shadow-sm h-100" data-coverage="xlarge" data-signal="multi" data-price="899">
+                                <div class="product-image position-relative">
+                                    <img src="assets/images/landing/Black1%201.png" alt="Industrial Signal Booster" class="img-fluid rounded-top-4">
+                                    <div class="product-badge bg-dark text-white">Industrial</div>
+                                    <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                                </div>
+                                <div class="product-content p-4">
+                                    <div class="product-rating mb-2">
+                                        <div class="stars">
+                                            <span class="text-warning">★★★★★</span>
+                                            <span class="text-muted small ms-1">(45 reviews)</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title h5 mb-2">
+                                        <a href="product.html" class="text-decoration-none">Industrial Signal Booster</a>
+                                    </h3>
+                                    <p class="product-description text-muted small mb-3">Heavy-duty solution for factories, warehouses, and large facilities. Coverage up to 5000 SQM.</p>
+                                    <div class="product-specs mb-3">
+                                        <span class="badge bg-light text-dark me-1">5000 SQM</span>
+                                        <span class="badge bg-light text-dark me-1">3G/4G/5G</span>
+                                        <span class="badge bg-light text-dark">Industrial</span>
+                                    </div>
+                                    <div class="product-price-action d-flex justify-content-between align-items-center">
+                                        <div class="price">
+                                            <span class="current-price h5 mb-0 text-primary">£899.99</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm add-to-cart" data-product-id="6">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Load More -->
+                        <div class="text-center mt-5">
+                            <button class="btn btn-outline-primary btn-lg" id="load-more-products">Load More Products</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Carousel -->
+    <section class="featured-products bg-light py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Best Selling Products</h2>
+                <p class="text-muted">Our most popular signal boosters loved by customers</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <div class="sale-badge">Top Rated</div>
+                            <img src="assets/images/landing/Black1%201.png" alt="Premium Home Booster" class="img-fluid rounded-top-4">
+                            <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="text-muted small ms-1">(218 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title h5 mb-2">
+                                <a href="product.html" class="text-decoration-none">Premium Home Booster</a>
+                            </h3>
+                            <p class="product-description text-muted small mb-3">Our best-selling home solution with multi-carrier support and easy setup.</p>
+                            <div class="product-price-action d-flex justify-content-between align-items-center">
+                                <div class="price">
+                                    <span class="current-price h5 mb-0 text-primary">£249.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart" data-product-id="7">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <div class="sale-badge">Best Value</div>
+                            <img src="assets/images/landing/Black1%201.png" alt="Office Pro Booster" class="img-fluid rounded-top-4">
+                            <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="text-muted small ms-1">(176 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title h5 mb-2">
+                                <a href="product.html" class="text-decoration-none">Office Pro Booster</a>
+                            </h3>
+                            <p class="product-description text-muted small mb-3">Perfect for small to medium offices with multiple devices and users.</p>
+                            <div class="product-price-action d-flex justify-content-between align-items-center">
+                                <div class="price">
+                                    <span class="current-price h5 mb-0 text-primary">£399.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart" data-product-id="8">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <div class="sale-badge">New</div>
+                            <img src="assets/images/landing/Black1%201.png" alt="5G Max Booster" class="img-fluid rounded-top-4">
+                            <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span class="text-muted small ms-1">(42 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title h5 mb-2">
+                                <a href="product.html" class="text-decoration-none">5G Max Booster</a>
+                            </h3>
+                            <p class="product-description text-muted small mb-3">Latest technology for maximum 5G performance in urban environments.</p>
+                            <div class="product-price-action d-flex justify-content-between align-items-center">
+                                <div class="price">
+                                    <span class="current-price h5 mb-0 text-primary">£499.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart" data-product-id="9">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card bg-white rounded-4 shadow-sm h-100">
+                        <div class="product-image position-relative">
+                            <div class="sale-badge">20% OFF</div>
+                            <img src="assets/images/landing/Black1%201.png" alt="Vehicle Booster Kit" class="img-fluid rounded-top-4">
+                            <a href="product.html" class="btn btn-primary btn-sm quick-view-btn">Quick View</a>
+                        </div>
+                        <div class="product-content p-4">
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span class="text-muted small ms-1">(89 reviews)</span>
+                                </div>
+                            </div>
+                            <h3 class="product-title h5 mb-2">
+                                <a href="product.html" class="text-decoration-none">Vehicle Booster Kit</a>
+                            </h3>
+                            <p class="product-description text-muted small mb-3">Stay connected on the road with this complete vehicle signal booster kit.</p>
+                            <div class="product-price-action d-flex justify-content-between align-items-center">
+                                <div class="price">
+                                    <span class="current-price h5 mb-0 text-primary">£199.99</span>
+                                    <span class="original-price text-muted text-decoration-line-through small">£249.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart" data-product-id="10">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section class="accessories-section py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Essential Accessories</h2>
+                <p class="text-muted">Enhance your signal booster setup with our professional accessories</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="accessory-card bg-white rounded-4 p-4 shadow-sm text-center h-100">
+                        <img src="assets/images/landing/cable-icon.svg" alt="Extension Cable" class="img-fluid mb-3" style="height: 60px;">
+                        <h5 class="mb-2">Extension Cables</h5>
+                        <p class="text-muted small mb-3">High-quality coaxial cables for extended reach and optimal signal transfer.</p>
+                        <div class="price mb-3">
+                            <span class="h6 text-primary">From £29.99</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm">View Options</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="accessory-card bg-white rounded-4 p-4 shadow-sm text-center h-100">
+                        <img src="assets/images/landing/yaggi-antenna.png" alt="External Antenna" class="img-fluid mb-3" style="height: 60px;">
+                        <h5 class="mb-2">External Antennas</h5>
+                        <p class="text-muted small mb-3">Directional and omnidirectional antennas for improved signal capture.</p>
+                        <div class="price mb-3">
+                            <span class="h6 text-primary">From £79.99</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm">View Options</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="accessory-card bg-white rounded-4 p-4 shadow-sm text-center h-100">
+                        <img src="assets/images/landing/power-surge.png" alt="Power Supply" class="img-fluid mb-3" style="height: 60px;">
+                        <h5 class="mb-2">Power Supplies</h5>
+                        <p class="text-muted small mb-3">Reliable power adapters and backup power solutions for continuous operation.</p>
+                        <div class="price mb-3">
+                            <span class="h6 text-primary">From £39.99</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm">View Options</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="accessory-card bg-white rounded-4 p-4 shadow-sm text-center h-100">
+                        <img src="assets/images/landing/window-jumper.png" alt="Installation Kit" class="img-fluid mb-3" style="height: 60px;">
+                        <h5 class="mb-2">Installation Kits</h5>
+                        <p class="text-muted small mb-3">Complete installation packages with all necessary mounting hardware.</p>
+                        <div class="price mb-3">
+                            <span class="h6 text-primary">From £49.99</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm">View Options</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p class="text-muted">Real experiences from people who've boosted their signal</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="testimonial-avatar">
+                                <img src="assets/images/landing/review-img-1.png" alt="Customer">
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Robert Johnson</h5>
+                                <p class="text-muted mb-0">Home User, Yorkshire</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"After struggling with poor signal in our rural home for years, Mobile Booster's solution has been life-changing. We now have perfect reception throughout our house!"</p>
+                        <p class="text-muted small mb-0">Purchased: Mobile Signal Booster Pro</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="testimonial-avatar">
+                                <img src="assets/images/landing/review-img-2.png" alt="Customer">
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Sarah Williams</h5>
+                                <p class="text-muted mb-0">Business Owner, London</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Our office is in a signal dead zone, which was affecting our business operations. The Mobile Booster team recommended the perfect solution for our space!"</p>
+                        <p class="text-muted small mb-0">Purchased: Commercial Signal Booster</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="testimonial-avatar">
+                                <img src="assets/images/landing/review-img-1.png" alt="Customer">
+                            </div>
+                            <div>
+                                <h5 class="mb-1">David Thompson</h5>
+                                <p class="text-muted mb-0">IT Manager, Manchester</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"As an IT manager for a large company, I needed a reliable solution for our warehouse facility. Mobile Booster provided a comprehensive system that covers our entire space."</p>
+                        <p class="text-muted small mb-0">Purchased: Industrial Signal Booster</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">Read More Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Mobile Booster?</h2>
+                <p class="text-muted">We're the UK's most trusted mobile signal booster provider</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <img src="assets/images/landing/premium-icon.png" alt="Quality" style="width: 64px; height: 64px;">
+                        </div>
+                        <h5 class="mb-2">Premium Quality</h5>
+                        <p class="text-muted small">Only certified, high-performance signal boosters from trusted manufacturers.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <img src="assets/images/landing/support-icon.png" alt="Support" style="width: 64px; height: 64px;">
+                        </div>
+                        <h5 class="mb-2">Expert Support</h5>
+                        <p class="text-muted small">24/7 technical support and free installation guidance from our experts.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <img src="assets/images/landing/truck-icon.svg" alt="Shipping" style="width: 64px; height: 64px;">
+                        </div>
+                        <h5 class="mb-2">Fast Shipping</h5>
+                        <p class="text-muted small">Free next-day delivery across the UK with tracking and insurance.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-item text-center">
+                        <div class="feature-icon mb-3">
+                            <img src="assets/images/landing/warranty-icon.png" alt="Warranty" style="width: 64px; height: 64px;">
+                        </div>
+                        <h5 class="mb-2">2-Year Warranty</h5>
+                        <p class="text-muted small">Comprehensive warranty coverage with hassle-free replacement service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5" style="background: linear-gradient(135deg, #1434CB 0%, #0A2A8F 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-white">
+                    <h2 class="mb-3">Not Sure Which Booster You Need?</h2>
+                    <p class="lead mb-0">Take our quick quiz to find the perfect signal booster for your specific requirements.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="#" class="btn btn-light btn-lg me-2 mb-2 mb-md-0">Take the Quiz</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content container">
+        <div class="footer-list-container">
+            <div>
+                <h6 class="footer-list-heading">Explore Products</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Find a Booster Quiz</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Installation Guide</a></li>
+                    <li><a href="#">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Customer Support</h6>
+                <ul class="footer-list">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Company Information</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Buyer's Guide</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Our brands</h6>
+                <ul class="footer-list">
+                    <li><a href="#">mysignalboosters</a></li>
+                    <li><a href="#">Mysignal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-section">
+            <p class="footer-list-heading">Subscribe</p>
+            <form method="post" action="/" class="subscribe-form needs-validation" novalidate>
+                <div>
+                    <input type="email" placeholder="Email address" class="input-bordered w-100" required/>
+                    <div class="invalid-feedback">This field is required Subscribe</div>
+                </div>
+                <button type="submit" class="subscribe-submit-btn">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0039 9H1.00001" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path d="M13.0026 15.0013L19.0039 9L13.0026 2.9987" stroke="white" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </form>
+            <span class="subscribe-section-description">
+                Subscribe to our newsletter and stay connected with exclusive offers, product updates, and tips to boost your signal experience.
+            </span>
+            <div class="message-after">
+                <p class="success-msg">Thanks for subscribing!</p>
+                <p class="subscribe-message">Please check your email for confirmation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-container container">
+        <a href="/" class="sm-none">
+            <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                 class="mobile-booster-logo">
+        </a>
+        <p>© 2024 mobilebooster . All rights reserved. </p>
+        <div class="footer-social-container">
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/linkedin.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/facebook-icon.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/twitter-icon.svg"/>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="country-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Change country</h3>
+                <span class="close-btn">
+                <img src="assets/images/landing/close-icon.svg" data-bs-dismiss="modal" aria-label="Close"/>
+            </span>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for a country" id="countrySearch">
+                    <label for="countrySearch" id="search-icon">
+                        <img src="assets/images/landing/search-icon.svg"/>
+                    </label>
+                </div>
+                <div class="country-list">
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="uk" name="country" value="UK">
+                        <label for="uk"><img src="https://flagcdn.com/gb.svg" class="country-popup-logo"
+                                             alt="uk Flag">United
+                            Kingdom</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="nz" name="country" value="NZ">
+                        <label for="nz"><img src="https://flagcdn.com/nz.svg" class="country-popup-logo"
+                                             alt="nz Flag">New
+                            Zealand</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="australia" name="country" value="Australia">
+                        <label for="australia"><img src="https://flagcdn.com/au.svg" class="country-popup-logo"
+                                                    alt="Australia Flag"> Australia</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="UAE" name="country" value="UAE">
+                        <label for="UAE"><img src="https://flagcdn.com/ae.svg" class="country-popup-logo"
+                                              alt="UAE Flag">
+                            UAE</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/shop.js" type="module"></script>
+</body>
+</html>
