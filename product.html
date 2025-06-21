@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Mobile Booster Product</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/product.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
+
+    <!-- Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+          integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+            integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Fancybox JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.4/jquery.fancybox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.4/jquery.fancybox.min.js"></script>
+
+    <script>
+        window.require = function (module) {
+            if (module === 'jquery') {
+                return window.jQuery;
+            }
+        };
+    </script>
+</head>
+<body>
+<header class="header-white">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container header-content">
+            <a href="/" class="logo-container">
+                <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                     class="mobile-booster-logo"/>
+            </a>
+            <div id="header-icons" class="d-flex d-lg-none">
+                <a id="cart" href="#">
+                    <img src="assets/images/landing/cart-black.svg"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="menu">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+            </div>
+            </a>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
+                    style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Shop
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul role="menu" class="navbar-dropdown dropdown-menu" data-bs-popper="static">
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by coverage</p>
+                                <a href="#" class="navbar-dropdown-links">Small Space (0: 300 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Midsize Space (300 : 500 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Large Space (500: 1000 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">huge space (1000 : 5000 SQM)</a>
+                            </li>
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by signal type</p>
+                                <a href="#" class="navbar-dropdown-links">3G</a>
+                                <a href="#" class="navbar-dropdown-links">4G</a>
+                                <a href="#" class="navbar-dropdown-links">5G</a>
+                                <a href="#" class="navbar-dropdown-links">3G & 4G & 5G</a>
+                            </li>
+                            <li class="navbar-dropdown-list navbar-dropdown-suggestion">
+                                <img src="assets/images/landing/Black1%201.png"/>
+                                <a href="#" class="btn-primary w-100">show more</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Carriers
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <div class="navbar-dropdown">
+                            <div class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">Vodafone</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">O2</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">giffgaff</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Tesco Mobile</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">EE</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">BT</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">ID UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Three UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Virgin UK</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Frequency
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul class="navbar-dropdown dropdown-menu" id="frequency-dropdown">
+                            <li class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">700 MHz (5G)</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/1800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">900/210 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/2600 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/900/2100 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/900/1800 /2100/2600 MHz</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">Floor Plan Analysis</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex gap-3">
+                    <div id="openPopup" class="country-logo" data-bs-toggle="modal" data-bs-target="#country-modal">
+                        <img class="logo" src="https://flagcdn.com/gb.svg">
+                        <img src="assets/images/landing/black-down-arrow.svg"/>
+                    </div>
+                    <a id="cart-desktop-header" href="#">
+                        <img src="assets/images/landing/cart-black.svg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+        <div class="container">
+            <ul class="navbar-nav navbar-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Shop</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Carriers</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Frequency</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Floor Plan Analysis</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="container product-page-wrapper">
+
+        <!--Breadcrumb-->
+        <section class="breadcrumb-wrapper">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/"><i class="icon icon-home"></i> Home</a></li>
+                    <li class="breadcrumb-item"><a href="/small-space">Small Space</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">BoostMaster 5000 ProSignal Plus</li>
+                </ol>
+            </nav>
+        </section>
+
+        <section class="product-details row">
+            <div class="col-12 col-md-5 col-lg-6 product-imgs-wrapper">
+                <div class="product-gallery-wrapper">
+                    <a href="./assets/images/product/product-4x.png" data-fancybox="gallery" class="featured-img">
+                        <img alt="Product image" width="381" height="381" src="./assets/images/product/product.png"/>
+                    </a>
+                    <div class="product-images-slider">
+                        <a href="./assets/images/product/product1-4x.png" data-fancybox="gallery">
+                            <img alt="Product image" width="204" height="204"
+                                 src="./assets/images/product/product1.png"/>
+                        </a>
+                        <a href="./assets/images/product/product2-4x.png" data-fancybox="gallery">
+                            <img alt="Product image" width="204" height="204"
+                                 src="./assets/images/product/product2.png"/>
+                        </a>
+                        <a href="./assets/images/product/product-4x.png" data-fancybox="gallery">
+                            <img alt="Product image" width="381" height="381"
+                                 src="./assets/images/product/product.png"/>
+                        </a>
+                        <a href="./assets/images/product/product2-4x.png" data-fancybox="gallery">
+                            <img alt="Product image" width="204" height="204"
+                                 src="./assets/images/product/product2.png"/>
+                        </a>
+                        <a href="./assets/images/product/product1-4x.png" data-fancybox="gallery">
+                            <img alt="Product image" width="204" height="204"
+                                 src="./assets/images/product/product1.png"/>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-12 col-md-7 col-lg-6 product-options-wrapper">
+                <h1 class="product-title">BoostMaster 5000 ProSignal Plus</h1>
+                <div class="product-price-wrapper">
+                    <span class="product-price">170$</span>
+                    <del class="product-old-price">250$</del>
+                    <span class="product-discount">10% OFF</span>
+                </div>
+                <div class="product-accordion">
+                    <div>
+                        <h3 class="product-accordion-header">
+                            Product Highlights
+                        </h3>
+                        <div class="accordion-collapse">
+                            <div class="product-accordion-body">
+                                <ul>
+                                    <li><strong>Coverage Area:</strong> Best for one large or multiple small rooms
+                                        (300 SQM) where you
+                                        have a medium to strong outside signal.
+                                    </li>
+                                    <li><strong>Signal Compatibility:</strong> 3G & 4G</li>
+                                    <li><strong>Supported Networks:</strong> Etisalat, Virgin, du</li>
+                                    <li><strong>Frequency Bands:</strong> 800/1800/2100 MHz</li>
+                                    <li><strong>Simultaneous Users:</strong> Supports up to 250 users concurrently
+                                    </li>
+                                    <li><a href="#"><strong>Installation guide</strong></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse mt-4" id="product-highlight">
+                        <div>
+                            <h3 class="product-accordion-header">
+                                What's Included
+                            </h3>
+                            <div id="highlight-2" class="accordion-collapse">
+                                <div class="product-accordion-body">
+                                    <ul>
+                                        <li><strong>Coverage Area:</strong> Best for one large or multiple small
+                                            rooms
+                                            (300 SQM) where you
+                                            have a medium to strong outside signal.
+                                        </li>
+                                        <li><strong>Signal Compatibility:</strong> 3G & 4G</li>
+                                        <li><strong>Supported Networks:</strong> Etisalat, Virgin, du</li>
+                                        <li><strong>Frequency Bands:</strong> 800/1800/2100 MHz</li>
+                                        <li><strong>Simultaneous Users:</strong> Supports up to 250 users
+                                            concurrently
+                                        </li>
+                                        <li><a href="#"><strong>Installation guide</strong></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="product-highlight-btn" data-bs-toggle="collapse" href="#product-highlight" role="button"
+                       aria-expanded="false" aria-controls="product-highlight">
+                        Read <span id="full-content">full</span> <span id="less-content">less</span> description
+                        <img src="./assets/images/product/blue-down-arrow.svg"/>
+                    </a>
+                </div>
+                <button type="button" form="options-form" class="btn btn-primary btn-primary-full btn-add-cart">
+                    <svg class="d-none" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 14.5L6.5 18.5L18.5 3.5" stroke="#1434CB" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M23.5 8.5H20.5" stroke="#1434CB" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23.5 13.5H16.5" stroke="#1434CB" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23.5 18.5H12.5" stroke="#1434CB" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    ADD TO CART
+                </button>
+                <!-- Options Form -->
+                <form id="options-form" class="product-options" novalidate method="post" action="/product">
+                    <div class="product-option-container">
+                        <h3>Get extra cable <span class="info" data-bs-toggle="tooltip"
+                                                  data-bs-placement="top" data-bs-html="true"
+                                                  data-bs-title="<h3>Why do I need this?</h3><p>Upgrade the external cable from 10 meters.This is for larger buildings who need extra cable from roof to the Booster inside.</p>"
+                                                  data-bs-custom-class="info-tooltip"><i
+                                class="icon icon-info2-solid"></i></span>
+                        </h3>
+
+                        <ul class="product-options-radios-holder">
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="10" name="cable" checked>
+                                    <div class="option-title"><strong>10 M</strong><span class="extra-value">Free</span>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="20" name="cable">
+                                    <div class="option-title"><strong>20 M</strong><span
+                                            class="extra-value">+ 20$</span></div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="30" name="cable">
+                                    <div class="option-title"><strong>30 M</strong><span
+                                            class="extra-value">+ 30$</span></div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="40" name="cable">
+                                    <div class="option-title"><strong>40 M</strong><span
+                                            class="extra-value">+ 40$</span></div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="50" name="cable">
+                                    <div class="option-title"><strong>50 M</strong><span
+                                            class="extra-value">+ 50$</span></div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-option-container">
+                        <h3>Get extra warranty</h3>
+                        <ul class="product-options-radios-holder">
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="1" name="warranty" checked>
+                                    <div class="option-title"><strong>1 Year</strong><span
+                                            class="extra-value">Free</span></div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="2" name="warranty">
+                                    <div class="option-title"><strong>2 Years</strong><span
+                                            class="extra-value">+ 35$</span></div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="3" name="warranty">
+                                    <div class="option-title"><strong>3 Years</strong><span
+                                            class="extra-value">+ 45$</span></div>
+                                </label>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="product-option-container">
+                        <ul class="product-options-radios-holder colors">
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="1" name="color" checked>
+                                    <div class="option-color" style="--option-color: #833B07"></div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="2" name="color">
+                                    <div class="option-color" style="--option-color: #61AF45"></div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-radio">
+                                    <input type="radio" value="3" name="color">
+                                    <div class="option-color" style="--option-color: #D9A644"></div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+
+                <div class="product-suggestions">
+                    <div class="alert alert-warning" role="alert">
+                        If you have a weak signal of 1-3 bars outside. Please add the yaggi antenna below in booster
+                        upgrades to
+                        guarantee signal increase and the best performance from the booster.
+                    </div>
+                    <h3 class="product-suggestions-title">You may need</h3>
+                    <div class="suggested-products">
+                        <article class="suggested-booster-wrapper">
+                            <div class="booster-img-wrapper">
+                                <img src="./assets/images/product/yaggi-antenna.png" alt="Yaggi Antenna" width="144"
+                                     height="103">
+                            </div>
+                            <div class="booster-details">
+                                <h2>Yaggi Antenna</h2>
+                                <h3 class="booster-price">$60.00</h3>
+                                <div class="booster-description">
+                                    <p>The Yaggi high gain antenna increases the strength of the signal received by the
+                                        repeater</p>
+                                </div>
+                                <button class="btn btn-text-primary btn-add-cart">+ Add to cart</button>
+                                <a class="single-booster-link" href="/product"></a>
+                            </div>
+                        </article>
+                        <article class="suggested-booster-wrapper">
+                            <div class="booster-img-wrapper">
+                                <img src="./assets/images/product/power-surge.png" alt="Power Surge Protector"
+                                     width="152"
+                                     height="152">
+                            </div>
+                            <div class="booster-details">
+                                <h2>Power Surge Protector</h2>
+                                <h3 class="booster-price">$60.00</h3>
+                                <div class="booster-description">
+                                    <p>The Power Surge Protector is designed to protect your equipment from high
+                                        amperage surges.</p>
+                                </div>
+                                <button class="btn btn-text-primary btn-add-cart">+ Add to cart</button>
+                                <a class="single-booster-link" href="/product"></a>
+                            </div>
+                        </article>
+                        <article class="suggested-booster-wrapper">
+                            <div class="booster-img-wrapper">
+                                <img src="./assets/images/product/window-jumper.png" alt="Window Jumper" width="106"
+                                     height="106">
+                            </div>
+                            <div class="booster-details">
+                                <h2>Window Jumper</h2>
+                                <h3 class="booster-price">$60.00</h3>
+                                <div class="booster-description">
+                                    <p>The Power Surge Protector is designed to protect your equipment from high
+                                        amperage surges.</p>
+                                </div>
+                                <button class="btn btn-text-primary btn-add-cart">+ Add to cart</button>
+                                <a class="single-booster-link" href="/product"></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="booster-quiz-section">
+        <div class="container">
+            <h3 class="booster-quiz-section-heading">Unsure of which signal Booster you need?</h3>
+            <p class="booster-quiz-section-subheading">Engage in our 30-second booster quiz by answering a few
+                questions, and discover the perfect booster
+                tailored to your needs.</p>
+            <div class="booster-quiz" id="booster-quiz">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip" data-tooltip="data_only">
+                    <p class="tooltip-heading">Why is data only?</p>
+                    <span class="tooltip-subheading">Upgrade the external cable from 10 metres.
+This is for larger buildings who need extra cable from roof to the Booster inside.</span>
+                </div>
+                <div class="tooltip" data-tooltip="voice_calls">
+                    <p class="tooltip-heading">Why is data only?</p>
+                    <span class="tooltip-subheading">Upgrade the external cable from 10 metres.
+This is for larger buildings who need extra cable from roof to the Booster inside.</span>
+                </div>
+                <div class="booster-quiz-arrow">
+                    <img src="assets/images/landing/circled-down-arrow.png"/>
+                </div>
+                <div>
+                    <p class="booster-quiz-heading" id="quiz-question">Which network should be boosted? <span
+                            class="booster-quiz-counter" id="page-indicator">(1/3)</span>
+                    </p>
+                </div>
+                <div id="prev-lg" class="slider-btn sm-none">
+                    <img src="assets/images/landing/prev-arrow.svg"/>
+                    <span>Previous</span>
+                </div>
+                <div class="slider-container">
+                    <div id="slider" class="custom-slider">
+                        <div>
+                            <div id="slide1" class="booster-quiz-cards-container slide">
+                                <div data-type="all_networks" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/select-all-icon.svg"/>
+                                </div>
+                                <div data-term-id="data" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/data-icon.svg"/>
+                                    <div class="booster-quiz-card-info">
+                                        <p class="booster-quiz-card-heading">Data only</p>
+                                        <svg id="data_only" class="tooltip-icon" width="16" height="16"
+                                             viewBox="0 0 16 16"
+                                             fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.23" clip-path="url(#clip0_109_2715)">
+                                                <path d="M8.00016 0.333328C3.76583 0.333328 0.333496 3.76566 0.333496 7.99999C0.333496 12.2343 3.76583 15.6667 8.00016 15.6667C12.2345 15.6667 15.6668 12.2343 15.6668 7.99999C15.6668 3.76566 12.2345 0.333328 8.00016 0.333328ZM8.66683 12.3333C8.66683 12.5173 8.5175 12.6667 8.3335 12.6667H7.66683C7.48283 12.6667 7.3335 12.5173 7.3335 12.3333V6.33333C7.3335 6.14933 7.48283 5.99999 7.66683 5.99999H8.3335C8.5175 5.99999 8.66683 6.14933 8.66683 6.33333V12.3333ZM8.00016 4.66666C7.53983 4.66666 7.16683 4.29366 7.16683 3.83333C7.16683 3.37299 7.53983 2.99999 8.00016 2.99999C8.4605 2.99999 8.8335 3.37299 8.8335 3.83333C8.8335 4.29366 8.4605 4.66666 8.00016 4.66666Z"
+                                                      fill="black"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_109_2715">
+                                                    <rect width="16" height="16" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div data-term-id="203" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/vodafone-icon.svg"/>
+                                </div>
+                                <div data-term-id="202" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/o2-2.svg"/>
+                                </div>
+                                <div data-term-id="308" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/giffgaff.svg"/>
+                                </div>
+                                <div data-term-id="307" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/Tesco_Mobile-Logo.wine.svg"/>
+                                </div>
+                                <div data-term-id="200" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/ee-mobile-network-uk-.svg"/>
+                                </div>
+                                <div data-term-id="309" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/bt-3.svg"/>
+                                </div>
+                                <div data-term-id="201" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/id-UK%201.png"/>
+                                </div>
+                                <div data-term-id="198" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/Three_UK-Logo.wine.svg"/>
+                                </div>
+                                <div data-term-id="310" data-term="providers" class="booster-quiz-card">
+                                    <img src="assets/images/landing/Virgin_Group-Logo.wine.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="slide2" class="booster-quiz-cards-container slide">
+                                <div data-term-id="378" data-term="signals" class="booster-quiz-card second-step">
+                                    <img src="assets/images/landing/phone-call%201.svg"/>
+                                    <div class="booster-quiz-card-info">
+                                        <p class="booster-quiz-card-heading">Voice Calls</p>
+                                        <svg id="voice_calls" class="tooltip-icon" width="16" height="16"
+                                             viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.23" clip-path="url(#clip0_109_2715)">
+                                                <path d="M8.00016 0.333328C3.76583 0.333328 0.333496 3.76566 0.333496 7.99999C0.333496 12.2343 3.76583 15.6667 8.00016 15.6667C12.2345 15.6667 15.6668 12.2343 15.6668 7.99999C15.6668 3.76566 12.2345 0.333328 8.00016 0.333328ZM8.66683 12.3333C8.66683 12.5173 8.5175 12.6667 8.3335 12.6667H7.66683C7.48283 12.6667 7.3335 12.5173 7.3335 12.3333V6.33333C7.3335 6.14933 7.48283 5.99999 7.66683 5.99999H8.3335C8.5175 5.99999 8.66683 6.14933 8.66683 6.33333V12.3333ZM8.00016 4.66666C7.53983 4.66666 7.16683 4.29366 7.16683 3.83333C7.16683 3.37299 7.53983 2.99999 8.00016 2.99999C8.4605 2.99999 8.8335 3.37299 8.8335 3.83333C8.8335 4.29366 8.4605 4.66666 8.00016 4.66666Z"
+                                                      fill="black"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_109_2715">
+                                                    <rect width="16" height="16" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div data-term-id="314" data-term="signals" class="booster-quiz-card second-step">
+                                    <img src="assets/images/landing/3g-icon.svg"/>
+                                </div>
+                                <div data-term-id="312" data-term="signals" class="booster-quiz-card second-step">
+                                    <img src="assets/images/landing/4g-icon.svg"/>
+                                </div>
+                                <div data-term-id="315" data-term="signals" class="booster-quiz-card second-step">
+                                    <img src="assets/images/landing/5g-icon.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="slide3" class="booster-quiz-cards-container slide">
+                                <div data-term-id="13" data-term="range" class="booster-quiz-card third-step">
+                                    <img src="assets/images/landing/home-button%201.svg"/>
+                                    <p class="booster-quiz-card-heading">Small Space (300 SQM)</p>
+                                </div>
+                                <div data-term-id="14" data-term="range" class="booster-quiz-card third-step">
+                                    <img src="assets/images/landing/building-icon.svg"/>
+                                    <p class="booster-quiz-card-heading">Midsize Space (500 SQM)</p>
+                                </div>
+                                <div data-term-id="15" data-term="range" class="booster-quiz-card third-step">
+                                    <img src="assets/images/landing/hotel%201.svg"/>
+                                    <p class="booster-quiz-card-heading">Large Space (1000 SQM)</p>
+                                </div>
+                                <div data-term-id="16" data-term="range" class="booster-quiz-card third-step">
+                                    <img src="assets/images/landing/company-icon.svg"/>
+                                    <p class="booster-quiz-card-heading">huge Space (5000 SQM)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="frequencies"
+                               value="[{termID:483,list:[202,308,307,200,309,201,198,310,315]},{termID:37,list:[203,202,308,307,200,309,201,198,310,312,378]},{termID:486,list:[203,202,308,307,200,309,201,198,310,314,378]},{termID:490,list:[203,202,308,307,200,309,201,198,310,315,378]},{termID:488,list:[202,308,307,200,309,201,198,310,312,315,378]},{termID:30,list:[203,312,315,378]},{termID:485,list:[203,202,308,307,200,309,201,198,310,314,312,315,378]},{termID:318,list:[202,312,378]},{termID:319,list:[203,202,308,307,200,309,201,198,310,312,315,378]},{termID:489,list:[436]},{termID:27,list:[436,314]},{termID:29,list:[203,200,309,310,312,378]},{termID:504,list:[203,202,200,198,312,315,378]}]">
+                    </div>
+                </div>
+                <div class="slider-btn-sm-container">
+                    <div id="prev" class="slider-btn">
+                        <img src="assets/images/landing/prev-arrow.svg"/>
+                        <span>Previous</span>
+                    </div>
+                    <div class="slider-btn" id="next">
+                        <img src="assets/images/landing/next-arrow.svg"/>
+                        <span>Next</span>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="features-section">
+        <h2 class="section-heading">Our Unbeatable Features</h2>
+        <div class="container">
+            <div class="features">
+                <div class="features-card">
+                    <img src="assets/images/landing/truck-icon.svg"/>
+                    <div class="features-card-content">
+                        <p class="features-card-content-heading">Free Delivery In The UK</p>
+                        <span class="features-card-content-subtext">Boost with convenience - enjoy free delivery on all our boosters, Arrives in 5-7 Working Days</span>
+                    </div>
+                </div>
+                <div class="features-card">
+                    <img src="assets/images/landing/warranty-icon.png"/>
+                    <div class="features-card-content">
+                        <p class="features-card-content-heading">1-Year Warranty</p>
+                        <span class="features-card-content-subtext">Experience worry-free boosting with a compli-mentary 1-year warranty on all our products.</span>
+                    </div>
+                </div>
+                <div class="features-card">
+                    <img src="assets/images/landing/cable-icon.svg"/>
+                    <div class="features-card-content">
+                        <p class="features-card-content-heading">Free 10m Cable</p>
+                        <span class="features-card-content-subtext">Enhance your signal without extra costs - each booster comes with a free 10m cable.</span>
+                    </div>
+                </div>
+                <div class="features-card">
+                    <img src="assets/images/landing/premium-icon.png"/>
+                    <div class="features-card-content">
+                        <p class="features-card-content-heading">Premium Quality</p>
+                        <span class="features-card-content-subtext">Rely on the best - our boosters are crafted with top-notch materials and precision.</span>
+                    </div>
+                </div>
+                <div class="features-card">
+                    <img src="assets/images/landing/support-icon.png"/>
+                    <div class="features-card-content">
+                        <p class="features-card-content-heading">24/7 chat support</p>
+                        <span class="features-card-content-subtext">Get help anytime with our 24/7 live chat support. Our experts are ready to assist you whenever you need.</span>
+                    </div>
+                </div>
+                <div class="features-card">
+                    <img src="assets/images/landing/refund-icon.png"/>
+                    <div class="features-card-content">
+                        <p class="features-card-content-heading">Money-Back Guarantee</p>
+                        <span class="features-card-content-subtext">Experience confidence - our boosters are guaranteed, or your money back.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <details class="product-details">
+                <summary>
+                    <h3 class="product-details-heading">Overview</h3>
+                    <svg width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.44856 1.5511L21 20.1025L39.5514 1.5511" stroke="black" stroke-width="3"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </summary>
+                <p>The Home Elite 3G Signal Booster is an excellent choice to cover areas of up to 300 square metres.
+                    This
+                    is a perfect signal booster for enhancing 3G signals in small homes, small offices, or any other
+                    smaller
+                    area of 300 square metres.
+                    It supports 3G signal enhancement for all major UK networks
+                    like Vodafone, EE, iD, O2, Three, Virgin, Tesco, GiffGaff, BT, etc. This booster can serve 6
+                    users simultaneously.
+                    .</p>
+            </details>
+            <details class="product-details">
+                <summary>
+                    <h3 class="product-details-heading">Technical Specifications</h3>
+                    <svg width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.44856 1.5511L21 20.1025L39.5514 1.5511" stroke="black" stroke-width="3"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </summary>
+                <div class="tab-pane" id="technical-specifications-tab-pane" role="tabpanel"
+                     aria-labelledby="technical-specifications-tab"
+                     tabindex="1">
+                    <div class="table-responsive">
+                        <table class="table specs-table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Specification </th>
+                                <th scope="col">Uplink</th>
+                                <th scope="col">Downlink</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span>Max Gain</span></td>
+                                <td>76dB</td>
+                                <td>
+                                    83dB
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>Bandwidth</span></td>
+                                <td>25 MHz</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span>Ripple in Band</span></td>
+                                <td>?8dB</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Input Power Without Damage</span></td>
+                                <td>0 dBm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span>Output Power</span></td>
+                                <td>23 dBm</td>
+                                <td>27 dBm</td>
+                            </tr>
+                            <tr>
+                                <td><span>Noise Figure @ max. gain </span></td>
+                                <td>4.5db</td>
+                                <td>8db</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-section-heading">Frequently asked questions</h2>
+            <div class="accordion" id="accordion">
+                <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingOne">
+                        <button class="faq-card-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <p>Why do I need a mobile signal booster?</p>
+                            <span class="faq-icon">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                        </button>
+                    </h5>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                         data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingTwo">
+                        <button class="faq-card-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <p>Is the installation of a mobile signal booster difficult?</p>
+                            <span class="faq-icon">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                        </button>
+                    </h5>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                         data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingThree">
+                        <button class="faq-card-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <p>Can a signal booster improve my cellular data speed?</p>
+                            <span class="faq-icon">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                        </button>
+                    </h5>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingFour">
+                        <button class="faq-card-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            <p>Do I need different boosters for different carriers?</p>
+                            <span class="faq-icon">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                        </button>
+                    </h5>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingFive">
+                        <button class="faq-card-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            <p>How do I know if I need a signal booster?</p>
+                            <span class="faq-icon">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                        </button>
+                    </h5>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="quiz-error-message">
+        <img src="assets/images/Featured%20icon.png"/>
+        <p>Please select an option to continue.</p>
+    </div>
+</main>
+<footer>
+    <div class="footer-content container">
+        <div class="footer-list-container">
+            <div>
+                <h6 class="footer-list-heading">Explore Products</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Find a Booster Quiz</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Installation Guide</a></li>
+                    <li><a href="#">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Customer Support</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Company Information</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Buyer's Guide</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Our brands</h6>
+                <ul class="footer-list">
+                    <li><a href="#">mysignalboosters</a></li>
+                    <li><a href="#">Mysignal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-section">
+            <p class="footer-list-heading">Subscribe</p>
+            <form method="post" action="/" class="subscribe-form needs-validation" novalidate>
+                <div>
+                    <input type="email" placeholder="Email address" class="input-bordered w-100" required/>
+                    <div class="invalid-feedback">This field is required Subscribe</div>
+                </div>
+                <button type="submit" class="subscribe-submit-btn">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0039 9H1.00001" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path d="M13.0026 15.0013L19.0039 9L13.0026 2.9987" stroke="white" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </form>
+            <span class="subscribe-section-description">
+                        Subscribe to our newsletter and stay connected with exclusive offers, product updates, and tips to boost your signal experience.
+            </span>
+            <div class="message-after">
+                <p class="success-msg">Thanks for subscribing!</p>
+                <p class="subscribe-message">Please check your email for confirmation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-container container">
+        <a href="/" class="sm-none">
+            <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                 class="mobile-booster-logo">
+        </a>
+        <p>© 2024 mobilebooster . All rights reserved. </p>
+        <div class="footer-social-container">
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/linkedin.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/facebook-icon.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/twitter-icon.svg"/>
+            </a>
+        </div>
+    </div>
+</footer>
+<div class="modal fade" id="country-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Change country</h3>
+                <span class="close-btn">
+                <img src="assets/images/landing/close-icon.svg" data-bs-dismiss="modal" aria-label="Close"/>
+            </span>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for a country" id="countrySearch">
+                    <label for="countrySearch" id="search-icon">
+                        <img src="assets/images/landing/search-icon.svg"/>
+                    </label>
+                </div>
+                <div class="country-list">
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="uk" name="country" value="UK">
+                        <label for="uk"><img src="https://flagcdn.com/gb.svg" class="country-popup-logo"
+                                             alt="uk Flag">United
+                            Kingdom</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="nz" name="country" value="NZ">
+                        <label for="nz"><img src="https://flagcdn.com/nz.svg" class="country-popup-logo"
+                                             alt="nz Flag">New
+                            Zealand</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="australia" name="country" value="Australia">
+                        <label for="australia"><img src="https://flagcdn.com/au.svg" class="country-popup-logo"
+                                                    alt="Australia Flag"> Australia</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="UAE" name="country" value="UAE">
+                        <label for="UAE"><img src="https://flagcdn.com/ae.svg" class="country-popup-logo"
+                                              alt="UAE Flag">
+                            UAE</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script>
+    function handleMenu(e) {
+        $(e.currentTarget).toggleClass('active');
+    }
+
+    $(document).ready(function () {
+        const menuToggle = $('header [data-bs-toggle="collapse"]');
+        const fullscreenNav = $('.fullscreen-nav');
+
+        menuToggle.on('click', function () {
+            $(this).toggleClass('active');
+            fullscreenNav.toggleClass('active');
+        });
+    });
+
+
+    function handleMenuList(e) {
+        $(e.currentTarget).toggleClass('active');
+    }
+
+    $('.navbar-list > li').on('click', handleMenuList);
+    document.querySelector('#menu').addEventListener('click', handleMenu);
+    $('.product-options-wrapper > .btn-add-cart').click(function () {
+        $(this).addClass('btn-outline-primary');
+        $(this).removeClass('btn-primary');
+        $(".btn-add-cart svg").removeClass('d-none');
+        setTimeout(() => {
+            $(this).removeClass('btn-outline-primary');
+            $(this).addClass('btn-primary');
+            $(".btn-add-cart svg").addClass('d-none');
+        }, 3000)
+    })
+    $('.country-item').on('click', function () {
+        if ($(this).find('input[type=radio]').is(':checked')) {
+            $('#openPopup .logo').attr('src', $(this).find('img').attr('src'));
+        } else {
+            $('#openPopup .logo').attr('src', 'https://flagcdn.com/gb.svg');
+        }
+    });
+
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.addClass('was-validated')
+                }, false)
+            })
+    })()
+    $('.subscribe-form').on('submit', (e) => {
+        e.preventDefault()
+        if ($(e.currentTarget).checkValidity()) {
+            $(e.currentTarget).classList.add('subscribed');
+
+        }
+    })
+
+    function handleToolTip(e) {
+        const el = e.currentTarget.parentNode;
+        const quiz = document.querySelector('.booster-quiz');
+        const rect = el.getBoundingClientRect();
+        const quizRect = quiz.getBoundingClientRect();
+        document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).classList.toggle('visible');
+        document.querySelector(`.tooltip-arrow`).classList.toggle('visible');
+        const tooltip = document.querySelector(`[data-tooltip=${e.currentTarget.id}]`);
+        if (window.matchMedia('(min-width: 991px)').matches) {
+            document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).style.left = `${rect.left - quizRect.left + rect.width - 30}px`;
+            document.querySelector(`.tooltip-arrow`).style.left = `${rect.left - quizRect.left + rect.width - 15}px`;
+            document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).style.top = `${rect.top - quizRect.top - tooltip.offsetHeight - 8}px`;
+            document.querySelector(`.tooltip-arrow`).style.top = `${rect.top - quizRect.top - 8}px`;
+        } else {
+            document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).style.right = `${rect.right - quizRect.right + rect.width + 15}px`;
+            document.querySelector(`.tooltip-arrow`).style.left = `${rect.left - quizRect.left + rect.width - 15}px`;
+            document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).style.top = `${rect.top - quizRect.top - tooltip.offsetHeight - 8}px`;
+            document.querySelector(`.tooltip-arrow`).style.top = `${rect.top - quizRect.top - 8}px`;
+        }
+    }
+
+    document.querySelectorAll('.tooltip-icon').forEach((icon) => {
+        icon.addEventListener('mouseout', handleToolTip);
+    })
+    document.querySelectorAll('.tooltip-icon').forEach((icon) => {
+        icon.addEventListener('mouseover', handleToolTip);
+    })
+</script>
+
+<script src="./assets/js/booster-quiz.js" type="module"></script>
+<script src="./assets/js/product.js" type="module"></script>
+</body>
+</html>
