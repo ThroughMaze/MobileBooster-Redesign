@@ -3,281 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Order Confirmation - Mobile Booster</title>
+    <title>Thank You - Mobile Booster</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/css/blog.css"/>
+    <link rel="stylesheet" href="assets/css/thanks.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .order-confirmation-page {
-            background-color: #f8f9fa;
-        }
-        
-        .order-confirmation-header {
-            background-color: #1434CB;
-            padding: 3rem 0;
-            text-align: center;
-            color: white;
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 2rem;
-        }
-        
-        .order-confirmation-header h1 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        
-        .order-confirmation-header p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .order-confirmation-icon {
-            width: 80px;
-            height: 80px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-        
-        .order-confirmation-icon svg {
-            width: 40px;
-            height: 40px;
-            color: #1434CB;
-        }
-        
-        .order-details-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .order-details-card h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #1434CB;
-        }
-        
-        .order-info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .order-info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .order-info-box h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .order-info-box p {
-            margin-bottom: 0.5rem;
-            color: #666;
-        }
-        
-        .order-info-box p strong {
-            color: #333;
-        }
-        
-        .order-items {
-            margin-top: 2rem;
-        }
-        
-        .order-item {
-            display: flex;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .order-item:last-child {
-            border-bottom: none;
-        }
-        
-        .order-item-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-right: 1rem;
-        }
-        
-        .order-item-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .order-item-details {
-            flex: 1;
-        }
-        
-        .order-item-title {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-        
-        .order-item-meta {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .order-item-price {
-            font-weight: 600;
-            color: #1434CB;
-        }
-        
-        .order-summary {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-        }
-        
-        .order-summary-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-        
-        .order-summary-row.total {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
-            padding-top: 0.5rem;
-            border-top: 1px solid #eee;
-        }
-        
-        .next-steps-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .next-steps-card h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #1434CB;
-        }
-        
-        .step-item {
-            display: flex;
-            margin-bottom: 1.5rem;
-        }
-        
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background-color: #1434CB;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            margin-right: 1rem;
-            flex-shrink: 0;
-        }
-        
-        .step-content h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .step-content p {
-            color: #666;
-            margin-bottom: 0;
-        }
-        
-        .support-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .support-card h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #1434CB;
-        }
-        
-        .support-options {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-        
-        .support-option {
-            flex: 1;
-            min-width: 200px;
-            padding: 1.5rem;
-            border-radius: 8px;
-            background-color: #f8f9fa;
-            transition: all 0.3s ease;
-        }
-        
-        .support-option:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-        
-        .support-icon {
-            width: 50px;
-            height: 50px;
-            margin: 0 auto 1rem;
-        }
-        
-        .support-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
-        .support-option h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .support-option p {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .action-buttons {
-            text-align: center;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
-        }
-    </style>
+    
 </head>
-<body class="order-confirmation-page">
+<body>
 <header class="header-white">
     <nav class="navbar navbar-expand-lg">
         <div class="container header-content">
@@ -296,6 +31,7 @@
                     </div>
                 </button>
             </div>
+            
             <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
                     style="--bs-scroll-height: 100px;">
@@ -383,9 +119,46 @@
             </div>
         </div>
     </nav>
-</header>
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+        <div class="container">
+            <ul class="navbar-nav navbar-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Shop</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Carriers</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Frequency</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Floor Plan Analysis</a></li>
+            </ul>
 
-<main>
+        </div>
+    </nav>
+</header> 
+<main><main>
     <!-- Order Confirmation Header -->
     <section class="order-confirmation-header">
         <div class="container">
@@ -548,7 +321,7 @@
         </div>
     </div>
 </main>
-
+</main>
 <footer>
     <div class="footer-content container">
         <div class="footer-list-container">
@@ -564,7 +337,7 @@
             <div>
                 <h6 class="footer-list-heading">Customer Support</h6>
                 <ul class="footer-list">
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Help center</a></li>
                     <li><a href="#">Returns & Refunds</a></li>
                     <li><a href="#">FAQs</a></li>
@@ -575,8 +348,8 @@
                 <ul class="footer-list">
                     <li><a href="#">Terms & Conditions</a></li>
                     <li><a href="#">Buyer's Guide</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
             </div>
             <div>
@@ -632,6 +405,52 @@
     </div>
 </footer>
 
-<script src="assets/js/blog.js" type="module"></script>
+<div class="modal fade" id="country-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Change country</h3>
+                <span class="close-btn">
+                <img src="assets/images/landing/close-icon.svg" data-bs-dismiss="modal" aria-label="Close"/>
+            </span>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for a country" id="countrySearch">
+                    <label for="countrySearch" id="search-icon">
+                        <img src="assets/images/landing/search-icon.svg"/>
+                    </label>
+                </div>
+                <div class="country-list">
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="uk" name="country" value="UK">
+                        <label for="uk"><img src="https://flagcdn.com/gb.svg" class="country-popup-logo"
+                                             alt="uk Flag">United
+                            Kingdom</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="nz" name="country" value="NZ">
+                        <label for="nz"><img src="https://flagcdn.com/nz.svg" class="country-popup-logo"
+                                             alt="nz Flag">New
+                            Zealand</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="australia" name="country" value="Australia">
+                        <label for="australia"><img src="https://flagcdn.com/au.svg" class="country-popup-logo"
+                                                    alt="Australia Flag"> Australia</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="UAE" name="country" value="UAE">
+                        <label for="UAE"><img src="https://flagcdn.com/ae.svg" class="country-popup-logo"
+                                              alt="UAE Flag">
+                            UAE</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/index.js" type="module"></script>
 </body>
-</html>
+</html> 

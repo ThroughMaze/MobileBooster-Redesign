@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Checkout - Mobile Booster</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="assets/css/blog.css"/>
+    <link rel="stylesheet" href="./assets/css/blog.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
 <header class="header-white">
@@ -29,6 +30,7 @@
                     </div>
                 </button>
             </div>
+            
             <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
                     style="--bs-scroll-height: 100px;">
@@ -116,9 +118,46 @@
             </div>
         </div>
     </nav>
-</header>
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+        <div class="container">
+            <ul class="navbar-nav navbar-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Shop</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Carriers</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Frequency</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Floor Plan Analysis</a></li>
+            </ul>
 
-<main class="container my-4">
+        </div>
+    </nav>
+</header> 
+<main><main class="container my-4">
     <div class="row">
         <div class="col-12">
             <nav aria-label="breadcrumb" class="mb-4">
@@ -459,7 +498,7 @@
         </div>
     </form>
 </main>
-
+</main>
 <footer>
     <div class="footer-content container">
         <div class="footer-list-container">
@@ -591,4 +630,4 @@
 
 <script src="assets/js/checkout.js" type="module"></script>
 </body>
-</html>
+</html> 

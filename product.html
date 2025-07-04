@@ -3,37 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Mobile Booster Product</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
+    <title>Mobile Booster</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/css/product.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
-
-    <!-- Select2 JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-          integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-            integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Fancybox JS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.4/jquery.fancybox.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.4/jquery.fancybox.min.js"></script>
-
-    <script>
-        window.require = function (module) {
-            if (module === 'jquery') {
-                return window.jQuery;
-            }
-        };
-    </script>
 </head>
 <body>
 <header class="header-white">
@@ -45,7 +20,7 @@
             </a>
             <div id="header-icons" class="d-flex d-lg-none">
                 <a id="cart" href="#">
-                    <img src="assets/images/landing/cart-black.svg"/>
+                    <img src="assets/images/landing/cart-black.svg" alt="Cart"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +29,7 @@
                     </div>
                 </button>
             </div>
-            </a>
+            
             <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
                     style="--bs-scroll-height: 100px;">
@@ -180,7 +155,7 @@
 
         </div>
     </nav>
-</header>
+</header> 
 <main>
     <section class="container product-page-wrapper">
 
@@ -188,7 +163,7 @@
         <section class="breadcrumb-wrapper">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/"><i class="icon icon-home"></i> Home</a></li>
+                    <li class="breadcrumb-item"><a href="/"><i class="icon-home"></i> Home</a></li>
                     <li class="breadcrumb-item"><a href="/small-space">Small Space</a></li>
                     <li class="breadcrumb-item active" aria-current="page">BoostMaster 5000 ProSignal Plus</li>
                 </ol>
@@ -198,27 +173,27 @@
         <section class="product-details row">
             <div class="col-12 col-md-5 col-lg-6 product-imgs-wrapper">
                 <div class="product-gallery-wrapper">
-                    <a href="./assets/images/product/product-4x.png" data-fancybox="gallery" class="featured-img">
+                    <a href="./assets/images/product/product-4x.png" class="featured-img">
                         <img alt="Product image" width="381" height="381" src="./assets/images/product/product.png"/>
                     </a>
                     <div class="product-images-slider">
-                        <a href="./assets/images/product/product1-4x.png" data-fancybox="gallery">
+                        <a href="./assets/images/product/product1-4x.png">
                             <img alt="Product image" width="204" height="204"
                                  src="./assets/images/product/product1.png"/>
                         </a>
-                        <a href="./assets/images/product/product2-4x.png" data-fancybox="gallery">
+                        <a href="./assets/images/product/product2-4x.png">
                             <img alt="Product image" width="204" height="204"
                                  src="./assets/images/product/product2.png"/>
                         </a>
-                        <a href="./assets/images/product/product-4x.png" data-fancybox="gallery">
+                        <a href="./assets/images/product/product-4x.png">
                             <img alt="Product image" width="381" height="381"
                                  src="./assets/images/product/product.png"/>
                         </a>
-                        <a href="./assets/images/product/product2-4x.png" data-fancybox="gallery">
+                        <a href="./assets/images/product/product2-4x.png">
                             <img alt="Product image" width="204" height="204"
                                  src="./assets/images/product/product2.png"/>
                         </a>
-                        <a href="./assets/images/product/product1-4x.png" data-fancybox="gallery">
+                        <a href="./assets/images/product/product1-4x.png">
                             <img alt="Product image" width="204" height="204"
                                  src="./assets/images/product/product1.png"/>
                         </a>
@@ -301,12 +276,7 @@
                 <!-- Options Form -->
                 <form id="options-form" class="product-options" novalidate method="post" action="/product">
                     <div class="product-option-container">
-                        <h3>Get extra cable <span class="info" data-bs-toggle="tooltip"
-                                                  data-bs-placement="top" data-bs-html="true"
-                                                  data-bs-title="<h3>Why do I need this?</h3><p>Upgrade the external cable from 10 meters.This is for larger buildings who need extra cable from roof to the Booster inside.</p>"
-                                                  data-bs-custom-class="info-tooltip"><i
-                                class="icon icon-info2-solid"></i></span>
-                        </h3>
+                        <h3>Get extra cable</h3>
 
                         <ul class="product-options-radios-holder">
                             <li>
@@ -369,7 +339,6 @@
                                     <div class="option-title"><strong>3 Years</strong><span
                                             class="extra-value">+ 45$</span></div>
                                 </label>
-                            </li>
                             </li>
                         </ul>
                     </div>
@@ -461,163 +430,11 @@
             </div>
         </section>
     </section>
-    <section class="booster-quiz-section">
+    <section class="contact-expert-section text-center py-5 bg-light">
         <div class="container">
-            <h3 class="booster-quiz-section-heading">Unsure of which signal Booster you need?</h3>
-            <p class="booster-quiz-section-subheading">Engage in our 30-second booster quiz by answering a few
-                questions, and discover the perfect booster
-                tailored to your needs.</p>
-            <div class="booster-quiz" id="booster-quiz">
-                <div class="tooltip-arrow"></div>
-                <div class="tooltip" data-tooltip="data_only">
-                    <p class="tooltip-heading">Why is data only?</p>
-                    <span class="tooltip-subheading">Upgrade the external cable from 10 metres.
-This is for larger buildings who need extra cable from roof to the Booster inside.</span>
-                </div>
-                <div class="tooltip" data-tooltip="voice_calls">
-                    <p class="tooltip-heading">Why is data only?</p>
-                    <span class="tooltip-subheading">Upgrade the external cable from 10 metres.
-This is for larger buildings who need extra cable from roof to the Booster inside.</span>
-                </div>
-                <div class="booster-quiz-arrow">
-                    <img src="assets/images/landing/circled-down-arrow.png"/>
-                </div>
-                <div>
-                    <p class="booster-quiz-heading" id="quiz-question">Which network should be boosted? <span
-                            class="booster-quiz-counter" id="page-indicator">(1/3)</span>
-                    </p>
-                </div>
-                <div id="prev-lg" class="slider-btn sm-none">
-                    <img src="assets/images/landing/prev-arrow.svg"/>
-                    <span>Previous</span>
-                </div>
-                <div class="slider-container">
-                    <div id="slider" class="custom-slider">
-                        <div>
-                            <div id="slide1" class="booster-quiz-cards-container slide">
-                                <div data-type="all_networks" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/select-all-icon.svg"/>
-                                </div>
-                                <div data-term-id="data" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/data-icon.svg"/>
-                                    <div class="booster-quiz-card-info">
-                                        <p class="booster-quiz-card-heading">Data only</p>
-                                        <svg id="data_only" class="tooltip-icon" width="16" height="16"
-                                             viewBox="0 0 16 16"
-                                             fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g opacity="0.23" clip-path="url(#clip0_109_2715)">
-                                                <path d="M8.00016 0.333328C3.76583 0.333328 0.333496 3.76566 0.333496 7.99999C0.333496 12.2343 3.76583 15.6667 8.00016 15.6667C12.2345 15.6667 15.6668 12.2343 15.6668 7.99999C15.6668 3.76566 12.2345 0.333328 8.00016 0.333328ZM8.66683 12.3333C8.66683 12.5173 8.5175 12.6667 8.3335 12.6667H7.66683C7.48283 12.6667 7.3335 12.5173 7.3335 12.3333V6.33333C7.3335 6.14933 7.48283 5.99999 7.66683 5.99999H8.3335C8.5175 5.99999 8.66683 6.14933 8.66683 6.33333V12.3333ZM8.00016 4.66666C7.53983 4.66666 7.16683 4.29366 7.16683 3.83333C7.16683 3.37299 7.53983 2.99999 8.00016 2.99999C8.4605 2.99999 8.8335 3.37299 8.8335 3.83333C8.8335 4.29366 8.4605 4.66666 8.00016 4.66666Z"
-                                                      fill="black"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_109_2715">
-                                                    <rect width="16" height="16" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div data-term-id="203" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/vodafone-icon.svg"/>
-                                </div>
-                                <div data-term-id="202" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/o2-2.svg"/>
-                                </div>
-                                <div data-term-id="308" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/giffgaff.svg"/>
-                                </div>
-                                <div data-term-id="307" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/Tesco_Mobile-Logo.wine.svg"/>
-                                </div>
-                                <div data-term-id="200" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/ee-mobile-network-uk-.svg"/>
-                                </div>
-                                <div data-term-id="309" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/bt-3.svg"/>
-                                </div>
-                                <div data-term-id="201" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/id-UK%201.png"/>
-                                </div>
-                                <div data-term-id="198" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/Three_UK-Logo.wine.svg"/>
-                                </div>
-                                <div data-term-id="310" data-term="providers" class="booster-quiz-card">
-                                    <img src="assets/images/landing/Virgin_Group-Logo.wine.svg"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="slide2" class="booster-quiz-cards-container slide">
-                                <div data-term-id="378" data-term="signals" class="booster-quiz-card second-step">
-                                    <img src="assets/images/landing/phone-call%201.svg"/>
-                                    <div class="booster-quiz-card-info">
-                                        <p class="booster-quiz-card-heading">Voice Calls</p>
-                                        <svg id="voice_calls" class="tooltip-icon" width="16" height="16"
-                                             viewBox="0 0 16 16" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g opacity="0.23" clip-path="url(#clip0_109_2715)">
-                                                <path d="M8.00016 0.333328C3.76583 0.333328 0.333496 3.76566 0.333496 7.99999C0.333496 12.2343 3.76583 15.6667 8.00016 15.6667C12.2345 15.6667 15.6668 12.2343 15.6668 7.99999C15.6668 3.76566 12.2345 0.333328 8.00016 0.333328ZM8.66683 12.3333C8.66683 12.5173 8.5175 12.6667 8.3335 12.6667H7.66683C7.48283 12.6667 7.3335 12.5173 7.3335 12.3333V6.33333C7.3335 6.14933 7.48283 5.99999 7.66683 5.99999H8.3335C8.5175 5.99999 8.66683 6.14933 8.66683 6.33333V12.3333ZM8.00016 4.66666C7.53983 4.66666 7.16683 4.29366 7.16683 3.83333C7.16683 3.37299 7.53983 2.99999 8.00016 2.99999C8.4605 2.99999 8.8335 3.37299 8.8335 3.83333C8.8335 4.29366 8.4605 4.66666 8.00016 4.66666Z"
-                                                      fill="black"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_109_2715">
-                                                    <rect width="16" height="16" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div data-term-id="314" data-term="signals" class="booster-quiz-card second-step">
-                                    <img src="assets/images/landing/3g-icon.svg"/>
-                                </div>
-                                <div data-term-id="312" data-term="signals" class="booster-quiz-card second-step">
-                                    <img src="assets/images/landing/4g-icon.svg"/>
-                                </div>
-                                <div data-term-id="315" data-term="signals" class="booster-quiz-card second-step">
-                                    <img src="assets/images/landing/5g-icon.svg"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="slide3" class="booster-quiz-cards-container slide">
-                                <div data-term-id="13" data-term="range" class="booster-quiz-card third-step">
-                                    <img src="assets/images/landing/home-button%201.svg"/>
-                                    <p class="booster-quiz-card-heading">Small Space (300 SQM)</p>
-                                </div>
-                                <div data-term-id="14" data-term="range" class="booster-quiz-card third-step">
-                                    <img src="assets/images/landing/building-icon.svg"/>
-                                    <p class="booster-quiz-card-heading">Midsize Space (500 SQM)</p>
-                                </div>
-                                <div data-term-id="15" data-term="range" class="booster-quiz-card third-step">
-                                    <img src="assets/images/landing/hotel%201.svg"/>
-                                    <p class="booster-quiz-card-heading">Large Space (1000 SQM)</p>
-                                </div>
-                                <div data-term-id="16" data-term="range" class="booster-quiz-card third-step">
-                                    <img src="assets/images/landing/company-icon.svg"/>
-                                    <p class="booster-quiz-card-heading">huge Space (5000 SQM)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <input type="hidden" name="frequencies"
-                               value="[{termID:483,list:[202,308,307,200,309,201,198,310,315]},{termID:37,list:[203,202,308,307,200,309,201,198,310,312,378]},{termID:486,list:[203,202,308,307,200,309,201,198,310,314,378]},{termID:490,list:[203,202,308,307,200,309,201,198,310,315,378]},{termID:488,list:[202,308,307,200,309,201,198,310,312,315,378]},{termID:30,list:[203,312,315,378]},{termID:485,list:[203,202,308,307,200,309,201,198,310,314,312,315,378]},{termID:318,list:[202,312,378]},{termID:319,list:[203,202,308,307,200,309,201,198,310,312,315,378]},{termID:489,list:[436]},{termID:27,list:[436,314]},{termID:29,list:[203,200,309,310,312,378]},{termID:504,list:[203,202,200,198,312,315,378]}]">
-                    </div>
-                </div>
-                <div class="slider-btn-sm-container">
-                    <div id="prev" class="slider-btn">
-                        <img src="assets/images/landing/prev-arrow.svg"/>
-                        <span>Previous</span>
-                    </div>
-                    <div class="slider-btn" id="next">
-                        <img src="assets/images/landing/next-arrow.svg"/>
-                        <span>Next</span>
-                    </div>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progress-bar"></div>
-                </div>
-            </div>
-
+            <h3 class="section-heading">Still Unsure?</h3>
+            <p class="section-subheading">Our experts are here to help you find the perfect signal booster for your needs.</p>
+            <a href="contact.html" class="btn btn-primary">Contact an Expert</a>
         </div>
     </section>
     <section class="features-section">
@@ -681,12 +498,12 @@ This is for larger buildings who need extra cable from roof to the Booster insid
                 </summary>
                 <p>The Home Elite 3G Signal Booster is an excellent choice to cover areas of up to 300 square metres.
                     This
-                    is a perfect signal booster for enhancing 3G signals in small homes, small offices, or any other
+                    is a perfect signal booster for enhancing 3G signals in small homes, small offices, or any other
                     smaller
                     area of 300 square metres.
                     It supports 3G signal enhancement for all major UK networks
-                    like Vodafone, EE, iD, O2, Three, Virgin, Tesco, GiffGaff, BT, etc. This booster can serve 6
-                    users simultaneously.
+                    like Vodafone, EE, iD, O2, Three, Virgin, Tesco, GiffGaff, BT, etc. This booster can serve 6
+                    users simultaneously.
                     .</p>
             </details>
             <details class="product-details">
@@ -704,7 +521,7 @@ This is for larger buildings who need extra cable from roof to the Booster insid
                         <table class="table specs-table">
                             <thead>
                             <tr>
-                                <th scope="col">Specification </th>
+                                <th scope="col">Specification</th>
                                 <th scope="col">Uplink</th>
                                 <th scope="col">Downlink</th>
                             </tr>
@@ -738,7 +555,7 @@ This is for larger buildings who need extra cable from roof to the Booster insid
                                 <td>27 dBm</td>
                             </tr>
                             <tr>
-                                <td><span>Noise Figure @ max. gain </span></td>
+                                <td><span>Noise Figure @ max. gain</span></td>
                                 <td>4.5db</td>
                                 <td>8db</td>
                             </tr>
@@ -859,10 +676,6 @@ This is for larger buildings who need extra cable from roof to the Booster insid
             </div>
         </div>
     </section>
-    <div class="quiz-error-message">
-        <img src="assets/images/Featured%20icon.png"/>
-        <p>Please select an option to continue.</p>
-    </div>
 </main>
 <footer>
     <div class="footer-content container">
@@ -907,7 +720,7 @@ This is for larger buildings who need extra cable from roof to the Booster insid
             <form method="post" action="/" class="subscribe-form needs-validation" novalidate>
                 <div>
                     <input type="email" placeholder="Email address" class="input-bordered w-100" required/>
-                    <div class="invalid-feedback">This field is required Subscribe</div>
+                    <div class="invalid-feedback">This field is required.</div>
                 </div>
                 <button type="submit" class="subscribe-submit-btn">
                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -919,7 +732,7 @@ This is for larger buildings who need extra cable from roof to the Booster insid
                 </button>
             </form>
             <span class="subscribe-section-description">
-                        Subscribe to our newsletter and stay connected with exclusive offers, product updates, and tips to boost your signal experience.
+                Subscribe to our newsletter and stay connected with exclusive offers, product updates, and tips to boost your signal experience.
             </span>
             <div class="message-after">
                 <p class="success-msg">Thanks for subscribing!</p>
@@ -934,18 +747,19 @@ This is for larger buildings who need extra cable from roof to the Booster insid
         </a>
         <p>© 2024 mobilebooster . All rights reserved. </p>
         <div class="footer-social-container">
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/linkedin.svg"/>
+            <a href="#" class="social-circle" aria-label="LinkedIn">
+                <img src="assets/images/landing/linkedin.svg" alt="LinkedIn logo"/>
             </a>
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/facebook-icon.svg"/>
+            <a href="#" class="social-circle" aria-label="Facebook">
+                <img src="assets/images/landing/facebook-icon.svg" alt="Facebook logo"/>
             </a>
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/twitter-icon.svg"/>
+            <a href="#" class="social-circle" aria-label="Twitter">
+                <img src="assets/images/landing/twitter-icon.svg" alt="Twitter logo"/>
             </a>
         </div>
     </div>
 </footer>
+
 <div class="modal fade" id="country-modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -991,106 +805,43 @@ This is for larger buildings who need extra cable from roof to the Booster insid
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
+
 <script>
-    function handleMenu(e) {
-        $(e.currentTarget).toggleClass('active');
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    // Product Image Gallery Functionality
+    const featuredImg = document.querySelector('.featured-img img');
+    const featuredLink = document.querySelector('.featured-img');
+    const thumbnailImages = document.querySelectorAll('.product-images-slider a');
 
-    $(document).ready(function () {
-        const menuToggle = $('header [data-bs-toggle="collapse"]');
-        const fullscreenNav = $('.fullscreen-nav');
-
-        menuToggle.on('click', function () {
-            $(this).toggleClass('active');
-            fullscreenNav.toggleClass('active');
+    if (featuredImg && thumbnailImages.length > 0) {
+        thumbnailImages.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Get the thumbnail image source and high-res version
+                const thumbnailImg = thumbnail.querySelector('img');
+                const newSrc = thumbnailImg.src;
+                const newHiResSrc = thumbnail.href;
+                
+                // Update the featured image
+                featuredImg.src = newSrc;
+                featuredLink.href = newHiResSrc;
+                
+                // Remove active class from all thumbnails and add to current
+                thumbnailImages.forEach(thumb => thumb.classList.remove('active'));
+                thumbnail.classList.add('active');
+            });
         });
-    });
 
-
-    function handleMenuList(e) {
-        $(e.currentTarget).toggleClass('active');
-    }
-
-    $('.navbar-list > li').on('click', handleMenuList);
-    document.querySelector('#menu').addEventListener('click', handleMenu);
-    $('.product-options-wrapper > .btn-add-cart').click(function () {
-        $(this).addClass('btn-outline-primary');
-        $(this).removeClass('btn-primary');
-        $(".btn-add-cart svg").removeClass('d-none');
-        setTimeout(() => {
-            $(this).removeClass('btn-outline-primary');
-            $(this).addClass('btn-primary');
-            $(".btn-add-cart svg").addClass('d-none');
-        }, 3000)
-    })
-    $('.country-item').on('click', function () {
-        if ($(this).find('input[type=radio]').is(':checked')) {
-            $('#openPopup .logo').attr('src', $(this).find('img').attr('src'));
-        } else {
-            $('#openPopup .logo').attr('src', 'https://flagcdn.com/gb.svg');
-        }
-    });
-
-    (function () {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.addClass('was-validated')
-                }, false)
-            })
-    })()
-    $('.subscribe-form').on('submit', (e) => {
-        e.preventDefault()
-        if ($(e.currentTarget).checkValidity()) {
-            $(e.currentTarget).classList.add('subscribed');
-
-        }
-    })
-
-    function handleToolTip(e) {
-        const el = e.currentTarget.parentNode;
-        const quiz = document.querySelector('.booster-quiz');
-        const rect = el.getBoundingClientRect();
-        const quizRect = quiz.getBoundingClientRect();
-        document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).classList.toggle('visible');
-        document.querySelector(`.tooltip-arrow`).classList.toggle('visible');
-        const tooltip = document.querySelector(`[data-tooltip=${e.currentTarget.id}]`);
-        if (window.matchMedia('(min-width: 991px)').matches) {
-            document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).style.left = `${rect.left - quizRect.left + rect.width - 30}px`;
-            document.querySelector(`.tooltip-arrow`).style.left = `${rect.left - quizRect.left + rect.width - 15}px`;
-            document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).style.top = `${rect.top - quizRect.top - tooltip.offsetHeight - 8}px`;
-            document.querySelector(`.tooltip-arrow`).style.top = `${rect.top - quizRect.top - 8}px`;
-        } else {
-            document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).style.right = `${rect.right - quizRect.right + rect.width + 15}px`;
-            document.querySelector(`.tooltip-arrow`).style.left = `${rect.left - quizRect.left + rect.width - 15}px`;
-            document.querySelector(`[data-tooltip=${e.currentTarget.id}]`).style.top = `${rect.top - quizRect.top - tooltip.offsetHeight - 8}px`;
-            document.querySelector(`.tooltip-arrow`).style.top = `${rect.top - quizRect.top - 8}px`;
+        // Set first thumbnail as active by default
+        if (thumbnailImages[0]) {
+            thumbnailImages[0].classList.add('active');
         }
     }
-
-    document.querySelectorAll('.tooltip-icon').forEach((icon) => {
-        icon.addEventListener('mouseout', handleToolTip);
-    })
-    document.querySelectorAll('.tooltip-icon').forEach((icon) => {
-        icon.addEventListener('mouseover', handleToolTip);
-    })
+});
 </script>
+<script src="assets/js/product.js" type="module"></script>
 
-<script src="./assets/js/booster-quiz.js" type="module"></script>
-<script src="./assets/js/product.js" type="module"></script>
 </body>
-</html>
+</html> 

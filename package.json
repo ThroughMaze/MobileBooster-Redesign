@@ -5,10 +5,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.3.3"
+    "sass-embedded": "^1.89.2",
+    "vite": "^5.3.3",
+    "vite-plugin-html": "^3.2.2"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "jquery": "^3.7.1"
+    "bootstrap": "^5.3.3"
   }
 }

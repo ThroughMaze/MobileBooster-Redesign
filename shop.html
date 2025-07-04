@@ -3,284 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Shop Mobile Signal Boosters - Mobile Booster</title>
+    <title>Shop - Mobile Booster</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/shop.css"/>
     <link rel="stylesheet" href="assets/css/blog.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .shop-hero {
-            background: linear-gradient(135deg, #1434CB 0%, #0A2A8F 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .shop-hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40%;
-            height: 100%;
-            background-image: url('assets/images/landing/hero-illustration.svg');
-            background-repeat: no-repeat;
-            background-position: center right;
-            background-size: contain;
-            opacity: 0.1;
-        }
-        
-        .hero-features .feature-item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .hero-features .feature-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(5px);
-        }
-        
-        .filter-group {
-            min-width: 180px;
-        }
-        
-        .product-card {
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(20, 52, 203, 0.1);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
-        }
-        
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        
-        .product-image {
-            overflow: hidden;
-        }
-        
-        .product-image img {
-            transition: all 0.5s ease;
-        }
-        
-        .product-card:hover .product-image img {
-            transform: scale(1.05);
-        }
-        
-        .product-specs .badge {
-            transition: all 0.3s ease;
-        }
-        
-        .product-card:hover .product-specs .badge {
-            background-color: rgba(20, 52, 203, 0.1) !important;
-            color: #1434CB !important;
-        }
-        
-        .add-to-cart {
-            transition: all 0.3s ease;
-        }
-        
-        .accessory-card {
-            transition: all 0.3s ease;
-            border-top: 3px solid transparent;
-        }
-        
-        .accessory-card:hover {
-            transform: translateY(-10px);
-            border-top: 3px solid #1434CB;
-        }
-        
-        .feature-item {
-            transition: all 0.3s ease;
-        }
-        
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .feature-item:hover .feature-icon {
-            transform: rotate(10deg);
-        }
-        
-        /* Product Grid Layout Improvements */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        
-        /* Quick View Button */
-        .quick-view-btn {
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            width: 80%;
-            transition: all 0.3s ease;
-            opacity: 0;
-        }
-        
-        .product-card:hover .quick-view-btn {
-            bottom: 20px;
-            opacity: 1;
-        }
-        
-        /* Sale Badge */
-        .sale-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-color: #FF5722;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            z-index: 1;
-        }
-        
-        /* Category Navigation */
-        .category-nav {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-        }
-        
-        .category-nav h5 {
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .category-nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .category-nav ul li {
-            margin-bottom: 10px;
-        }
-        
-        .category-nav ul li a {
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .category-nav ul li a:hover {
-            color: #1434CB;
-            transform: translateX(5px);
-        }
-        
-        .category-nav ul li a span {
-            background-color: #f0f0f0;
-            border-radius: 50px;
-            padding: 2px 8px;
-            font-size: 0.75rem;
-            color: #666;
-        }
-        
-        /* Testimonial Section */
-        .testimonial-section {
-            background-color: #f8f9fa;
-            padding: 60px 0;
-        }
-        
-        .testimonial-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 15px;
-        }
-        
-        .testimonial-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .testimonial-rating {
-            color: #FFC107;
-            margin-bottom: 15px;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #555;
-        }
-        
-        /* Featured Products Carousel */
-        .featured-products {
-            padding: 60px 0;
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        
-        .section-title:after {
-            content: "";
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #1434CB;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .shop-hero::before {
-                width: 100%;
-                opacity: 0.05;
-            }
-            
-            .category-nav {
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    
 </head>
 <body>
 <header class="header-white">
@@ -301,6 +31,7 @@
                     </div>
                 </button>
             </div>
+            
             <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
                     style="--bs-scroll-height: 100px;">
@@ -388,9 +119,46 @@
             </div>
         </div>
     </nav>
-</header>
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+        <div class="container">
+            <ul class="navbar-nav navbar-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Shop</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Carriers</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Frequency</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Floor Plan Analysis</a></li>
+            </ul>
 
-<main>
+        </div>
+    </nav>
+</header> 
+<main><main>
     <!-- Hero Section -->
     <section class="shop-hero text-white py-5">
         <div class="container">
@@ -1042,7 +810,7 @@
         </div>
     </section>
 </main>
-
+</main>
 <footer>
     <div class="footer-content container">
         <div class="footer-list-container">
@@ -1058,7 +826,7 @@
             <div>
                 <h6 class="footer-list-heading">Customer Support</h6>
                 <ul class="footer-list">
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Help center</a></li>
                     <li><a href="#">Returns & Refunds</a></li>
                     <li><a href="#">FAQs</a></li>
@@ -1070,7 +838,7 @@
                     <li><a href="#">Terms & Conditions</a></li>
                     <li><a href="#">Buyer's Guide</a></li>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
             </div>
             <div>
@@ -1174,4 +942,4 @@
 
 <script src="assets/js/shop.js" type="module"></script>
 </body>
-</html>
+</html> 

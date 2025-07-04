@@ -1,4 +1,4 @@
-import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import "bootstrap/dist/js/bootstrap.min.js";
 import "./booster-quiz";
 import "./article-progress-bar";
 import "./share-article";

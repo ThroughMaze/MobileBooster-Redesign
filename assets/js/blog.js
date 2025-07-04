@@ -1,4 +1,4 @@
-import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import "bootstrap/dist/js/bootstrap.min.js";
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
     'use strict'

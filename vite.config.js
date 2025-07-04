@@ -6,9 +6,6 @@ export default defineConfig({
     build: {
         outDir: "./dist",
         emptyOutDir: true,
-        define: {
-            'require': 'window.require',
-        },
         rollupOptions: {
             output: {
                 entryFileNames: "assets/js/[name].js",
@@ -26,8 +23,8 @@ export default defineConfig({
                     if (/\.ttf$/.test(name ?? '')) {
                         return 'assets/fonts/[name][extname]';
                     }
-                    if (/\.ttf$/.test(name ?? '')) {
-                        return 'fonts/[name][extname]';
+                    if (/\.woff2?$/.test(name ?? '')) {
+                        return 'assets/fonts/[name][extname]';
                     }
 
                     // default value
@@ -44,8 +41,17 @@ export default defineConfig({
                 checkout: resolve('', 'checkout.html'),
                 thanks: resolve('', 'thanks-for-purchase.html'),
                 contact: resolve('', 'contact.html'),
-                shop: resolve('', 'shop.html')
+                shop: resolve('', 'shop.html'),
+                about: resolve('', 'about.html'),
+                category: resolve('', 'category.html')
             },
         }
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `@import "bootstrap/scss/bootstrap";`
+            }
+        }
+    }
 });
