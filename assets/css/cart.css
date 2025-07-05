@@ -101,7 +101,7 @@ main > section:not(:first-child) {
 }
 
 
-/* Header styles moved to base.css */
+
 
 .blog-hero-section {
     background: var(--primary-color);
@@ -1540,7 +1540,53 @@ input::placeholder {
     }
 
 
+    .footer-list-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        justify-content: space-between;
+        align-items: start;
+    }
 
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .subscribe-section {
+        border-radius: 1.5625rem;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 3rem 2rem;
+        width: calc(33.33% - 2rem);
+    }
+
+    .footer-list-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: start;
+        gap: 0;
+        width: 66.66%;
+    }
+
+    .copyright-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6rem;
+    }
+
+    footer {
+        background: var(--primary-color);
+        padding-bottom: 2rem;
+        padding-top: 3rem;
+    }
 
     .popup {
         display: none; /* Hidden by default */
@@ -1750,7 +1796,25 @@ input::placeholder {
         line-height: 3.6875rem; /* 147.5% */
     }
 
+    .header-content {
+        display: flex;
+        gap: 7.5rem;
+        align-items: center;
+    }
 
+    .mobile-booster-logo {
+        width: 14.6875rem;
+        height: 2.6875rem;
+        object-fit: contain;
+    }
+
+    .navbar-list > li:first-child .navbar-dropdown {
+        width: 880px;
+    }
+
+    .navbar .navbar-list > li:hover .navbar-dropdown-arrow, .navbar .navbar-list > li:hover .navbar-dropdown {
+        display: flex;
+    }
 
     .latest-articles-card {
         height: 27rem;
@@ -1764,7 +1828,9 @@ input::placeholder {
         margin-bottom: 3.5rem;
     }
 
-
+    .navbar-list > li {
+        font-size: 1rem;
+    }
 
     .latest-articles-card h4 {
         font-size: 1.5rem;

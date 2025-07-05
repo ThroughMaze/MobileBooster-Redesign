@@ -6,6 +6,7 @@ export default defineConfig({
     build: {
         outDir: "./dist",
         emptyOutDir: true,
+        cssCodeSplit: true,
         rollupOptions: {
             output: {
                 entryFileNames: "assets/js/[name].js",
@@ -39,19 +40,21 @@ export default defineConfig({
                 product: resolve('', 'product.html'),
                 cart: resolve('', 'cart.html'),
                 checkout: resolve('', 'checkout.html'),
-                thanks: resolve('', 'thanks-for-purchase.html'),
-                contact: resolve('', 'contact.html'),
+                thanks: resolve('', 'thanks.html'),
                 shop: resolve('', 'shop.html'),
-                about: resolve('', 'about.html'),
-                category: resolve('', 'category.html')
+                category: resolve('', 'category.html'),
+                'base': resolve('assets/css/base.css'),
+                'index': resolve('assets/css/index.css'),
+                'bootstrap': resolve('assets/css/bootstrap.css')
             },
         }
     },
-    css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: `@import "bootstrap/scss/bootstrap";`
-            }
-        }
+    server: {
+        port: 3000,
+        open: true
+    },
+    preview: {
+        port: 4173,
+        open: true
     }
 });

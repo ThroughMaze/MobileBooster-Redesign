@@ -359,18 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.shop = new Shop();
 });
 
-// Handle mobile menu
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector('[data-bs-toggle="collapse"]');
-    const fullscreenNav = document.querySelector(".fullscreen-nav");
-
-    if (menuToggle && fullscreenNav) {
-        menuToggle.addEventListener("click", () => {
-            menuToggle.classList.toggle("active");
-            fullscreenNav.classList.toggle("active");
-        });
-    }
-});
+/* Mobile menu handling moved to menu.js for consistency */
 
 // Handle country selection
 document.querySelectorAll('.country-item').forEach((country) => {

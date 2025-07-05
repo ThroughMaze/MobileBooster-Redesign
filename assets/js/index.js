@@ -31,15 +31,7 @@ function handleMenu(e) {
     e.currentTarget.classList.toggle('active');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector('[data-bs-toggle="collapse"]');
-    const fullscreenNav = document.querySelector(".fullscreen-nav");
-
-    menuToggle.addEventListener("click", () => {
-        menuToggle.classList.toggle("active");
-        fullscreenNav.classList.toggle("active");
-    });
-});
+/* Mobile menu handling moved to menu.js for consistency */
 
 function handleMenuList(e) {
     e.currentTarget.classList.toggle('active');
