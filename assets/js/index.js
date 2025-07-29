@@ -1,4 +1,5 @@
 import "bootstrap/dist/js/bootstrap.min.js";
+import "./menu.js";
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
     'use strict'
@@ -27,15 +28,7 @@ document.querySelector('.subscribe-form').addEventListener('submit', (e) => {
     }
 })
 
-function handleMenu(e) {
-    e.currentTarget.classList.toggle('active');
-}
-
 /* Mobile menu handling moved to menu.js for consistency */
-
-function handleMenuList(e) {
-    e.currentTarget.classList.toggle('active');
-}
 
 let booster = {
     providers: [],
@@ -206,10 +199,6 @@ nextButton.addEventListener('click', () => {
 updateSlider(); // Initialize the slider position
 
 
-document.querySelectorAll('.navbar-list > li').forEach((el) => {
-    el.addEventListener('click', handleMenuList);
-});
-document.querySelector('#menu').addEventListener('click', handleMenu);
 document.querySelectorAll('.booster-quiz-card').forEach((card) => {
     card.addEventListener('click', handleQuizSelection);
 });

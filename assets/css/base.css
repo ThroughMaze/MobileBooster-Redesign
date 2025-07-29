@@ -168,11 +168,17 @@ header #progress-bar-container {
 }
 
 .logo-container:has(~ div .navbar-toggler.active) {
-    z-index: 20;
+    z-index: 60;
+    position: relative;
 }
 
 .logo-container:has(~ div .navbar-toggler.active) .mobile-booster-logo { 
     filter: none; 
+}
+
+#header-icons:has(.navbar-toggler.active) {
+    z-index: 60;
+    position: relative;
 }
 
 #cart-icon {
@@ -193,6 +199,10 @@ header #progress-bar-container {
     position: absolute;
     border-radius: 999px;
     transition: .3s ease;
+    background: white;
+}
+
+.header-white #menu span {
     background: black;
 }
 
@@ -240,12 +250,18 @@ header #progress-bar-container {
 .fullscreen-nav {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    z-index: 10; /* Ensure it overlays content */
+    z-index: 50; /* Ensure it overlays content but below logo when active */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    padding-top: 6rem; /* Account for header height */
 }
 
 .fullscreen-nav.active {
     transform: translateX(0);
-    width: 100%;
 }
 
 /* Hide fullscreen navigation on desktop */
