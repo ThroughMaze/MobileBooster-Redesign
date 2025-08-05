@@ -3,7 +3,7 @@
 :root {
     --primary-color: #1434CB;
     --color-dark-navy: #0F172A;
-    --primary-hover-color: #01D1EE;
+    --primary-hover-color: rgba(252, 192, 20, 1);
     --primary-stroke: #D3DDFD;
     --light-heading: #484848;
     --light-paragraph: #333;

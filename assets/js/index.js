@@ -21,14 +21,70 @@ import "bootstrap/dist/js/bootstrap.min.js";
 })()
 
 
+// Main mobile menu toggle functionality
 function handleMenu(e) {
-    e.currentTarget.classList.toggle('active');
+    console.log('handleMenu called'); // Debug log
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const menuButton = e.currentTarget;
+    const navbarToggler = menuButton.closest('[data-bs-toggle="collapse"]');
+    const fullscreenNav = document.querySelector(".fullscreen-nav");
+    
+    console.log('menuButton:', menuButton); // Debug log
+    console.log('navbarToggler:', navbarToggler); // Debug log
+    console.log('fullscreenNav:', fullscreenNav); // Debug log
+    
+    if (navbarToggler && fullscreenNav) {
+        navbarToggler.classList.toggle("active");
+        fullscreenNav.classList.toggle("active");
+        menuButton.classList.toggle("active");
+        
+        console.log('Menu toggled. Active classes:', {
+            navbarToggler: navbarToggler.classList.contains('active'),
+            fullscreenNav: fullscreenNav.classList.contains('active'),
+            menuButton: menuButton.classList.contains('active')
+        }); // Debug log
+    }
 }
 
-/* Mobile menu handling moved to menu.js for consistency */
-
+// Mobile menu dropdown functionality
 function handleMenuList(e) {
-    e.currentTarget.classList.toggle('active');
+    e.preventDefault();
+    
+    const navItem = e.currentTarget.closest('.nav-item');
+    const innerList = navItem.querySelector('.inner-list');
+    
+    if (navItem && innerList) {
+        // Close other open dropdowns
+        const mobileDropdownToggles = document.querySelectorAll('.fullscreen-nav .dropdown-toggle');
+        mobileDropdownToggles.forEach(otherToggle => {
+            const otherNavItem = otherToggle.closest('.nav-item');
+            if (otherNavItem !== navItem) {
+                otherNavItem.classList.remove('active');
+            }
+        });
+        
+        // Toggle current dropdown
+        navItem.classList.toggle('active');
+    }
+}
+
+// Close mobile menu when clicking outside
+function handleOutsideClick(e) {
+    const fullscreenNav = document.querySelector(".fullscreen-nav");
+    const navbarToggler = document.querySelector('[data-bs-toggle="collapse"]');
+    
+    if (fullscreenNav && fullscreenNav.classList.contains('active')) {
+        if (!fullscreenNav.contains(e.target) && !navbarToggler.contains(e.target)) {
+            navbarToggler.classList.remove('active');
+            fullscreenNav.classList.remove('active');
+            const menuIcon = document.querySelector("#menu");
+            if (menuIcon) {
+                menuIcon.classList.remove('active');
+            }
+        }
+    }
 }
 
 let booster = {
@@ -200,10 +256,74 @@ nextButton.addEventListener('click', () => {
 updateSlider(); // Initialize the slider position
 
 
+// Desktop navbar dropdown functionality
 document.querySelectorAll('.navbar-list > li').forEach((el) => {
     el.addEventListener('click', handleMenuList);
 });
-document.querySelector('#menu').addEventListener('click', handleMenu);
+
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded - setting up menu listeners'); // Debug log
+    
+    const menuButton = document.querySelector('#menu');
+    const navbarToggler = document.querySelector('[data-bs-toggle="collapse"]');
+    
+    console.log('menuButton:', menuButton); // Debug log
+    console.log('navbarToggler:', navbarToggler); // Debug log
+    
+    if (menuButton && navbarToggler) {
+        // Attach event listener to the menu button itself
+        menuButton.addEventListener('click', (e) => {
+            console.log('Menu button clicked'); // Debug log
+            e.preventDefault();
+            e.stopPropagation();
+            handleMenu(e);
+        });
+        console.log('Event listener attached to menu button'); // Debug log
+    } else {
+        console.log('Menu elements not found:', { menuButton: !!menuButton, navbarToggler: !!navbarToggler }); // Debug log
+    }
+});
+
+// Mobile menu dropdown functionality
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Setting up mobile dropdown functionality'); // Debug log
+    
+    const mobileDropdownToggles = document.querySelectorAll('.fullscreen-nav .dropdown-toggle');
+    console.log('Found mobile dropdown toggles:', mobileDropdownToggles.length); // Debug log
+    
+    mobileDropdownToggles.forEach((toggle, index) => {
+        console.log(`Setting up toggle ${index}:`, toggle); // Debug log
+        
+        toggle.addEventListener('click', (e) => {
+            console.log('Mobile dropdown toggle clicked:', toggle.textContent); // Debug log
+            e.preventDefault();
+            
+            const navItem = toggle.closest('.nav-item');
+            const innerList = navItem.querySelector('.inner-list');
+            
+            console.log('navItem:', navItem); // Debug log
+            console.log('innerList:', innerList); // Debug log
+            
+            if (navItem && innerList) {
+                // Close other open dropdowns
+                mobileDropdownToggles.forEach(otherToggle => {
+                    const otherNavItem = otherToggle.closest('.nav-item');
+                    if (otherNavItem !== navItem) {
+                        otherNavItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current dropdown
+                navItem.classList.toggle('active');
+                console.log('Toggled navItem active class. Active:', navItem.classList.contains('active')); // Debug log
+            }
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', handleOutsideClick);
+});
 document.querySelectorAll('.booster-quiz-card').forEach((card) => {
     card.addEventListener('click', handleQuizSelection);
 });
