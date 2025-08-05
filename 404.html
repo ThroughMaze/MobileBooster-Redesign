@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Page Not Found - Mobile Booster</title>
+    <link rel="stylesheet" href="./assets/css/layout.css"/>
+    <link rel="stylesheet" href="assets/css/404.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<header class="header-white">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container header-content">
+            <a href="/" class="logo-container">
+                <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                     class="mobile-booster-logo"/>
+            </a>
+            <div id="header-icons" class="d-flex d-lg-none">
+                <a id="cart" href="cart.html">
+                    <img src="assets/images/landing/cart-black.svg"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="menu">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll navbar-list"
+                    style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Shop
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul role="menu" class="navbar-dropdown dropdown-menu" data-bs-popper="static">
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by coverage</p>
+                                <a href="#" class="navbar-dropdown-links">Small Space (0: 300 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Midsize Space (300 : 500 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">Large Space (500: 1000 SQM)</a>
+                                <a href="#" class="navbar-dropdown-links">huge space (1000 : 5000 SQM)</a>
+                            </li>
+                            <li class="navbar-dropdown-list">
+                                <p class="navbar-dropdown-heading">Shop by signal type</p>
+                                <a href="#" class="navbar-dropdown-links">3G</a>
+                                <a href="#" class="navbar-dropdown-links">4G</a>
+                                <a href="#" class="navbar-dropdown-links">5G</a>
+                                <a href="#" class="navbar-dropdown-links">3G & 4G & 5G</a>
+                            </li>
+                            <li class="navbar-dropdown-list navbar-dropdown-suggestion">
+                                <img src="assets/images/landing/Black1%201.png"/>
+                                <a href="#" class="btn-primary w-100">show more</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Carriers
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <div class="navbar-dropdown">
+                            <div class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">Vodafone</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">O2</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">giffgaff</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Tesco Mobile</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">EE</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">BT</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">ID UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Three UK</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">Virgin UK</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Frequency
+                        </a>
+                        <div class="navbar-dropdown-arrow">
+                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                        </div>
+                        <ul class="navbar-dropdown dropdown-menu" id="frequency-dropdown">
+                            <li class="navbar-dropdown-list">
+                                <a href="#" class="navbar-dropdown-heading-lighter">700 MHz (5G)</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/1800 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">900/210 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/2600 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">800/900/2100 MHz</a>
+                                <a href="#" class="navbar-dropdown-heading-lighter">700/900/1800 /2100/2600 MHz</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">Floor Plan Analysis</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex gap-3">
+                    <div id="openPopup" class="country-logo" data-bs-toggle="modal" data-bs-target="#country-modal">
+                        <img class="logo" src="https://flagcdn.com/gb.svg">
+                        <img src="assets/images/landing/black-down-arrow.svg"/>
+                    </div>
+                    <a id="cart-desktop-header" href="cart.html">
+                        <img src="assets/images/landing/cart-black.svg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+        <div class="container">
+            <ul class="navbar-nav navbar-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Shop</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Carriers</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">Frequency</a>
+                    <ul class="inner-list">
+                        <li><a href="#">Micro-Home (300 SQM)</a></li>
+                        <li><a href="#">Home (500 SQM)</a></li>
+                        <li><a href="#">Hotel (1000 SQM)</a></li>
+                        <li><a href="#">Factory (5000 SQM)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Floor Plan Analysis</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-12">
+            <div class="error-page-content text-center">
+                <!-- 404 Error Number -->
+                <div class="error-number">
+                    <h1 class="display-1 fw-bold text-primary">404</h1>
+                </div>
+                
+                <!-- Error Message -->
+                <div class="error-message mb-4">
+                    <h2 class="mb-3" style="color: var(--color-dark-navy);">Page Not Found</h2>
+                    <p class="text-muted fs-5">Oops! The page you're looking for seems to have lost its signal.</p>
+                    <p class="text-muted">Don't worry, we'll help you get back on track with a strong connection.</p>
+                </div>
+                
+                <!-- Error Illustration -->
+                <div class="error-illustration mb-5">
+                    <img src="assets/images/landing/hero-mobile-booster.png" alt="Mobile Booster" class="img-fluid" style="max-width: 300px;">
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="error-actions d-flex flex-column flex-md-row gap-3 justify-content-center">
+                    <a href="/" class="btn btn-primary btn-lg">
+                        <i class="fas fa-home me-2"></i>
+                        Go to Homepage
+                    </a>
+                    <a href="shop.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-shopping-cart me-2"></i>
+                        Browse Products
+                    </a>
+                </div>
+                
+                <!-- Helpful Links -->
+                <div class="helpful-links mt-5">
+                    <h5 class="mb-3" style="color: var(--color-dark-navy);">Looking for something specific?</h5>
+                    <div class="row g-3">
+                        <div class="col-md-4 col-6">
+                            <a href="shop.html" class="helpful-link">
+                                <div class="helpful-link-card">
+                                    <i class="fas fa-signal text-primary mb-2"></i>
+                                    <span>Signal Boosters</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <a href="blog.html" class="helpful-link">
+                                <div class="helpful-link-card">
+                                    <i class="fas fa-blog text-primary mb-2"></i>
+                                    <span>Blog & Guides</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <a href="#" class="helpful-link">
+                                <div class="helpful-link-card">
+                                    <i class="fas fa-question-circle text-primary mb-2"></i>
+                                    <span>Help Center</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <a href="#" class="helpful-link">
+                                <div class="helpful-link-card">
+                                    <i class="fas fa-phone text-primary mb-2"></i>
+                                    <span>Contact Us</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <a href="#" class="helpful-link">
+                                <div class="helpful-link-card">
+                                    <i class="fas fa-search text-primary mb-2"></i>
+                                    <span>Search Products</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <a href="#" class="helpful-link">
+                                <div class="helpful-link-card">
+                                    <i class="fas fa-map-marker-alt text-primary mb-2"></i>
+                                    <span>Coverage Check</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content container">
+        <div class="footer-list-container">
+            <div>
+                <h6 class="footer-list-heading">Explore Products</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Find a Booster Quiz</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Installation Guide</a></li>
+                    <li><a href="#">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Customer Support</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Company Information</h6>
+                <ul class="footer-list">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Buyer's Guide</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-list-heading">Our brands</h6>
+                <ul class="footer-list">
+                    <li><a href="#">mysignalboosters</a></li>
+                    <li><a href="#">Mysignal</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="copyright-container container">
+        <a href="/" class="sm-none">
+            <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
+                 class="mobile-booster-logo">
+        </a>
+        <p>© 2024 mobilebooster . All rights reserved. </p>
+        <div class="footer-social-container">
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/linkedin.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/facebook-icon.svg"/>
+            </a>
+            <a href="#" class="social-circle">
+                <img src="assets/images/landing/twitter-icon.svg"/>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="country-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Change country</h3>
+                <span class="close-btn">
+                <img src="assets/images/landing/close-icon.svg" data-bs-dismiss="modal" aria-label="Close"/>
+            </span>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for a country" id="countrySearch">
+                    <label for="countrySearch" id="search-icon">
+                        <img src="assets/images/landing/search-icon.svg"/>
+                    </label>
+                </div>
+                <div class="country-list">
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="uk" name="country" value="UK">
+                        <label for="uk"><img src="https://flagcdn.com/gb.svg" class="country-popup-logo"
+                                             alt="uk Flag">United
+                            Kingdom</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="nz" name="country" value="NZ">
+                        <label for="nz"><img src="https://flagcdn.com/nz.svg" class="country-popup-logo"
+                                             alt="nz Flag">New
+                            Zealand</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="australia" name="country" value="Australia">
+                        <label for="australia"><img src="https://flagcdn.com/au.svg" class="country-popup-logo"
+                                                    alt="Australia Flag"> Australia</label>
+                    </div>
+                    <div class="country-item" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="radio" id="UAE" name="country" value="UAE">
+                        <label for="UAE"><img src="https://flagcdn.com/ae.svg" class="country-popup-logo"
+                                              alt="UAE Flag">
+                            UAE</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/menu.js" type="module"></script>
+</body>
+</html> 
