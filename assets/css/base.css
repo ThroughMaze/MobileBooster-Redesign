@@ -542,39 +542,7 @@ footer {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-.subscribe-section {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem 1rem;
-    width: 100%;
-}
 
-.subscribe-form {
-    position: relative;
-    margin-bottom: 1rem;
-}
-
-.subscribe-submit-btn {
-    position: absolute;
-    background: #FCC014;
-    border: 0;
-    margin: 0;
-    top: 0;
-    right: 0;
-    height: 48px;
-    border-top-right-radius: 0.625rem;
-    border-bottom-right-radius: 0.625rem;
-}
-
-.subscribe-submit-btn:hover {
-    background: #e6ac13;
-}
-
-.subscribe-section-description {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 1.275rem;
-}
 
 .input-bordered {
     border-radius: 0.625rem;
@@ -900,17 +868,10 @@ footer {
 
     .footer-content {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
         gap: 3rem;
-    }
-
-    .subscribe-section {
-        border-radius: 1.5625rem;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 3rem 2rem;
-        width: calc(33.33% - 2rem);
     }
 
     .footer-list-container {
@@ -919,8 +880,8 @@ footer {
         flex-wrap: nowrap;
         flex-direction: row;
         align-items: start;
-        gap: 0;
-        width: 66.66%;
+        gap: 2rem;
+        width: 100%;
     }
 
     .copyright-container {
@@ -955,12 +916,6 @@ footer {
         gap: 2.5rem;
         justify-content: space-between;
         align-items: start;
-    }
-
-    .subscribe-section {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 2rem 1rem;
-        width: 100%;
     }
 
     .copyright-container {

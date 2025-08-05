@@ -19,13 +19,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
             }, false)
         })
 })()
-document.querySelector('.subscribe-form').addEventListener('submit', (e) => {
-    e.preventDefault()
-    if (e.currentTarget.checkValidity()) {
-        e.currentTarget.classList.add('subscribed');
 
-    }
-})
 
 function handleMenu(e) {
     e.currentTarget.classList.toggle('active');

@@ -22,13 +22,7 @@ import "./share-article";
             }, false)
         })
 })()
-document.querySelector('.subscribe-form').addEventListener('submit', (e) => {
-    e.preventDefault()
-    if (e.currentTarget.checkValidity()) {
-        e.currentTarget.classList.add('subscribed');
 
-    }
-})
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector('[data-bs-toggle="collapse"]');
     const fullscreenNav = document.querySelector(".fullscreen-nav");

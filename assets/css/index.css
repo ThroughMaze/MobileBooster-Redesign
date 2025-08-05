@@ -2363,18 +2363,13 @@ input[name="country"][type="radio"]:checked::before {
 
     .footer-content {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
         gap: 3rem;
     }
 
-    .subscribe-section {
-        border-radius: 1.5625rem;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 3rem 2rem;
-        width: calc(33.33% - 2rem);
-    }
+
 
     .footer-list-container {
         display: flex;
@@ -2382,8 +2377,8 @@ input[name="country"][type="radio"]:checked::before {
         flex-wrap: nowrap;
         flex-direction: row;
         align-items: start;
-        gap: 0;
-        width: 66.66%;
+        gap: 2rem;
+        width: 100%;
     }
 
     .copyright-container {
@@ -3132,4 +3127,49 @@ input[name="country"][type="radio"]:checked::before {
 .work-section-icon-container i {
     font-size: 6rem;
     color: var(--primary-color);
+}
+
+/* Mobile-specific improvements for work section */
+@media screen and (max-width: 767px) {
+    .work-section {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .work-section-content {
+        gap: 2rem;
+    }
+    
+    .work-section-content-card {
+        gap: 0.75rem;
+    }
+    
+    .work-section-card-text {
+        gap: 0.5rem;
+    }
+    
+    .work-section-card-text h3 {
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+    
+    .work-section-card-text p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0 0.5rem;
+    }
+    
+    .work-section-icon-container {
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+    
+    .work-section-icon-container i {
+        font-size: 4rem;
+    }
+    
+    .work-section-btn {
+        margin-top: 1rem;
+        font-size: 0.95rem;
+    }
 }

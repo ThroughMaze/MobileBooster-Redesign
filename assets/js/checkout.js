@@ -403,10 +403,3 @@ document.querySelectorAll('.country-item').forEach((country) => {
     });
 });
 
-// Newsletter subscription
-document.querySelector('.subscribe-form')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (e.currentTarget.checkValidity()) {
-        e.currentTarget.classList.add('subscribed');
-    }
-});
