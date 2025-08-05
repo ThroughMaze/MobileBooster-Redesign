@@ -138,6 +138,13 @@ main > section:not(:first-child) {
     width: 100%;
 }
 
+.hero-subtext {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: white;
+    line-height: normal;
+}
+
 .booster-quiz-section {
     background: #E7EBFA;
     padding: 2rem 0;
