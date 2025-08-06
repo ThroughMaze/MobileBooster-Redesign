@@ -347,6 +347,7 @@ header {
 .hero-section {
     background: var(--primary-color);
     position: relative;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 20rem, rgba(20, 52, 203, 1) 20rem, rgba(20, 52, 203, 1) 100%);
 }
 
 .hero-section {
@@ -930,7 +931,7 @@ button {
     gap: 2.5rem;
 }
 
-.struggle-section-content h2, .struggle-section-content span {
+.struggle-section-content h2, .struggle-section-content p {
     color: white;
 }
 
@@ -1620,7 +1621,7 @@ input::placeholder {
     transform: rotate(180deg);
 }
 
-.go-to-top p {
+.go-to-top span {
     color: #FFF;
     font-size: 0.75rem;
     font-weight: 500;
