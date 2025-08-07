@@ -737,119 +737,7 @@ details > summary {
     list-style: none;
 }
 
-footer {
-    background: var(--primary-color);
-    padding-bottom: 2rem;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
-    padding: 0;
-}
-
-.message-after {
-    display: none;
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1.275rem;
-}
-
-.subscribe-form.subscribed ~ .message-after {
-    display: block;
-}
-
-.success-msg {
-    color: #00F04C;
-}
-
-.subscribe-message {
-    color: #D5DEE7;
-    font-weight: 400;
-    margin-top: 0.25rem;
-}
-
-.footer-list-heading {
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.75rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.footer-list > li {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.footer-list > li:hover {
-    text-decoration: underline;
-}
-
-.footer-list-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 2.5rem;
-    justify-content: space-between;
-    align-items: start;
-}
-
-.copyright-container {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2.5rem;
-}
-
-.copyright-container p {
-    color: #FFF;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.625rem;
-}
-
-.footer-social-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.subscribe-section {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem 1rem;
-    width: 100%;
-}
-
-.error-msg {
-    display: none;
-    color: #F33;
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1.275rem;
-}
-
-.success-msg {
-    display: none;
-    color: #00F04C;
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1.275rem;
-}
+/* Footer styles moved to base.css */
 
 .input-msg {
     display: none;
@@ -1287,53 +1175,7 @@ footer {
         width: 85%;
     }
 
-    .footer-list-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 2.5rem;
-        justify-content: space-between;
-        align-items: start;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .subscribe-section {
-        border-radius: 1.5625rem;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 3rem 2rem;
-        width: calc(33.33% - 2rem);
-    }
-
-    .footer-list-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        align-items: start;
-        gap: 0;
-        width: 66.66%;
-    }
-
-    .copyright-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 6rem;
-    }
-
-    footer {
-        background: var(--primary-color);
-        padding-bottom: 2rem;
-        padding-top: 3rem;
-    }
+    /* Footer responsive styles moved to base.css */
 
     .popup {
         display: none; /* Hidden by default */
@@ -2563,7 +2405,7 @@ input[name="warranty"] ~ .option-title:hover {
     width: 100%;
 }
 
-.suggested-booster-wrapper .booster-details h2, .suggested-booster-wrapper .booster-details .h2 {
+.suggested-booster-wrapper .booster-details h4, .suggested-booster-wrapper .booster-details .h4 {
     font-size: 24px;
     font-weight: 600;
     line-height: 1.5;

@@ -86,7 +86,7 @@ header {
     position: sticky;
     top: 0;
     padding: 1.25rem 0;
-    z-index: 10;
+    z-index: 1100;
 }
 
 header #article-progress-bar {
@@ -456,10 +456,15 @@ header #progress-bar-container {
 }
 
 /* Footer Styles */
+/* Footer styles from index.css - overwriting base styles */
 footer {
     background: var(--primary-color);
     padding-bottom: 2rem;
-    padding-top: 3rem;
+}
+
+.footer-content.container {
+    padding: 0;
+    padding-top: 2rem;
 }
 
 .footer-content {
@@ -468,16 +473,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    padding: 0;
-}
-
-.footer-list-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 2.5rem;
-    justify-content: space-between;
-    align-items: start;
 }
 
 .footer-list-heading {
@@ -505,6 +500,15 @@ footer {
     text-decoration: underline;
 }
 
+.footer-list-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: start;
+}
+
 .copyright-container {
     display: flex;
     flex-direction: column-reverse;
@@ -526,6 +530,52 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+/* Subscribe section styles from index.css */
+.subscribe-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.subscribe-form {
+    --bs-form-invalid-color: #F33;
+    --bs-form-invalid-border-color: #F33;
+    --bs-form-valid-color: #00F04C;
+    --bs-form-valid-border-color: #00F04C;
+}
+
+.message-after {
+    display: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.275rem;
+}
+
+.subscribe-message {
+    color: #D5DEE7;
+    font-weight: 400;
+    margin-top: 0.25rem;
+}
+
+.success-msg {
+    color: #00F04C;
+}
+
+.subscribe-form.subscribed ~ .message-after {
+    display: block;
+}
+
+.subscribe-form.subscribed ~ .subscribe-section-description {
+    display: none;
+}
+
+.invalid-feedback, .valid-feedback {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.275rem;
+    margin-top: 16px;
 }
 
 .social-circle {
@@ -857,20 +907,11 @@ footer {
         object-fit: contain;
     }
 
-    .footer-list-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 2.5rem;
-        justify-content: space-between;
-        align-items: start;
-    }
-
     .footer-content {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        flex-direction: row;
+        flex-direction: column;
         gap: 3rem;
     }
 
@@ -881,6 +922,7 @@ footer {
         flex-direction: row;
         align-items: start;
         gap: 2rem;
+        width: 66.66%;
     }
 
     .copyright-container {

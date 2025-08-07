@@ -1540,53 +1540,7 @@ input::placeholder {
     }
 
 
-    .footer-list-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 2.5rem;
-        justify-content: space-between;
-        align-items: start;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .subscribe-section {
-        border-radius: 1.5625rem;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 3rem 2rem;
-        width: calc(33.33% - 2rem);
-    }
-
-    .footer-list-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        align-items: start;
-        gap: 0;
-        width: 66.66%;
-    }
-
-    .copyright-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 6rem;
-    }
-
-    footer {
-        background: var(--primary-color);
-        padding-bottom: 2rem;
-        padding-top: 3rem;
-    }
+    /* Footer responsive styles moved to base.css */
 
     .popup {
         display: none; /* Hidden by default */

@@ -382,158 +382,16 @@ input[name="country"][type="radio"]:checked::before {
     transform: scale(1);
 }
 
-.go-to-top {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.go-to-top .circle-down-arrow {
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-}
-
-.go-to-top .circle-down-arrow svg {
-    stroke: #1434CB;
-    transform: rotate(180deg);
-}
-
-.go-to-top p {
-    color: #FFF;
-    font-size: 0.875rem;
-    font-weight: 500;
-    line-height: 1.5rem; /* 150% */
-    letter-spacing: 0.03125rem;
-}
-
-.go-to-top {
-    display: none;
-    cursor: pointer;
-}
+/* Go-to-top styles moved to base.css */
 
 /* Navbar styles moved to base.css */
-
-.popup {
-    left: -110%;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition-duration: 300ms;
-}
-
-.popup.active {
-    left: 0;
-}
 
 .article-social-media {
     display: flex;
     gap: 0.5rem;
 }
 
-/* Popup content */
-.modal-content {
-    position: relative;
-    margin: auto;
-    padding: 3rem 1rem;
-    background-color: #fff;
-    max-width: 100%;
-}
-
-.modal-content {
-    border: 0;
-}
-
-/* Modal styles moved to base.css */
-
-.modal-body {
-    padding: 0;
-}
-
-/* Logo styles moved to base.css */
-
-.search-container {
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-#countrySearch {
-    border-radius: 1.5625rem;
-    border: 1px solid #E7E7E7;
-    background: #FFF;
-    padding: 1.5rem 1.5rem 1.5rem 3.5rem;
-    max-width: 100%;
-    min-width: 75%;
-}
-
-#countrySearch::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: normal;
-}
-
-#search-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 2rem;
-}
-
-#countrySearch:focus {
-    outline: none;
-}
-
-/* Country list */
-
-.country-list {
-    overflow-y: auto;
-    padding: 1.5rem;
-}
-
-.country-item:not(:last-child) {
-    border-bottom: 1px solid #E7E7E7;
-    padding-bottom: 1.5rem;
-}
-
-.country-item {
-    padding-top: 1.5rem;
-}
-
-.country-item label {
-    display: flex;
-    align-items: center;
-}
-
-.country-list .country-item:first-child {
-    padding-top: 0;
-}
-
-.country-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.country-item input {
-    margin-right: 10px;
-}
-
-.country-item img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    object-fit: contain;
-}
+/* Header, footer, navbar, menu, modal, and logo styles moved to base.css */
 
 .single-blog-card {
     background: white;
@@ -575,17 +433,7 @@ input::placeholder {
     color: #00F04C;
 }
 
-.btn-primary {
-    border-radius: 0.625rem;
-    background: #1434CB;
-    padding: 0.75rem 0;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Button styles moved to base.css */
 
 .subscribe-form.subscribed ~ .message-after {
     display: block;
@@ -891,9 +739,7 @@ input::placeholder {
 
 /* Footer styles moved to base.css */
 
-.sm-none {
-    display: none;
-}
+/* Utility classes moved to base.css */
 
 @media screen and (max-width: 300px) {
     .booster-quiz {
@@ -1268,4 +1114,41 @@ input::placeholder {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/* CTA Section Mobile Centering */
+@media (max-width: 767.98px) {
+    section[aria-labelledby="cta-heading"] .row {
+        text-align: center;
+    }
+    
+    section[aria-labelledby="cta-heading"] .col-lg-8 {
+        margin-bottom: 1.5rem;
+    }
+    
+    section[aria-labelledby="cta-heading"] .col-lg-4 {
+        text-align: center !important;
+    }
+    
+    section[aria-labelledby="cta-heading"] .btn {
+        display: inline-block;
+        margin: 0.25rem;
+    }
+}
+
+/* Inline styles moved from HTML */
+.navbar-nav-scroll {
+    --bs-scroll-height: 100px;
+}
+
+.hero-image img {
+    max-width: 400px;
+}
+
+.category-nav.sticky-top {
+    top: 100px;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, #1434CB 0%, #0A2A8F 100%);
 }

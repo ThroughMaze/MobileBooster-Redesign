@@ -357,12 +357,19 @@
     .step-item {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
     
     .step-number {
         margin-right: 0;
         margin-bottom: 1rem;
-  }
+        align-self: center;
+    }
+    
+    .step-content {
+        text-align: center;
+        max-width: 100%;
+    }
     
   .action-buttons .btn {
         min-width: 100%;

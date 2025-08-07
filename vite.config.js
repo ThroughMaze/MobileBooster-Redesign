@@ -42,7 +42,7 @@ export default defineConfig({
                 checkout: resolve('', 'checkout.html'),
                 thanks: resolve('', 'thanks.html'),
                 shop: resolve('', 'shop.html'),
-                category: resolve('', 'category.html'),
+
             },
         }
     },
