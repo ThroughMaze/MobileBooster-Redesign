@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Shopping Cart - Mobile Booster</title>
+    <meta name="description" content="Review items in your Mobile Booster cart, update quantities, apply discount codes, and proceed securely to checkout."/>
     <link rel="stylesheet" href="./assets/css/layout.css"/>
     <link rel="stylesheet" href="assets/css/cart.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +14,7 @@
 </head>
 <body>
 <header class="header-white">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
         <div class="container header-content">
             <a href="/" class="logo-container">
                 <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
@@ -21,7 +22,7 @@
             </a>
             <div id="header-icons" class="d-flex d-lg-none">
                 <a id="cart" href="cart.html">
-                    <img src="assets/images/landing/cart-black.svg"/>
+                    <img src="assets/images/landing/cart-black.svg" alt="Shopping cart"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +40,7 @@
                             Shop
                         </a>
                         <div class="navbar-dropdown-arrow">
-                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                            <img src="assets/images/landing/nav-above-icon.svg" alt="Shop dropdown arrow" aria-hidden="true"/>
                         </div>
                         <ul role="menu" class="navbar-dropdown dropdown-menu" data-bs-popper="static">
                             <li class="navbar-dropdown-list">
@@ -57,7 +58,7 @@
                                 <a href="#" class="navbar-dropdown-links">3G & 4G & 5G</a>
                             </li>
                             <li class="navbar-dropdown-list navbar-dropdown-suggestion">
-                                <img src="assets/images/landing/Black1%201.png"/>
+                                <img src="assets/images/landing/Black1%201.png" alt="Featured product"/>
                                 <a href="#" class="btn-primary w-100">show more</a>
                             </li>
                         </ul>
@@ -67,7 +68,7 @@
                             Carriers
                         </a>
                         <div class="navbar-dropdown-arrow">
-                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                            <img src="assets/images/landing/nav-above-icon.svg" alt="Carriers dropdown arrow" aria-hidden="true"/>
                         </div>
                         <div class="navbar-dropdown">
                             <div class="navbar-dropdown-list">
@@ -88,7 +89,7 @@
                             Frequency
                         </a>
                         <div class="navbar-dropdown-arrow">
-                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                            <img src="assets/images/landing/nav-above-icon.svg" alt="Frequency dropdown arrow" aria-hidden="true"/>
                         </div>
                         <ul class="navbar-dropdown dropdown-menu" id="frequency-dropdown">
                             <li class="navbar-dropdown-list">
@@ -108,17 +109,17 @@
                 </ul>
                 <div class="d-none d-lg-flex gap-3">
                     <div id="openPopup" class="country-logo" data-bs-toggle="modal" data-bs-target="#country-modal">
-                        <img class="logo" src="https://flagcdn.com/gb.svg">
-                        <img src="assets/images/landing/black-down-arrow.svg"/>
+                        <img class="logo" src="https://flagcdn.com/gb.svg" alt="United Kingdom flag">
+                        <img src="assets/images/landing/black-down-arrow.svg" alt="Country selector arrow" aria-hidden="true"/>
                     </div>
                     <a id="cart-desktop-header" href="cart.html">
-                        <img src="assets/images/landing/cart-black.svg"/>
+                        <img src="assets/images/landing/cart-black.svg" alt="Shopping cart"/>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column" aria-label="Fullscreen menu">
         <div class="container">
             <ul class="navbar-nav navbar-list">
                 <li class="nav-item">
@@ -157,7 +158,7 @@
         </div>
     </nav>
 </header> 
-<main><main><main class="container my-4">
+<main id="main-content" class="container my-4" role="main">
     <div class="row">
         <div class="col-12">
             <nav aria-label="breadcrumb" class="mb-4">
@@ -174,7 +175,7 @@
     <div class="row">
         <div class="col-lg-8">
             <!-- Cart Items -->
-            <div class="cart-items bg-white rounded-4 p-4 mb-4 shadow-sm">
+            <div class="cart-items bg-white rounded-4 p-4 mb-4 shadow-sm" role="region" aria-label="Cart items">
                 <div class="cart-item border-bottom pb-4 mb-4" data-product-id="1">
                     <div class="row align-items-center">
                         <div class="col-md-2 col-4 mb-3 mb-md-0">
@@ -188,7 +189,7 @@
                         <div class="col-md-2 col-6 mb-3 mb-md-0">
                             <div class="quantity-controls d-flex align-items-center">
                                 <button class="btn btn-outline-secondary btn-sm quantity-decrease" type="button">-</button>
-                                <input type="number" class="form-control form-control-sm mx-2 text-center quantity-input" value="1" min="1" style="width: 60px;">
+                                <input type="number" class="form-control form-control-sm mx-2 text-center quantity-input" value="1" min="1" style="width: 60px;" aria-label="Quantity">
                                 <button class="btn btn-outline-secondary btn-sm quantity-increase" type="button">+</button>
                             </div>
                         </div>
@@ -216,7 +217,7 @@
                         <div class="col-md-2 col-6 mb-3 mb-md-0">
                             <div class="quantity-controls d-flex align-items-center">
                                 <button class="btn btn-outline-secondary btn-sm quantity-decrease" type="button">-</button>
-                                <input type="number" class="form-control form-control-sm mx-2 text-center quantity-input" value="2" min="1" style="width: 60px;">
+                                <input type="number" class="form-control form-control-sm mx-2 text-center quantity-input" value="2" min="1" style="width: 60px;" aria-label="Quantity">
                                 <button class="btn btn-outline-secondary btn-sm quantity-increase" type="button">+</button>
                             </div>
                         </div>
@@ -240,11 +241,11 @@
             </div>
 
             <!-- Coupon Code -->
-            <div class="coupon-section bg-white rounded-4 p-4 shadow-sm">
-                <h5 class="mb-3">Discount Code</h5>
+            <div class="coupon-section bg-white rounded-4 p-4 shadow-sm" role="region" aria-label="Discount code">
+                <h5 class="mb-3" role="heading" aria-level="2">Discount Code</h5>
                 <div class="row">
                     <div class="col-md-8 mb-3 mb-md-0">
-                        <input type="text" class="form-control" placeholder="Enter coupon code" id="coupon-code">
+                        <input type="text" class="form-control" placeholder="Enter coupon code" id="coupon-code" aria-label="Coupon code">
                     </div>
                     <div class="col-md-4">
                         <button class="btn btn-outline-primary w-100" type="button" id="apply-coupon">Apply Coupon</button>
@@ -256,33 +257,33 @@
         <div class="col-lg-4">
             <!-- Order Summary -->
             <div class="order-summary bg-white rounded-4 p-4 shadow-sm sticky-top" style="top: 2rem;">
-                <h5 class="mb-4">Order Summary</h5>
+                <h5 class="mb-4" role="heading" aria-level="2">Order Summary</h5>
                 
                 <div class="summary-row d-flex justify-content-between mb-3">
                     <span>Subtotal:</span>
-                    <span class="subtotal">£479.97</span>
+                    <span class="subtotal" aria-live="polite">£479.97</span>
                 </div>
                 
                 <div class="summary-row d-flex justify-content-between mb-3">
                     <span>Shipping:</span>
-                    <span class="shipping">Free</span>
+                    <span class="shipping" aria-live="polite">Free</span>
                 </div>
                 
                 <div class="summary-row d-flex justify-content-between mb-3 discount-row d-none">
                     <span>Discount:</span>
-                    <span class="discount text-success">-£0.00</span>
+                    <span class="discount text-success" aria-live="polite">-£0.00</span>
                 </div>
                 
                 <div class="summary-row d-flex justify-content-between mb-3">
                     <span>VAT (20%):</span>
-                    <span class="vat">£95.99</span>
+                    <span class="vat" aria-live="polite">£95.99</span>
                 </div>
                 
                 <hr>
                 
                 <div class="summary-row d-flex justify-content-between mb-4">
                     <strong>Total:</strong>
-                    <strong class="total">£575.96</strong>
+                    <strong class="total" aria-live="polite">£575.96</strong>
                 </div>
                 
                 <div class="d-grid gap-2">
@@ -317,8 +318,6 @@
         </div>
     </div>
 
-</main>
-</main>
 </main>
 <footer>
     <div class="footer-content container">
@@ -367,14 +366,14 @@
         </a>
         <p>© 2024 mobilebooster . All rights reserved. </p>
         <div class="footer-social-container">
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/linkedin.svg"/>
+            <a href="#" class="social-circle" aria-label="LinkedIn">
+                <img src="assets/images/landing/linkedin.svg" alt="LinkedIn"/>
             </a>
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/facebook-icon.svg"/>
+            <a href="#" class="social-circle" aria-label="Facebook">
+                <img src="assets/images/landing/facebook-icon.svg" alt="Facebook"/>
             </a>
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/twitter-icon.svg"/>
+            <a href="#" class="social-circle" aria-label="Twitter">
+                <img src="assets/images/landing/twitter-icon.svg" alt="Twitter"/>
             </a>
         </div>
     </div>

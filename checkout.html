@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Checkout - Mobile Booster</title>
+    <meta name="description" content="Secure Mobile Booster checkout. Enter billing and shipping details, choose payment method, and place your order with confidence."/>
     <link rel="stylesheet" href="./assets/css/layout.css"/>
     <link rel="stylesheet" href="./assets/css/checkout.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +14,7 @@
 </head>
 <body>
 <header class="header-white">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
         <div class="container header-content">
             <a href="/" class="logo-container">
                 <img src="assets/images/landing/colored-logo.svg" alt="Mobile Booster, Clear signal, every time"
@@ -21,7 +22,7 @@
             </a>
             <div id="header-icons" class="d-flex d-lg-none">
                 <a id="cart" href="cart.html">
-                    <img src="assets/images/landing/cart-black.svg"/>
+                    <img src="assets/images/landing/cart-black.svg" alt="Shopping cart"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +40,7 @@
                             Shop
                         </a>
                         <div class="navbar-dropdown-arrow">
-                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                            <img src="assets/images/landing/nav-above-icon.svg" alt="Shop dropdown arrow" aria-hidden="true"/>
                         </div>
                         <ul role="menu" class="navbar-dropdown dropdown-menu" data-bs-popper="static">
                             <li class="navbar-dropdown-list">
@@ -57,7 +58,7 @@
                                 <a href="#" class="navbar-dropdown-links">3G & 4G & 5G</a>
                             </li>
                             <li class="navbar-dropdown-list navbar-dropdown-suggestion">
-                                <img src="assets/images/landing/Black1%201.png"/>
+                                <img src="assets/images/landing/Black1%201.png" alt="Featured product"/>
                                 <a href="#" class="btn-primary w-100">show more</a>
                             </li>
                         </ul>
@@ -67,7 +68,7 @@
                             Carriers
                         </a>
                         <div class="navbar-dropdown-arrow">
-                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                            <img src="assets/images/landing/nav-above-icon.svg" alt="Carriers dropdown arrow" aria-hidden="true"/>
                         </div>
                         <div class="navbar-dropdown">
                             <div class="navbar-dropdown-list">
@@ -88,7 +89,7 @@
                             Frequency
                         </a>
                         <div class="navbar-dropdown-arrow">
-                            <img src="assets/images/landing/nav-above-icon.svg"/>
+                            <img src="assets/images/landing/nav-above-icon.svg" alt="Frequency dropdown arrow" aria-hidden="true"/>
                         </div>
                         <ul class="navbar-dropdown dropdown-menu" id="frequency-dropdown">
                             <li class="navbar-dropdown-list">
@@ -108,17 +109,17 @@
                 </ul>
                 <div class="d-none d-lg-flex gap-3">
                     <div id="openPopup" class="country-logo" data-bs-toggle="modal" data-bs-target="#country-modal">
-                        <img class="logo" src="https://flagcdn.com/gb.svg">
-                        <img src="assets/images/landing/black-down-arrow.svg"/>
+                        <img class="logo" src="https://flagcdn.com/gb.svg" alt="United Kingdom flag">
+                        <img src="assets/images/landing/black-down-arrow.svg" alt="Country selector arrow" aria-hidden="true"/>
                     </div>
                     <a id="cart-desktop-header" href="cart.html">
-                        <img src="assets/images/landing/cart-black.svg"/>
+                        <img src="assets/images/landing/cart-black.svg" alt="Shopping cart"/>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column">
+    <nav class="fullscreen-nav position-fixed top-0 start-0 vh-100 bg-white d-flex flex-column" aria-label="Fullscreen menu">
         <div class="container">
             <ul class="navbar-nav navbar-list">
                 <li class="nav-item">
@@ -157,7 +158,7 @@
         </div>
     </nav>
 </header> 
-<main><main class="container my-4">
+<main id="main-content" class="container my-4" role="main">
     <div class="row">
         <div class="col-12">
             <nav aria-label="breadcrumb" class="mb-4">
@@ -177,17 +178,17 @@
             <div class="col-lg-8">
                 <!-- Customer Information -->
                 <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
-                    <h4 class="mb-4">Customer Information</h4>
+                    <h2 class="mb-4 h4">Customer Information</h2>
                     
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="billing_first_name" class="form-label">First Name *</label>
-                            <input type="text" class="form-control" id="billing_first_name" name="billing_first_name" required>
+                            <input type="text" class="form-control" id="billing_first_name" name="billing_first_name" autocomplete="given-name" required>
                             <div class="invalid-feedback">Please provide a valid first name.</div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="billing_last_name" class="form-label">Last Name *</label>
-                            <input type="text" class="form-control" id="billing_last_name" name="billing_last_name" required>
+                            <input type="text" class="form-control" id="billing_last_name" name="billing_last_name" autocomplete="family-name" required>
                             <div class="invalid-feedback">Please provide a valid last name.</div>
                         </div>
                     </div>
@@ -195,12 +196,12 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="billing_email" class="form-label">Email Address *</label>
-                            <input type="email" class="form-control" id="billing_email" name="billing_email" required>
+                            <input type="email" class="form-control" id="billing_email" name="billing_email" inputmode="email" autocomplete="email" required>
                             <div class="invalid-feedback">Please provide a valid email address.</div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="billing_phone" class="form-label">Phone Number *</label>
-                            <input type="tel" class="form-control" id="billing_phone" name="billing_phone" required>
+                            <input type="tel" class="form-control" id="billing_phone" name="billing_phone" inputmode="tel" autocomplete="tel" required>
                             <div class="invalid-feedback">Please provide a valid phone number.</div>
                         </div>
                     </div>
@@ -208,7 +209,7 @@
 
                 <!-- Billing Address -->
                 <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
-                    <h4 class="mb-4">Billing Address</h4>
+                    <h2 class="mb-4 h4">Billing Address</h2>
                     
                     <div class="mb-3">
                         <label for="billing_company" class="form-label">Company Name (Optional)</label>
@@ -217,30 +218,30 @@
                     
                     <div class="mb-3">
                         <label for="billing_address_1" class="form-label">Street Address *</label>
-                        <input type="text" class="form-control" id="billing_address_1" name="billing_address_1" placeholder="House number and street name" required>
+                        <input type="text" class="form-control" id="billing_address_1" name="billing_address_1" placeholder="House number and street name" autocomplete="address-line1" required>
                         <div class="invalid-feedback">Please provide a valid address.</div>
                     </div>
                     
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="billing_address_2" name="billing_address_2" placeholder="Apartment, suite, unit etc. (optional)">
+                        <input type="text" class="form-control" id="billing_address_2" name="billing_address_2" placeholder="Apartment, suite, unit etc. (optional)" autocomplete="address-line2">
                     </div>
                     
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="billing_city" class="form-label">Town / City *</label>
-                            <input type="text" class="form-control" id="billing_city" name="billing_city" required>
+                            <input type="text" class="form-control" id="billing_city" name="billing_city" autocomplete="address-level2" required>
                             <div class="invalid-feedback">Please provide a valid city.</div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="billing_state" class="form-label">County (Optional)</label>
-                            <input type="text" class="form-control" id="billing_state" name="billing_state">
+                            <input type="text" class="form-control" id="billing_state" name="billing_state" autocomplete="address-level1">
                         </div>
                     </div>
                     
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="billing_postcode" class="form-label">Postcode / ZIP *</label>
-                            <input type="text" class="form-control" id="billing_postcode" name="billing_postcode" required>
+                            <input type="text" class="form-control" id="billing_postcode" name="billing_postcode" autocomplete="postal-code" required>
                             <div class="invalid-feedback">Please provide a valid postcode.</div>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -264,7 +265,7 @@
                 <!-- Shipping Address -->
                 <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h4 class="mb-0">Shipping Address</h4>
+                        <h2 class="mb-0 h4">Shipping Address</h2>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="ship_to_different_address" name="ship_to_different_address">
                             <label class="form-check-label" for="ship_to_different_address">
@@ -277,11 +278,11 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="shipping_first_name" class="form-label">First Name *</label>
-                                <input type="text" class="form-control" id="shipping_first_name" name="shipping_first_name">
+                                <input type="text" class="form-control" id="shipping_first_name" name="shipping_first_name" autocomplete="given-name">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="shipping_last_name" class="form-label">Last Name *</label>
-                                <input type="text" class="form-control" id="shipping_last_name" name="shipping_last_name">
+                                <input type="text" class="form-control" id="shipping_last_name" name="shipping_last_name" autocomplete="family-name">
                             </div>
                         </div>
                         
@@ -292,28 +293,28 @@
                         
                         <div class="mb-3">
                             <label for="shipping_address_1" class="form-label">Street Address *</label>
-                            <input type="text" class="form-control" id="shipping_address_1" name="shipping_address_1" placeholder="House number and street name">
+                            <input type="text" class="form-control" id="shipping_address_1" name="shipping_address_1" placeholder="House number and street name" autocomplete="address-line1">
                         </div>
                         
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="shipping_address_2" name="shipping_address_2" placeholder="Apartment, suite, unit etc. (optional)">
+                            <input type="text" class="form-control" id="shipping_address_2" name="shipping_address_2" placeholder="Apartment, suite, unit etc. (optional)" autocomplete="address-line2">
                         </div>
                         
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="shipping_city" class="form-label">Town / City *</label>
-                                <input type="text" class="form-control" id="shipping_city" name="shipping_city">
+                                <input type="text" class="form-control" id="shipping_city" name="shipping_city" autocomplete="address-level2">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="shipping_state" class="form-label">County (Optional)</label>
-                                <input type="text" class="form-control" id="shipping_state" name="shipping_state">
+                                <input type="text" class="form-control" id="shipping_state" name="shipping_state" autocomplete="address-level1">
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="shipping_postcode" class="form-label">Postcode / ZIP *</label>
-                                <input type="text" class="form-control" id="shipping_postcode" name="shipping_postcode">
+                                <input type="text" class="form-control" id="shipping_postcode" name="shipping_postcode" autocomplete="postal-code">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="shipping_country" class="form-label">Country *</label>
@@ -335,7 +336,7 @@
 
                 <!-- Payment Method -->
                 <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
-                    <h4 class="mb-4">Payment Method</h4>
+                    <h2 class="mb-4 h4">Payment Method</h2>
                     
                     <div class="payment-options">
                         <div class="form-check mb-3 p-3 border rounded">
@@ -376,29 +377,29 @@
                     </div>
                     
                     <!-- Card Details (shown when Stripe is selected) -->
-                    <div id="card-details" class="mt-4">
+                    <div id="card-details" class="mt-4" aria-live="polite">
                         <div class="mb-3">
                             <label for="card_number" class="form-label">Card Number *</label>
-                            <input type="text" class="form-control" id="card_number" name="card_number" placeholder="1234 5678 9012 3456" required>
+                            <input type="text" class="form-control" id="card_number" name="card_number" placeholder="1234 5678 9012 3456" inputmode="numeric" autocomplete="cc-number" required>
                             <div class="invalid-feedback">Please provide a valid card number.</div>
                         </div>
                         
                         <div class="row">
                             <div class="col-6 mb-3">
                                 <label for="card_expiry" class="form-label">Expiry Date *</label>
-                                <input type="text" class="form-control" id="card_expiry" name="card_expiry" placeholder="MM/YY" required>
+                                <input type="text" class="form-control" id="card_expiry" name="card_expiry" placeholder="MM/YY" inputmode="numeric" autocomplete="cc-exp" required>
                                 <div class="invalid-feedback">Please provide a valid expiry date.</div>
                             </div>
                             <div class="col-6 mb-3">
                                 <label for="card_cvc" class="form-label">CVC *</label>
-                                <input type="text" class="form-control" id="card_cvc" name="card_cvc" placeholder="123" required>
+                                <input type="text" class="form-control" id="card_cvc" name="card_cvc" placeholder="123" inputmode="numeric" autocomplete="cc-csc" required>
                                 <div class="invalid-feedback">Please provide a valid CVC.</div>
                             </div>
                         </div>
                         
                         <div class="mb-3">
                             <label for="card_name" class="form-label">Name on Card *</label>
-                            <input type="text" class="form-control" id="card_name" name="card_name" required>
+                            <input type="text" class="form-control" id="card_name" name="card_name" autocomplete="cc-name" required>
                             <div class="invalid-feedback">Please provide the name on the card.</div>
                         </div>
                     </div>
@@ -431,7 +432,7 @@
 
                 <!-- Order Notes -->
                 <div class="checkout-section bg-white rounded-4 p-4 mb-4 shadow-sm">
-                    <h4 class="mb-4">Order Notes</h4>
+                    <h2 class="mb-4 h4">Order Notes</h2>
                     <div class="mb-3">
                         <label for="order_comments" class="form-label">Order Notes (Optional)</label>
                         <textarea class="form-control" id="order_comments" name="order_comments" rows="4" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
@@ -442,13 +443,13 @@
             <div class="col-lg-4">
                 <!-- Order Summary -->
                 <div class="order-summary bg-white rounded-4 p-4 shadow-sm sticky-top mb-4" style="top: 2rem;">
-                    <h4 class="mb-4">Your Order</h4>
+                    <h2 class="mb-4 h4">Your Order</h2>
                     
                     <!-- Order Items -->
                     <div class="order-items mb-4">
                         <div class="order-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
                             <div class="d-flex align-items-center">
-                                <img src="assets/images/landing/Black1%201.png" alt="Product" class="me-3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
+                                <img src="assets/images/landing/Black1%201.png" alt="Mobile Signal Booster Pro thumbnail" class="me-3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
                                 <div>
                                     <h6 class="mb-1">Mobile Signal Booster Pro</h6>
                                     <small class="text-muted">Qty: 1</small>
@@ -459,7 +460,7 @@
                         
                         <div class="order-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
                             <div class="d-flex align-items-center">
-                                <img src="assets/images/landing/Black1%201.png" alt="Product" class="me-3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
+                                <img src="assets/images/landing/Black1%201.png" alt="External Antenna Kit thumbnail" class="me-3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
                                 <div>
                                     <h6 class="mb-1">External Antenna Kit</h6>
                                     <small class="text-muted">Qty: 2</small>
@@ -473,31 +474,30 @@
                     <div class="order-totals">
                         <div class="d-flex justify-content-between mb-2">
                             <span>Subtotal:</span>
-                            <span class="subtotal">£479.97</span>
+                            <span class="subtotal" aria-live="polite">£479.97</span>
                         </div>
                         
                         <div class="d-flex justify-content-between mb-2">
                             <span>Shipping:</span>
-                            <span class="shipping-cost">Free</span>
+                            <span class="shipping-cost" aria-live="polite">Free</span>
                         </div>
                         
                         <div class="d-flex justify-content-between mb-2">
                             <span>VAT (20%):</span>
-                            <span class="vat">£95.99</span>
+                            <span class="vat" aria-live="polite">£95.99</span>
                         </div>
                         
                         <hr>
                         
                         <div class="d-flex justify-content-between mb-4">
                             <strong>Total:</strong>
-                            <strong class="total">£575.96</strong>
+                            <strong class="total" aria-live="polite">£575.96</strong>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-</main>
 </main>
 <footer>
     <div class="footer-content container">
@@ -546,14 +546,14 @@
         </a>
         <p>© 2024 mobilebooster . All rights reserved. </p>
         <div class="footer-social-container">
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/linkedin.svg"/>
+            <a href="#" class="social-circle" aria-label="LinkedIn">
+                <img src="assets/images/landing/linkedin.svg" alt="LinkedIn"/>
             </a>
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/facebook-icon.svg"/>
+            <a href="#" class="social-circle" aria-label="Facebook">
+                <img src="assets/images/landing/facebook-icon.svg" alt="Facebook"/>
             </a>
-            <a href="#" class="social-circle">
-                <img src="assets/images/landing/twitter-icon.svg"/>
+            <a href="#" class="social-circle" aria-label="Twitter">
+                <img src="assets/images/landing/twitter-icon.svg" alt="Twitter"/>
             </a>
         </div>
     </div>
