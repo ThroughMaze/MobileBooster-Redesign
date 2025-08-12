@@ -462,6 +462,11 @@ footer {
     padding-bottom: 2rem;
 }
 
+/* Add margin above footer for consistent spacing across all pages */
+main {
+    margin-bottom: 3rem;
+}
+
 .footer-content.container {
     padding: 0;
     padding-top: 2rem;

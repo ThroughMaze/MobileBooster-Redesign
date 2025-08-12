@@ -1,0 +1,113 @@
+.page-content-container {
+  margin-top: 2rem;
+}
+
+.page-content {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
+
+.page-content > h1:first-child {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.page-content h2 {
+  color: #000;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.page-content h3 {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-content p,
+.page-content li,
+.page-content span {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.page-content p {
+  margin: 0.5rem 0;
+}
+
+.page-content ul {
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
+.page-content a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* FAQ specific styles */
+.faq-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.faq-item h3 {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #333;
+}
+
+@media screen and (min-width: 992px) {
+  .page-content-container {
+    margin-top: 2.5rem;
+  }
+
+  .page-content {
+    padding: 3rem 6rem;
+  }
+
+  .page-content > h1:first-child {
+    line-height: 3rem;
+  }
+
+  .page-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+
