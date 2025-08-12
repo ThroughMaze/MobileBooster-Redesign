@@ -95,6 +95,11 @@
   line-height: 1.4;
 }
 
+/* Highlight class for emphasizing key text */
+.highlight {
+  background: linear-gradient(90deg, rgba(252, 192, 20, 0.00) 0%, rgba(252, 192, 20, 0.64) 50%, rgba(252, 192, 20, 0.00) 100%);
+}
+
 /* Screen reader only class for accessibility */
 .sr-only {
   position: absolute;
@@ -244,7 +249,7 @@
   }
   
   .commercial-hero-section .hero-subtext {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
 }
 
