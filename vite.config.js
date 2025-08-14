@@ -46,6 +46,7 @@ export default defineConfig({
                 'commercial-solutions': resolve('', 'commercial-solutions.html'),
                 pages: resolve('', 'pages.html'),
                 faq: resolve('', 'faq.html'),
+                '404': resolve('', '404.html'),
             },
         }
     },
