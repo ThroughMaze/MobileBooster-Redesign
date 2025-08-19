@@ -159,27 +159,21 @@ async function handleQuizSelection(e) {
         })
     }
     if (currentPage == 3) {
+        document.querySelectorAll('#slide3 [data-term="range"]').forEach((el) => {
+            let rangeId;
+            if (el.classList.contains('selected') && el.getAttribute('data-term-id')) {
+                rangeId = el.getAttribute('data-term-id');
+                if (!booster.range.includes(rangeId)) {
+                    booster.range.push(rangeId);
+                }
+            }
+        });
         let newIds = [...booster.providers?.filter(v => v !== 'data'), ...booster.signals];
         let datefreq = [];
         let freqs_array;
-        await fetch('./freq.json')
-            .then(res => res.json())
-            .then((data) => {
-                freqs_array = data;
-                freqs_array.forEach((item) => {
-                    if (checker(item.list, newIds)) {
-                        datefreq.push(item.termID);
-                    }
-                });
-            }).catch(err => console.error(err));
-        freqs_array.forEach((item) => {
-            if (newIds.every(val => item.list.includes(Number(val)))) {
-                datefreq.push(item.termID);
-            }
-        });
         booster.datefreq = datefreq;
         setTimeout(() => {
-            window.location.href = `https://mobileboosteruk.com/search-result/?prd=${booster?.providers?.join(',')}&rng=${booster?.range}&wifi=${booster?.signals?.join(',')}&fre=${booster?.datefreq?.join(',')}&nwifi=${booster?.otherSignals?.join(',')}`;
+            window.location.href = `/search-result/?prd=${booster?.providers?.join(',')}&rng=${booster?.range}&wifi=${booster?.signals?.join(',')}&fre=${booster?.datefreq?.join(',')}&nwifi=${booster?.otherSignals?.join(',')}`;
         }, 1000)
     }
 }

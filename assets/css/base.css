@@ -1194,6 +1194,17 @@ footer .mobile-booster-logo {
     filter: brightness(0) invert(1);
 }
 
+#cart-desktop-header{
+    position: relative;
+}
+
+.cart-count{
+    position: absolute;
+    top: 20px;
+    font-size: 11px;
+    left: 21px;
+}
+
 /* Additional responsive styles for larger screens */
 @media screen and (min-width: 992px) {
     .popup {

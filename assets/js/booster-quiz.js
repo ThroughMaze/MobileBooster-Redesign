@@ -155,6 +155,7 @@ nextButton.addEventListener('click', () => {
         currentPage++;
         updateSlider();
     } else {
+        alert('test');
         document.querySelector('.quiz-error-message').classList.add('visible');
         setTimeout(() => {
             document.querySelector('.quiz-error-message').classList.remove('visible');
