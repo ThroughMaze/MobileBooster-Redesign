@@ -458,8 +458,8 @@ header {
 }
 
 .booster-quiz-card:not(.second-step, .third-step) {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 7rem;
+    height: 7rem;
 }
 
 .booster-quiz-card:hover {
@@ -2336,7 +2336,7 @@ input[name="country"][type="radio"]:checked::before {
         display: none;
         align-items: start;
         justify-content: space-between;
-        margin-top: 0 !important;
+        margin-top: -0.5rem !important;
         gap: 4rem;
     }
 
