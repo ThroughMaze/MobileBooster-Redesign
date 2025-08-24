@@ -372,7 +372,7 @@
 
                 <div class="product-suggestions">
                     <div class="alert alert-warning" role="alert">
-                        If you have a weak signal of 1-3 bars outside. Please add the yaggi antenna below in booster
+                        If you have a weak signal of 2-3 bars outside. Please add the LPDA antenna below in booster
                         upgrades to
                         guarantee signal increase and the best performance from the booster.
                     </div>
@@ -390,7 +390,16 @@
                                     <p>The Yaggi high gain antenna increases the strength of the signal received by the
                                         repeater</p>
                                 </div>
-                                <button class="btn btn-text-primary btn-add-cart">+ Add to cart</button>
+                                <button class="btn btn-text-primary btn-add-cart" data-product-id="yaggi-antenna" data-product-name="Yaggi Antenna" data-product-price="60.00">
+                                    <svg class="add-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 3.33334V12.6667" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.6667 8H3.33333" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="btn-text">Add to cart</span>
+                                    <svg class="remove-icon d-none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.33333 8H12.6667" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
                                 <a class="single-booster-link" href="/product"></a>
                             </div>
                         </article>
@@ -407,7 +416,16 @@
                                     <p>The Power Surge Protector is designed to protect your equipment from high
                                         amperage surges.</p>
                                 </div>
-                                <button class="btn btn-text-primary btn-add-cart">+ Add to cart</button>
+                                <button class="btn btn-text-primary btn-add-cart" data-product-id="power-surge" data-product-name="Power Surge Protector" data-product-price="60.00">
+                                    <svg class="add-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 3.33334V12.6667" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.6667 8H3.33333" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="btn-text">Add to cart</span>
+                                    <svg class="remove-icon d-none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.33333 8H12.6667" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
                                 <a class="single-booster-link" href="/product"></a>
                             </div>
                         </article>
@@ -423,10 +441,36 @@
                                     <p>The Power Surge Protector is designed to protect your equipment from high
                                         amperage surges.</p>
                                 </div>
-                                <button class="btn btn-text-primary btn-add-cart">+ Add to cart</button>
+                                <button class="btn btn-text-primary btn-add-cart" data-product-id="window-jumper" data-product-name="Window Jumper" data-product-price="60.00">
+                                    <svg class="add-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 3.33334V12.6667" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.6667 8H3.33333" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="btn-text">Add to cart</span>
+                                    <svg class="remove-icon d-none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.33333 8H12.6667" stroke="#1434CB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
                                 <a class="single-booster-link" href="/product"></a>
                             </div>
                         </article>
+                    </div>
+                </div>
+
+                <!-- Sticky Add to Cart Button -->
+                <div class="sticky-add-to-cart d-none" id="sticky-add-to-cart">
+                    <div class="container">
+                        <div class="sticky-cart-content">
+                            <div class="sticky-cart-info">
+                                <span class="sticky-cart-count">0</span> Add-on Added
+                            </div>
+                            <button class="btn btn-primary btn-lg" id="sticky-cart-btn">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                                    <path d="M2.5 14.5L6.5 18.5L18.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Add All to Cart
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -793,6 +837,10 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+    // Cart state management
+    let cartItems = new Map();
+    let cartTotal = 0;
+    
     // Product Image Gallery Functionality
     const featuredImg = document.querySelector('.featured-img img');
     const featuredLink = document.querySelector('.featured-img');
@@ -822,6 +870,91 @@ document.addEventListener("DOMContentLoaded", () => {
         if (thumbnailImages[0]) {
             thumbnailImages[0].classList.add('active');
         }
+    }
+
+    // Cart functionality for suggested products
+    const addToCartButtons = document.querySelectorAll('.btn-add-cart');
+    const stickyCart = document.getElementById('sticky-add-to-cart');
+    const stickyCartCount = document.querySelector('.sticky-cart-count');
+    const stickyCartBtn = document.getElementById('sticky-cart-btn');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const productId = button.dataset.productId;
+            const productName = button.dataset.productName;
+            const productPrice = parseFloat(button.dataset.productPrice);
+            
+            if (cartItems.has(productId)) {
+                // Remove from cart
+                cartItems.delete(productId);
+                cartTotal -= productPrice;
+                button.classList.remove('added');
+                button.querySelector('.btn-text').textContent = 'Add to cart';
+            } else {
+                // Add to cart
+                cartItems.set(productId, {
+                    name: productName,
+                    price: productPrice
+                });
+                cartTotal += productPrice;
+                button.classList.add('added');
+                button.querySelector('.btn-text').textContent = 'Remove';
+            }
+            
+            updateStickyCart();
+        });
+    });
+
+    // Update sticky cart display
+    function updateStickyCart() {
+        if (cartItems.size > 0) {
+            stickyCartCount.textContent = cartItems.size;
+            stickyCart.classList.remove('d-none');
+            setTimeout(() => {
+                stickyCart.classList.add('visible');
+            }, 100);
+        } else {
+            stickyCart.classList.remove('visible');
+            setTimeout(() => {
+                stickyCart.classList.add('d-none');
+            }, 300);
+        }
+    }
+
+    // Sticky cart button functionality
+    if (stickyCartBtn) {
+        stickyCartBtn.addEventListener('click', () => {
+            // Here you would typically redirect to cart or show cart modal
+            console.log('Adding all items to cart:', Array.from(cartItems.values()));
+            alert(`Added ${cartItems.size} items to cart! Total: $${cartTotal.toFixed(2)}`);
+        });
+    }
+
+    // Product accordion functionality
+    const productHighlightBtn = document.querySelector('.product-highlight-btn');
+    const productHighlight = document.getElementById('product-highlight');
+    const fullContent = document.getElementById('full-content');
+    const lessContent = document.getElementById('less-content');
+
+    if (productHighlightBtn && productHighlight) {
+        productHighlightBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            if (productHighlight.classList.contains('show')) {
+                // Collapse
+                productHighlight.classList.remove('show');
+                fullContent.style.display = 'inline';
+                lessContent.style.display = 'none';
+            } else {
+                // Expand
+                productHighlight.classList.add('show');
+                fullContent.style.display = 'none';
+                lessContent.style.display = 'inline';
+            }
+        });
     }
 });
 </script>

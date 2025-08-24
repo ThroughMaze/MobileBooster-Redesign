@@ -1214,3 +1214,32 @@ input::placeholder {
 .cta-section {
     background: linear-gradient(135deg, #1434CB 0%, #0A2A8F 100%);
 }
+
+/* Button styles to match index.css for consistent mega menu styling */
+.btn-primary {
+    border-radius: 0.625rem;
+    background: #1434CB;
+    padding: 0.75rem 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0f2a9e;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(20, 52, 203, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(20, 52, 203, 0.3);
+}
