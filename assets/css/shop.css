@@ -1,5 +1,67 @@
 /* Shop-specific styles - Header, footer, navbar, menu, and logo styles moved to base.css */
 
+/* Enhanced Breadcrumb Styles for Shop Page (cloned from blog.css) */
+.breadcrumb-wrapper {
+    background: linear-gradient(135deg, #1434CB 0%, #1E40AF 100%);
+    padding: 1rem 0;
+    margin-bottom: 0;
+    box-shadow: 0 4px 12px rgba(20, 52, 203, 0.15);
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+}
+
+.breadcrumb-wrapper .breadcrumb {
+    margin-bottom: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.breadcrumb-wrapper .breadcrumb-item {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-wrapper .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.breadcrumb-wrapper .breadcrumb-item a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumb-wrapper .breadcrumb-item.active {
+    color: #FFD700;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.breadcrumb-wrapper .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+.breadcrumb-wrapper .icon-home {
+    margin-right: 0.5rem;
+    font-size: 16px;
+}
+
 main > section:not(:first-child) {
     margin-top: 3.3rem !important;
 }
