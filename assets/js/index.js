@@ -170,11 +170,13 @@ async function handleQuizSelection(e) {
         });
         let newIds = [...booster.providers?.filter(v => v !== 'data'), ...booster.signals];
         let datefreq = [];
-        let freqs_array;
+        let freqs_array = php_data.freqs_array;
+        freqs_array.forEach((item) => {
+            if (newIds.every(val => item.list.includes(val))) {
+                datefreq.push(item.termID);
+            }
+        });
         booster.datefreq = datefreq;
-        setTimeout(() => {
-            window.location.href = `/search-result/?prd=${booster?.providers?.join(',')}&rng=${booster?.range}&wifi=${booster?.signals?.join(',')}&fre=${booster?.datefreq?.join(',')}&nwifi=${booster?.otherSignals?.join(',')}`;
-        }, 1000)
     }
 }
 
@@ -240,10 +242,7 @@ nextButton.addEventListener('click', () => {
         currentPage++;
         updateSlider();
     } else {
-        document.querySelector('.quiz-error-message').classList.add('visible');
-        setTimeout(() => {
-            document.querySelector('.quiz-error-message').classList.remove('visible');
-        }, 10000)
+        window.location.href = `/search-result/?prd=${booster?.providers?.join(',')}&rng=${booster?.range}&wifi=${booster?.signals?.join(',')}&fre=${booster?.datefreq?.join(',')}&nwifi=${booster?.otherSignals?.join(',')}`;
     }
 });
 
