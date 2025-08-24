@@ -9,17 +9,22 @@ class Shop {
             coverage: '',
             signal: '',
             price: '',
-            search: ''
+            search: '',
+            carrier: ''
         };
         this.sortBy = 'featured';
         this.init();
     }
 
     init() {
-        this.loadProducts();
+        const urlParams = new URLSearchParams(window.location.search);
+        this.filters.coverage = urlParams.get('coverage') == 'undefined' ? '' : urlParams.get('coverage');
+        this.filters.signal = urlParams.get('signal') == 'undefined' ? '' : urlParams.get('signal');
+        this.filters.carrier = urlParams.get('carrier') == 'undefined' ? '' : urlParams.get('carrier');
+        //this.loadProducts();
         this.bindEvents();
-        this.initFormValidation();
-        this.initTooltips();
+        //this.initFormValidation();
+        //this.initTooltips();
     }
 
     loadProducts() {
@@ -51,6 +56,11 @@ class Shop {
 
         document.getElementById('signal-filter')?.addEventListener('change', (e) => {
             this.filters.signal = e.target.value;
+            this.applyFilters();
+        });
+
+        document.getElementById('carrier-filter')?.addEventListener('change', (e) => {
+            this.filters.carrier = e.target.value;
             this.applyFilters();
         });
 
@@ -97,6 +107,13 @@ class Shop {
     }
 
     applyFilters() {
+        this.filters.coverage = this.filters.coverage == 'null' ? '' : this.filters.coverage;
+        this.filters.signal = this.filters.signal == 'null' ? '' : this.filters.signal;
+        this.filters.carrier = this.filters.carrier == 'null' ? '' : this.filters.carrier;
+        window.location.href = window.location.href.split('?')[0] + '?coverage=' + this.filters.coverage + '&signal=' + this.filters.signal+'&carrier=' + this.filters.carrier;
+        return;
+
+        // Filter products
         this.filteredProducts = this.products.filter(product => {
             // Coverage filter
             if (this.filters.coverage && product.coverage !== this.filters.coverage) {
@@ -314,6 +331,7 @@ class Shop {
     }
 
     loadMoreProducts() {
+        return;
         // This would typically load more products from an API
         this.showMessage('All products are currently displayed.', 'info');
     }
