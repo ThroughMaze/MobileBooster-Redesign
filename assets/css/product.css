@@ -1975,6 +1975,10 @@ input[name="warranty"] ~ .option-title:hover {
     gap: 16px;
 }
 
+#product-price-sticky {
+    margin-left: 10px;
+}
+
 .btn-add-cart {
     --bs-btn-border-radius: 7px;
     font-size: 16px;
@@ -1983,6 +1987,7 @@ input[name="warranty"] ~ .option-title:hover {
     text-align: center;
     padding: 10px 24px;
     z-index: 3;
+    margin-top: 16px;
 }
 
 .btn-add-cart.btn-outline-primary {

@@ -241,8 +241,13 @@ nextButton.addEventListener('click', () => {
         });
         currentPage++;
         updateSlider();
-    } else {
+    }else if(currentPage == 3 && selected) {
         window.location.href = `/search-result/?prd=${booster?.providers?.join(',')}&rng=${booster?.range}&wifi=${booster?.signals?.join(',')}&fre=${booster?.datefreq?.join(',')}&nwifi=${booster?.otherSignals?.join(',')}`;
+    } else {
+        document.querySelector('.quiz-error-message').classList.add('visible');
+        setTimeout(() => {
+            document.querySelector('.quiz-error-message').classList.remove('visible');
+        }, 10000)
     }
 });
 
@@ -250,7 +255,7 @@ updateSlider(); // Initialize the slider position
 
 
 // Desktop navbar dropdown functionality
-document.querySelectorAll('.navbar-list > li').forEach((el) => {
+document.querySelectorAll('.fullscreen-nav .navbar-list > li').forEach((el) => {
     el.addEventListener('click', handleMenuList);
 });
 

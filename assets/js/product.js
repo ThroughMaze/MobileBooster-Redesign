@@ -143,3 +143,169 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// Product options click handler
+document.addEventListener("DOMContentLoaded", () => {
+    const productOptionsRadioHolders = document.querySelectorAll('.product-options-radios-holder li');
+    
+    productOptionsRadioHolders.forEach(li => {
+        li.addEventListener('click', (event) => {
+                handlePriceUpdate();
+        });
+    });
+       // Cart state management
+       let cartItems = new Map();
+       let cartTotal = 0;
+       
+       // Product Image Gallery Functionality
+       const featuredImg = document.querySelector('.featured-img img');
+       const featuredLink = document.querySelector('.featured-img');
+       const thumbnailImages = document.querySelectorAll('.product-images-slider a');
+   
+       if (featuredImg && thumbnailImages.length > 0) {
+           thumbnailImages.forEach((thumbnail, index) => {
+               thumbnail.addEventListener('click', (e) => {
+                   e.preventDefault();
+                   
+                   // Get the thumbnail image source and high-res version
+                   const thumbnailImg = thumbnail.querySelector('img');
+                   const newSrc = thumbnailImg.src;
+                   const newHiResSrc = thumbnail.href;
+                   
+                   // Update the featured image
+                   featuredImg.src = newSrc;
+                   featuredLink.href = newHiResSrc;
+                   
+                   // Remove active class from all thumbnails and add to current
+                   thumbnailImages.forEach(thumb => thumb.classList.remove('active'));
+                   thumbnail.classList.add('active');
+               });
+           });
+   
+           // Set first thumbnail as active by default
+           if (thumbnailImages[0]) {
+               thumbnailImages[0].classList.add('active');
+           }
+       }
+   
+       // Cart functionality for suggested products
+       const addToCartButtons = document.querySelectorAll('.suggested-booster-wrapper .btn-add-cart');
+       const stickyCart = document.getElementById('sticky-add-to-cart');
+       const stickyCartCount = document.querySelector('.sticky-cart-count');
+       const stickyCartBtn = document.getElementById('sticky-cart-btn');
+   
+       addToCartButtons.forEach(button => {
+           button.addEventListener('click', (e) => {
+               e.preventDefault();
+               e.stopPropagation();
+               
+               const productId = button.dataset.productId;
+               const productName = button.dataset.productName;
+               const productRadio = button.querySelector('input[type="radio"]');
+               const productPrice = parseFloat(button.dataset.productPrice);
+               
+               if (cartItems.has(productId)) {
+                   // Remove from cart
+                   cartItems.delete(productId);
+                   cartTotal -= productPrice;
+                   button.classList.remove('added');
+                   button.querySelector('.btn-text').textContent = 'Add to cart';
+                   productRadio.checked = false;
+               } else {
+                   // Add to cart
+                   cartItems.set(productId, {
+                       name: productName,
+                       price: productPrice
+                   });
+                   cartTotal += productPrice;
+                   button.classList.add('added');
+                   button.querySelector('.btn-text').textContent = 'Remove';
+                   productRadio.checked = true;
+               }
+               
+               handlePriceUpdate();
+               updateStickyCart();
+           });
+       });
+   
+       // Update sticky cart display
+       function updateStickyCart() {
+           if (cartItems.size > 0) {
+               stickyCartCount.textContent = cartItems.size;
+               stickyCart.classList.remove('d-none');
+               setTimeout(() => {
+                   stickyCart.classList.add('visible');
+               }, 100);
+           } else {
+               stickyCart.classList.remove('visible');
+               setTimeout(() => {
+                   stickyCart.classList.add('d-none');
+               }, 300);
+           }
+       }
+   
+       // Product accordion functionality
+       const productHighlightBtn = document.querySelector('.product-highlight-btn');
+       const productHighlight = document.getElementById('product-highlight');
+       const fullContent = document.getElementById('full-content');
+       const lessContent = document.getElementById('less-content');
+   
+       if (productHighlightBtn && productHighlight) {
+           let isExpanded = false;
+           productHighlightBtn.addEventListener('click', (e) => {
+               e.preventDefault();
+               if (isExpanded) {
+                   // Collapse
+                   productHighlight.classList.remove('show');
+                   fullContent.style.display = 'inline';
+                   lessContent.style.display = 'none';
+                   isExpanded = false;
+               } else {
+                   // Expand
+                   productHighlight.classList.add('show');
+                   fullContent.style.display = 'none';
+                   lessContent.style.display = 'inline';
+                   isExpanded = true;
+               }
+           });
+       }
+});
+
+// Function to handle price updates (customize as needed)
+function handlePriceUpdate() {
+    const radioInputs = document.querySelectorAll('input[type="radio"][name*="upgrades_select"]');
+    let totalUpgradePrice = 0;
+    if (radioInputs) {
+        radioInputs.forEach(radio => {
+            if (radio.checked) {
+                const price = radio.getAttribute('data-price');
+                if (price) {
+                    totalUpgradePrice += parseFloat(price);
+                }
+            }
+        });
+    }
+    const boosterUpgrades = document.querySelectorAll('.btn-add-cart.added');
+    if (boosterUpgrades) {
+        boosterUpgrades.forEach(boosterUpgrade => {
+            const price = boosterUpgrade.getAttribute('data-price');
+            if (price) {
+                totalUpgradePrice += parseFloat(price);
+            }
+        });
+    }
+    const price = totalUpgradePrice.toString();
+    // Example: Update the main product price display
+    const productPriceElement = document.querySelector('#product-price');
+    const productPriceStickyElement = document.querySelector('#product-price-sticky');
+    const currency = productPriceElement.dataset.currency;
+    
+    if (productPriceElement && price && currency) {
+        // You can customize this logic based on your needs
+        // For example, add the option price to base price
+        console.log(`Price updated: ${currency}${price}`);
+        let newPrice = parseFloat(productPriceElement.dataset.price) + parseFloat(price);
+        productPriceElement.textContent = `${currency}${newPrice}`;
+        productPriceStickyElement.textContent = `${currency}${newPrice}`;
+    }
+}
