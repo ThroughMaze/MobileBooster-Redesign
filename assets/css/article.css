@@ -174,8 +174,8 @@ main > section:first-child {
                                                                                                                         }
 
                                                                                                                         [data-term-id="203"] img, [data-term-id="202"] img, [data-term-id="200"] img, [data-term-id="378"] img {
-                                                                                                                            width: 32px;
-                                                                                                                                height: 32px;
+                                                                                                                            width: 52px;
+                                                                                                                                height: 52px;
                                                                                                                                 }
 
                                                                                                                                 .booster-quiz {
@@ -575,8 +575,8 @@ main > section:first-child {
 }
 
 [data-term-id="203"] img, [data-term-id="202"] img, [data-term-id="200"] img, [data-term-id="378"] img {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
 }
 
 .booster-quiz {
