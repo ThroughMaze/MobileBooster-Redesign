@@ -374,7 +374,7 @@ scrollBreakpoint.addEventListener("change", function () {
 });
 
 var lastScrollTop = 0;
-
+/*
 function handleScroll(breakpoint, rect) {
     // handle mobile scroll
     if (breakpoint.matches) {
@@ -405,7 +405,7 @@ function handleScroll(breakpoint, rect) {
 
     }
 
-}
+}*/
 
 document.querySelectorAll('.country-item').forEach((country) => {
     country.addEventListener('click', (e) => {

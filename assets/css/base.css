@@ -275,11 +275,38 @@ header #progress-bar-container {
 }
 
 .inner-list > li {
-    padding: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(20, 52, 203, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.inner-list > li:last-child {
+    border-bottom: none;
+}
+
+.inner-list > li a {
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+}
+
+.inner-list > li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.inner-list > li:hover {
+    background-color: rgba(20, 52, 203, 0.05);
 }
 
 .fullscreen-nav .nav-item.active .inner-list {
     display: block;
+    opacity: 1;
+    max-height: 500px;
 }
 
 .fullscreen-nav .navbar-list {
@@ -340,6 +367,16 @@ header #progress-bar-container {
 
 .inner-list {
     display: none;
+    background: #f8f9fa;
+    border-left: 3px solid var(--primary-color);
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .menu-navbar li.active > .inner-list {
