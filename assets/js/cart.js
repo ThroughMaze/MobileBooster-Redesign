@@ -111,7 +111,7 @@ class Cart {
         const total = subtotal - discount + shipping + vat;
 
         // Update display
-        document.querySelector('.subtotal').textContent = `£${subtotal.toFixed(2)}`;
+        //document.querySelector('.subtotal').textContent = `£${subtotal.toFixed(2)}`;
         document.querySelector('.shipping').textContent = shipping === 0 ? 'Free' : `£${shipping.toFixed(2)}`;
         document.querySelector('.vat').textContent = `£${vat.toFixed(2)}`;
         document.querySelector('.total').textContent = `£${total.toFixed(2)}`;
