@@ -22,7 +22,7 @@ class Shop {
         this.filters.signal = urlParams.get('signal') == 'undefined' ? '' : urlParams.get('signal');
         this.filters.carrier = urlParams.get('carrier') == 'undefined' ? '' : urlParams.get('carrier');
         //this.loadProducts();
-        this.bindEvents();
+        //this.bindEvents();
         //this.initFormValidation();
         //this.initTooltips();
     }
@@ -51,7 +51,7 @@ class Shop {
         // Filter controls
         document.getElementById('coverage-filter')?.addEventListener('change', (e) => {
             this.filters.coverage = e.target.value;
-            this.applyFilters();
+            //this.applyFilters();
         });
 
         document.getElementById('signal-filter')?.addEventListener('change', (e) => {
