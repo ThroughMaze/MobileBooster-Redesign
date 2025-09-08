@@ -33,7 +33,7 @@ class Cart {
         });
 
         // Coupon code
-        document.getElementById('apply-coupon')?.addEventListener('click', () => this.applyCoupon());
+        //document.getElementById('apply-coupon')?.addEventListener('click', () => this.applyCoupon());
 
         // Add to cart buttons (for recommended products)
         document.querySelectorAll('.product-card .btn').forEach(btn => {
