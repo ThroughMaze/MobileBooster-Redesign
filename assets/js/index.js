@@ -377,12 +377,12 @@ document.querySelectorAll('.navbar .navbar-list > li').forEach((list) => {
 })
 var scrollBreakpoint = window.matchMedia("(max-width: 767.99px)");
 // Call listener function at run time
-//handleScroll(scrollBreakpoint);
+handleScroll(scrollBreakpoint);
 
 // Attach listener function on state changes
-//scrollBreakpoint.addEventListener("change", function () {
-    //handleScroll(scrollBreakpoint);
-//});
+scrollBreakpoint.addEventListener("change", function () {
+    handleScroll(scrollBreakpoint);
+});
 
 var lastScrollTop = 0;
 
