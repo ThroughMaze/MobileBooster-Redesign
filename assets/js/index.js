@@ -242,6 +242,17 @@ nextButton.addEventListener('click', () => {
         currentPage++;
         updateSlider();
     }else if(currentPage == 3 && selected) {
+        if(booster?.datefreq?.length == 0) {
+            let newIds = [...booster.providers?.filter(v => v !== 'data'), ...booster.signals];
+            let datefreq = [];
+            let freqs_array = php_data.freqs_array;
+            freqs_array.forEach((item) => {
+                if (newIds.every(val => item.list.includes(val))) {
+                    datefreq.push(item.termID);
+                }
+            });
+            booster.datefreq = datefreq;
+        }
         window.location.href = `/search-result/?prd=${booster?.providers?.join(',')}&rng=${booster?.range}&wifi=${booster?.signals?.join(',')}&fre=${booster?.datefreq?.join(',')}&nwifi=${booster?.otherSignals?.join(',')}`;
     } else {
         document.querySelector('.quiz-error-message').classList.add('visible');
@@ -366,12 +377,12 @@ document.querySelectorAll('.navbar .navbar-list > li').forEach((list) => {
 })
 var scrollBreakpoint = window.matchMedia("(max-width: 767.99px)");
 // Call listener function at run time
-handleScroll(scrollBreakpoint);
+//handleScroll(scrollBreakpoint);
 
 // Attach listener function on state changes
-scrollBreakpoint.addEventListener("change", function () {
-    handleScroll(scrollBreakpoint);
-});
+//scrollBreakpoint.addEventListener("change", function () {
+    //handleScroll(scrollBreakpoint);
+//});
 
 var lastScrollTop = 0;
 /*
