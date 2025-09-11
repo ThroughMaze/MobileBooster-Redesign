@@ -2279,7 +2279,7 @@ input[name="country"][type="radio"]:checked::before {
     }
 
     .tab-product-card {
-        min-width: auto;
+        min-width: 47%;
     }
 
     .tabs-content {
