@@ -385,7 +385,7 @@ var scrollBreakpoint = window.matchMedia("(max-width: 767.99px)");
 //});
 
 var lastScrollTop = 0;
-/*
+
 function handleScroll(breakpoint, rect) {
     // handle mobile scroll
     if (breakpoint.matches) {
@@ -394,9 +394,9 @@ function handleScroll(breakpoint, rect) {
             let rect = document.querySelector('#booster-quiz').getBoundingClientRect();
             var st = window.pageYOffset || document.documentElement.scrollTop;
             if (st > lastScrollTop && (rect.top < 0 && rect.bottom < 0)) {
-                document.querySelector('.header-content').classList.add('secondary-navbar');
+               // document.querySelector('.header-content').classList.add('secondary-navbar');
             } else if (st < lastScrollTop || st === 0) {
-                document.querySelector('.header-content').classList.remove('secondary-navbar');
+               // document.querySelector('.header-content').classList.remove('secondary-navbar');
             } // else was horizontal scroll
             lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
         }, false);
@@ -407,16 +407,16 @@ function handleScroll(breakpoint, rect) {
             let rect = document.querySelector('#booster-quiz').getBoundingClientRect();
             if (e.deltaY >= 0 && !document.getElementById('country-modal').classList.contains('show') && (rect.top < 0 && rect.bottom < 0)) {
                 // Wheel Down
-                document.querySelector('.header-content').classList.add('secondary-navbar');
+               // document.querySelector('.header-content').classList.add('secondary-navbar');
             } else {
                 // Wheel Up
-                document.querySelector('.header-content').classList.remove('secondary-navbar');
+               // document.querySelector('.header-content').classList.remove('secondary-navbar');
             }
         }
 
     }
 
-}*/
+}
 
 document.querySelectorAll('.country-item').forEach((country) => {
     country.addEventListener('click', (e) => {

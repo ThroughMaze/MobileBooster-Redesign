@@ -45,3 +45,8 @@
     font-style: normal;
     font-weight: normal;
 }
+
+/*Hide breadcrumbs container if it's empty*/
+.breadcrumb-wrapper:not(:has(ol)) {
+    display: none !important;
+  }
