@@ -94,13 +94,10 @@ body {
 
 /* Enhanced Breadcrumb Styles for Blog Page */
 .breadcrumb-wrapper {
-    background: linear-gradient(135deg, #1434CB 0%, #1E40AF 100%);
-    padding: 1rem 0;
     margin-bottom: 0;
-    box-shadow: 0 4px 12px rgba(20, 52, 203, 0.15);
     display: flex;
     align-items: center;
-    min-height: 60px;
+    color: white;
 }
 
 .breadcrumb-wrapper .breadcrumb {
