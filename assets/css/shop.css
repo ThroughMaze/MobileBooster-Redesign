@@ -1140,7 +1140,7 @@ input::placeholder {
     }
 
     .product-image img {
-        height: 200px;
+        height: auto;
     }
     }
 
