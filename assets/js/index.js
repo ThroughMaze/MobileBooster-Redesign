@@ -266,7 +266,7 @@ updateSlider(); // Initialize the slider position
 
 
 // Desktop navbar dropdown functionality
-document.querySelectorAll('.fullscreen-nav .navbar-list > li').forEach((el) => {
+document.querySelectorAll('.fullscreen-nav .navbar-list > li a.dropdown-toggle').forEach((el) => {
     el.addEventListener('click', handleMenuList);
 });
 
