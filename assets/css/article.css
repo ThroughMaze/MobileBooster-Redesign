@@ -2162,7 +2162,7 @@ input::placeholder {
 
 
     .latest-articles-card {
-        height: 27rem;
+        height: 30rem;
     }
 
     .latest-articles-card:not(:nth-child(4n + 1),:first-child) {
@@ -2176,7 +2176,7 @@ input::placeholder {
 
 
     .latest-articles-card h4 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 500;
         margin-top: 1.5rem;
         line-height: 2.1875rem; /* 145.833% */
@@ -2195,4 +2195,9 @@ input::placeholder {
     .hero-text {
         width: 40%;
     }
+}
+
+/* Margin above footer */
+footer {
+    margin-top: 3.3rem;
 }
