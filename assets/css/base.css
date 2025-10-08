@@ -1013,6 +1013,7 @@ footer {
         gap: 2.5rem;
         justify-content: space-between;
         align-items: start;
+        padding: 20px;
     }
 
     .copyright-container {
