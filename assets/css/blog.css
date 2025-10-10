@@ -8,11 +8,6 @@
     --Blue-Gray-600: #475569;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 ul, ol {
     list-style: none;
     padding: 0;
@@ -51,10 +46,6 @@ h5 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-}
-
-p {
-    margin: 0;
 }
 
 .subscribe-submit-btn {

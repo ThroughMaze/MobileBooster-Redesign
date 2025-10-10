@@ -47,10 +47,6 @@ h2 { font-size: 1.5rem; }
 h3 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 
-p {
-    margin: 0;
-}
-
 /* Font face for icons */
 @font-face {
     font-family: "mysignal-icons";
