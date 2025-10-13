@@ -8,11 +8,6 @@
     --Blue-Gray-600: #475569;
 }
 
-ul, ol {
-    list-style: none;
-    padding: 0;
-}
-
 a {
     color: inherit;
     text-decoration: inherit;
