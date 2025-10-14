@@ -76,7 +76,10 @@ body {
     transition-duration: 500ms;
 }
 
-
+footer ul, ol{
+    list-style: none !important;
+    padding: 0 !important;
+}
 
 /* Enhanced Breadcrumb Styles for Blog Page */
 .breadcrumb-wrapper {

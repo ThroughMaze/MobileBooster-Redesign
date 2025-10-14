@@ -50,3 +50,8 @@
 .breadcrumb-wrapper:not(:has(ol)) {
     display: none !important;
   }
+
+  footer ul, ol{
+    list-style: none !important;
+    padding: 0 !important;
+}
