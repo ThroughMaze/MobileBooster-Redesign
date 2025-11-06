@@ -3425,7 +3425,8 @@ input[name="country"][type="radio"]:checked::before {
     }
     
     .certificate-tab-label {
-        padding: 0.875rem 1rem;
+        /* padding: 0.875rem 1rem; */
+        padding: 0;
     }
     
     .certificate-details {
