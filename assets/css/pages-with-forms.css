@@ -253,7 +253,7 @@
   }
 }
 
-footer ul, ol{
+footer ul, footer ol{
   list-style: none !important;
   padding: 0 !important;
 }
