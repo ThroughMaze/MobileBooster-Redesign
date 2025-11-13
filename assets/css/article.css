@@ -76,11 +76,6 @@ body {
     transition-duration: 500ms;
 }
 
-footer ul, ol{
-    list-style: none !important;
-    padding: 0 !important;
-}
-
 main > section:not(:first-child) {
     margin-top: 3.3rem !important;
 }
