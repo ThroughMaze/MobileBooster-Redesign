@@ -1918,8 +1918,8 @@ input[name="country"][type="radio"]:checked::before {
     }
 
     .booster-quiz-card.third-step {
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         text-align: center;
         padding: 0;
     }
@@ -2119,8 +2119,8 @@ input[name="country"][type="radio"]:checked::before {
     }
 
     .booster-quiz-card.third-step {
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         text-align: center;
         gap: 1rem;
         padding: 0;
